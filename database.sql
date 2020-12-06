@@ -26,7 +26,7 @@ values (1, "Chofer"),
 (3, "Encargado del taller"),
 (4, "Administrador");
 
-insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario, tipoDeLicenciaConducir, id_viaje)
+insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
 values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4);
 
 
@@ -131,8 +131,8 @@ tipoDeDocumento_chofer varchar(40),
  
  select * from CARGA;
  
- select rolUsuario.nivel  from USUARIO join rol where tipoDeDocumento = "dni" and numeroDeDocumento = 40379084 and rolUsuario = 1;
- 
+ /*select rolUsuario.nivel  from USUARIO join rol where tipoDeDocumento = "dni" and numeroDeDocumento = 40379084 and rolUsuario = 1;
+ */
  SELECT * FROM VIAJE;
  
  select * from CLIENTE;
