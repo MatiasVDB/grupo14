@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/third-party/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="composer.json" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="1k1dkD6HPJGAN4iqJqQunlNzXqb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\actividad3\public" />
+      <recent name="C:\xampp\htdocs\actividad3" />
+      <recent name="C:\xampp\htdocs\actividad3\helper" />
+      <recent name="C:\xampp\htdocs\actividad3\view" />
+      <recent name="C:\xampp\htdocs\actividad3\config" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="" />
+      <created>1604872171812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604872171812</updated>
+      <workItem from="1604872172853" duration="20165000" />
+      <workItem from="1604929154900" duration="4184000" />
+      <workItem from="1604940360244" duration="30539000" />
+      <workItem from="1605020408806" duration="8782000" />
+      <workItem from="1605047337384" duration="12821000" />
+      <workItem from="1605470694716" duration="8556000" />
+      <workItem from="1605540954036" duration="3048000" />
+      <workItem from="1605544070681" duration="135000" />
+      <workItem from="1605547541727" duration="728000" />
+      <workItem from="1605554424846" duration="14498000" />
+      <workItem from="1605632595205" duration="17215000" />
+      <workItem from="1605652571561" duration="114000" />
+      <workItem from="1606154169785" duration="2195000" />
+      <workItem from="1606157738083" duration="4760000" />
+      <workItem from="1606228618353" duration="7940000" />
+      <workItem from="1606246403679" duration="9011000" />
+      <workItem from="1606317499921" duration="8721000" />
+      <workItem from="1606351074177" duration="2322000" />
+      <workItem from="1606670229356" duration="24074000" />
+      <workItem from="1606754606049" duration="9401000" />
+      <workItem from="1606838873107" duration="4255000" />
+      <workItem from="1607212160361" duration="10386000" />
+      <workItem from="1607282054326" duration="4846000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="260" y="19" key="#CLI_Interpreters" timestamp="1604929452637">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="260" y="19" key="#CLI_Interpreters/0.0.1360.728@0.0.1360.728" timestamp="1604929452637" />
+    <state x="272" y="22" key="#Deployment" timestamp="1604942206631">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="272" y="22" key="#Deployment/0.0.1360.728@0.0.1360.728" timestamp="1604942206631" />
+    <state x="387" y="7" key="#PHP" timestamp="1604929458788">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="387" y="7" key="#PHP/0.0.1360.728@0.0.1360.728" timestamp="1604929458788" />
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604875442239">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604875442239" />
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1606694396117">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1606694396117" />
+    <state x="498" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604883699503">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="498" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604883699503" />
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605058588759">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1605058588759" />
+    <state x="460" y="118" key="FileChooserDialogImpl" timestamp="1605056606584">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1605056606584" />
+    <state x="606" y="138" key="NewPhpClassDialog" timestamp="1606320128967">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1606320128967" />
+    <state x="593" y="135" key="NewPhpClassDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1606154966203" />
+    <state x="593" y="135" key="NewPhpClassDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604888137142" />
+    <state x="535" y="297" key="NewPhpFileDialog" timestamp="1606318702768">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1606318702768" />
+    <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1606155332006" />
+    <state x="604" y="336" key="NewPhpFileDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604891483858" />
+    <state x="536" y="263" width="418" height="202" key="WebDeployment.AddServerDialog.v.1" timestamp="1604942191980">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="536" y="263" width="418" height="202" key="WebDeployment.AddServerDialog.v.1/0.0.1360.728@0.0.1360.728" timestamp="1604942191980" />
+    <state x="285" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1607222622437">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="285" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.728@0.0.1360.728" timestamp="1607222622437" />
+    <state x="522" y="163" key="refactoring.ChangeSignatureDialog" timestamp="1606682237771">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="522" y="163" key="refactoring.ChangeSignatureDialog/0.0.1360.728@0.0.1360.728" timestamp="1606682237771" />
+    <state x="590" y="184" key="refactoring.ChangeSignatureDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604881525391" />
+    <state x="376" y="165" key="run.anything.popup" timestamp="1605636980407">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="376" y="165" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1605636980407" />
+    <state x="425" y="187" key="run.anything.popup/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604889864056" />
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606842658841">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606842658841" />
+  </component>
+</project>
