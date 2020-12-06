@@ -56,6 +56,9 @@
     <label for="inputChasis" class="sr-only">Chasis</label>
     <input name="chasis"  id="inputChasis" class="form-control" placeholder="Chasis" readonly='readonly' value="{{numeroDeChasis}}" required>
     <br>
+    <label for="inputId" class="sr-only">Id</label>
+    <input name="id"  id="inputId" class="form-control" placeholder="Id" readonly='readonly' value="{{id}}" required>
+    <br>
     <br>
 
 

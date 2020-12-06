@@ -28,11 +28,10 @@ class ArrastradosController
 
     public function vistaActualizarArrastrado()
     {
-        $patente = $_GET["patente"];
-        $nroChasis = $_GET["chasis"];
+        $id = $_GET["id"];
 
 
-        $data["arrastrado"] = $this->arrastradosModel->getArrastrado($patente, $nroChasis);
+        $data["arrastrado"] = $this->arrastradosModel->getArrastrado($id);
         echo $this->render->render("view/arrastradoModificarView.php", $data);
 
     }
@@ -42,12 +41,11 @@ class ArrastradosController
 
         $pesoNeto = $_POST['peso'];
         $hazard = $_POST['hazard'];
-        $patente = $_POST['patente'];
         $tipoCarga = $_POST['tipo'];
-        $nroChasis = $_POST['chasis'];
+        $id = $_POST['id'];
         $refrigeracion = $_POST['refrigeracion'];
 
-        $data['datos'] = $this->arrastradosModel->modificarArrastrado($patente, $nroChasis, $tipoCarga, $refrigeracion, $pesoNeto, $hazard);
+        $data['datos'] = $this->arrastradosModel->modificarArrastrado($id, $tipoCarga, $refrigeracion, $pesoNeto, $hazard);
 
         header("Location: ../arrastrados");
 
@@ -57,10 +55,9 @@ class ArrastradosController
     public function eliminarArrastrado()
     {
 
-        $patente = $_GET['patente'];
-        $numeroChasis = $_GET['chasis'];
+        $id = $_GET['id'];
 
-        $this->arrastradosModel->eliminarArrastrado($patente, $numeroChasis);
+        $this->arrastradosModel->eliminarArrastrado($id);
 
         header("Location: ../arrastrados");
 

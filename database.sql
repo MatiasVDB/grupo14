@@ -30,12 +30,14 @@ insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaD
 values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4);
 
 
-create table TRACTOR(marca varchar(40),
+create table TRACTOR(
+id int not null auto_increment,
+marca varchar(40),
 modelo varchar(40),
 patente varchar(40),
 numeroDeMotor int,
 numeroDeChasis varchar(40),
-primary key (patente, numeroDeChasis),
+primary key (id),
 kilometros int,
 añoDeFabricacion int);
 
@@ -43,13 +45,15 @@ insert into TRACTOR(marca, modelo, patente, numeroDeMotor, numeroDeChasis, kilom
 values ("IVECO", "Cursor", "AA124DC", 69904367, "R69904367", 7892356, 2013);
 
 
-create table ARRASTRADO(patente varchar(40),
+create table ARRASTRADO(
+id int not null auto_increment,
+patente varchar(40),
 numeroDeChasis int,
 tipoCarga varchar(40),
 refrigeracionCarga varchar(40),
 pesoNetoCarga varchar(40),
 hazardCarga varchar(40),
-primary key (patente, numeroDeChasis));
+primary key (id));
 
 insert into ARRASTRADO(patente, numeroDeChasis, tipoCarga, refrigeracionCarga, pesoNetoCarga, hazardCarga)
 values ("ABC-123", 29, "Liquida", "No", "10000KG", "Si");
@@ -100,14 +104,13 @@ carga int,
 kilometrosActuales float,
 combustibleFinal float,
 combustibleConsumido float,
-patenteVehiculo varchar(50),
-chasisVehiculo varchar(50),
+idVehiculo int,
 tipoDocumentoChofer varchar(50),
 numeroDeDocumentoChofer int,
 cuitCliente int,
 primary key (id),
 foreign key(carga) references CARGA(id),
-foreign key(patenteVehiculo,chasisVehiculo) references TRACTOR(patente, numeroDeChasis),
+foreign key(idVehiculo) references TRACTOR(id),
 foreign key(tipoDocumentoChofer,numeroDeDocumentoChofer) references USUARIO(tipoDeDocumento, numeroDeDocumento),
 foreign key(cuitCliente) references CLIENTE(CUIT));
 

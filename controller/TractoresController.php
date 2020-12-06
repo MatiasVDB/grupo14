@@ -31,10 +31,9 @@ class TractoresController
 
     public function detalle(){
 
-        $patente = $_GET['patente'];
-        $nroChasis = $_GET['chasis'];
+        $id = $_GET['id'];
 
-        $data['tractor'] = $this->tractoresModel->getTractor($patente,$nroChasis);
+        $data['tractor'] = $this->tractoresModel->getTractor($id);
 
         echo $this->render->render("view/tractorDetalleView.php", $data);
 
@@ -88,13 +87,12 @@ class TractoresController
 
         $marca = $_POST['marca'];
         $modelo = $_POST['modelo'];
-        $patente = $_POST['patente'];
-        $nroMotor = $_POST['motor'];
-        $nroChasis = $_POST['chasis'];
         $kilometros = $_POST['kilometros'];
+        $nroMotor = $_POST['motor'];
         $anoDeFabricacion = $_POST['año'];
+        $id = $_POST['id'];
 
-        $this->tractoresModel->modificarTractor($marca, $modelo, $patente, $nroMotor,$nroChasis,$kilometros,$anoDeFabricacion);
+        $this->tractoresModel->modificarTractor($id, $marca, $modelo, $nroMotor,$kilometros,$anoDeFabricacion);
 
         header("Location: ../tractores");
 
@@ -104,10 +102,9 @@ class TractoresController
 
     public function eliminarTractor(){
 
-        $patente = $_GET['patente'];
-        $nroChasis = $_GET['chasis'];
+        $id = $_GET['id'];
 
-        $this->tractoresModel->eliminar($patente, $nroChasis);
+        $this->tractoresModel->eliminar($id);
 
        header("Location: ../tractores");
 

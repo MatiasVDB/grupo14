@@ -14,21 +14,21 @@ class ArrastradosModel
     public function getArrastrados(){
         return $this->database->query("SELECT * FROM ARRASTRADO");
     }
-    public function getArrastrado($patente, $nroChasis){
-        $sql = "SELECT * FROM ARRASTRADO where patente = '$patente' and numeroDeChasis = '$nroChasis'";
+    public function getArrastrado($id){
+        $sql = "SELECT * FROM ARRASTRADO where id = '$id' ";
 
         return $this->database->query($sql);
     }
 
-    public function modificarArrastrado($patente, $numeroDeChasis, $tipoCarga, $refrigeracionCarga, $pesoNetoCarga, $hazardCarga){
-        $sql = "update ARRASTRADO set pesoNetoCarga = '$pesoNetoCarga', hazardCarga = '$hazardCarga', tipoCarga = '$tipoCarga',refrigeracionCarga = '$refrigeracionCarga' where patente = '$patente' and numeroDeChasis = '$numeroDeChasis'";
+    public function modificarArrastrado($id, $tipoCarga, $refrigeracionCarga, $pesoNetoCarga, $hazardCarga){
+        $sql = "update ARRASTRADO set pesoNetoCarga = '$pesoNetoCarga', hazardCarga = '$hazardCarga', tipoCarga = '$tipoCarga',refrigeracionCarga = '$refrigeracionCarga' where id = '$id' ";
 
         return $this->database->query($sql);
     }
 
-    public function eliminarArrastrado($patente, $numeroDeChasisChasis)
+    public function eliminarArrastrado($id)
     {
-        $sql = "delete from ARRASTRADO where patente = '$patente' and numeroDeChasis = '$numeroDeChasisChasis'";
+        $sql = "delete from ARRASTRADO where id = '$id'";
 
         return $this->database->query($sql);
     }

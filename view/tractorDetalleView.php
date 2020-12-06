@@ -7,15 +7,13 @@
     <h2> Actualización de Tractor</h2>
 
     <br>
-
-    <input type="hidden" name="patente" value="{{patente}}">
-
-    <input type="hidden" name="chasis" value="{{numeroDeChasis}}">
+    <input type="hidden" name="id" value="{{id}}">
 
     <div>
         <h5> Marca {{marca}} </h5>
         <h5> Patente {{patente}}</h5>
         <h5> Chasis {{numeroDeChasis}}</h5>
+        <h5> Id {{id}}</h5>
 
     </div>
     <div class="form-row">

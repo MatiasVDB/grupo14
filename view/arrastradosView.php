@@ -7,6 +7,7 @@
     <table class="table table-borderless table-dark">
         <thead>
         <tr>
+            <th scope="col">Id</th>
             <th scope="col">Patente</th>
             <th scope="col">Chasis</th>
             <th scope="col">Tipo</th>
@@ -22,15 +23,15 @@
 
         {{#arrastrados}}
         <tr>
-
+            <td>{{id}}</td>
             <td>{{patente}}</td>
             <td>{{numeroDeChasis}}</td>
             <td>{{tipoCarga}}</td>
             <td>{{pesoNetoCarga}}</td>
             <td>{{refrigeracionCarga}}</td>
             <td>{{hazardCarga}}</td>
-            <td><a href="arrastrados/vistaActualizarArrastrado/patente={{patente}}&chasis={{numeroDeChasis}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Actualizar</a>
-            <a href="arrastrados/eliminarArrastrado?patente={{patente}}&chasis={{numeroDeChasis}}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Dar Baja</a></td>
+            <td><a href="http://localhost/grupo14/arrastrados/vistaActualizarArrastrado/id={{id}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Actualizar</a>
+            <a href="http://localhost/grupo14/arrastrados/eliminarArrastrado?id={{id}}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Dar Baja</a></td>
         </tr>
 
 
@@ -40,7 +41,7 @@
 
     </table>
     <div class="col text-center">
-    <a href="arrastrados/registerArrastrado" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar arrastrado</a>
+    <a href="http://localhost/grupo14/arrastrados/registerArrastrado" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar arrastrado</a>
     </div>
 </div>
 

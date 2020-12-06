@@ -14,8 +14,8 @@ class TractoresModel
     public function getTractores(){
         return $this->database->query("SELECT * FROM TRACTOR");
     }
-    public function getTractor($patente, $nroChasis){
-        $sql = "SELECT * FROM TRACTOR where patente = '$patente' and numeroDeChasis = '$nroChasis'";
+    public function getTractor($id){
+        $sql = "SELECT * FROM TRACTOR where id = '$id' ";
 
         return $this->database->query($sql);
     }
@@ -29,15 +29,15 @@ class TractoresModel
 
         }
 
-    public function modificarTractor($marca, $modelo, $patente, $nroMotor, $nroChasis, $kilometros, $anoDeFabricacion){
-        $sql = "update TRACTOR set marca = '$marca', modelo = '$modelo', numeroDeMotor = '$nroMotor',kilometros = '$kilometros', añoDeFabricacion = '$anoDeFabricacion' where patente = '$patente' and numeroDeChasis = '$nroChasis'";
+    public function modificarTractor($id, $marca, $modelo,  $nroMotor, $kilometros, $anoDeFabricacion){
+        $sql = "update TRACTOR set marca = '$marca', modelo = '$modelo', numeroDeMotor = '$nroMotor',kilometros = '$kilometros', añoDeFabricacion = '$anoDeFabricacion' where id = '$id'";
 
         return $this->database->query($sql);
     }
 
-    public function eliminar($patente, $nroChasis)
+    public function eliminar($id)
     {
-        $sql = "delete from TRACTOR where patente = '$patente' and numeroDeChasis = '$nroChasis'";
+        $sql = "delete from TRACTOR where id = '$id'";
 
         return $this->database->query($sql);
     }

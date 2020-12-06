@@ -7,6 +7,7 @@
 <table class="table table-borderless table-dark">
     <thead>
     <tr>
+        <th scope="col">Id</th>
         <th scope="col">Marca</th>
         <th scope="col">Modelo</th>
         <th scope="col">Año</th>
@@ -23,7 +24,7 @@
 
     {{#tractores}}
     <tr>
-
+        <td>{{id}}</td>
         <td>{{marca}}</td>
         <td>{{modelo}}</td>
         <td>{{añoDeFabricacion}}</td>
@@ -31,8 +32,8 @@
         <td>{{numeroDeMotor}}</td>
         <td>{{numeroDeChasis}}</td>
         <td>{{kilometros}}</td>
-        <td><a href="tractores/detalle/tractorDetalle?patente={{patente}}&chasis={{numeroDeChasis}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Actualizar</a>
-            <a href="tractores/eliminarTractor?patente={{patente}}&chasis={{numeroDeChasis}}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Dar Baja</a>
+        <td><a href="http://localhost/grupo14/tractores/detalle/tractorDetalle?id={{id}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Actualizar</a>
+            <a href="http://localhost/grupo14/tractores/eliminarTractor?id={{id}}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Dar Baja</a>
         </td>
 
     </tr>
@@ -44,7 +45,7 @@
 </table>
 
     <div class="col text-center">
-        <a href="tractores/registerTractor" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar Tractor</a>
+        <a href="http://localhost/grupo14/tractores/registerTractor" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar Tractor</a>
     </div>
 
 </div>
