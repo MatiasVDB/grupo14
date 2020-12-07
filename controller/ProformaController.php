@@ -88,9 +88,9 @@ class ProformaController
     }
 
     public function imprimirQR(){
-        $numero = $_GET['numero'];
-
-        QRcode::png('http://localhost/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero);
+        $numero = $_GET['id_viaje'];
+        QRcode::png('http://localhost/grupo14/viajes/detalle/id='.$numero);
+       // QRcode::png('http://localhost/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero);
     }
 
 }

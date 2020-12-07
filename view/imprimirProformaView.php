@@ -291,8 +291,9 @@
     <div class="col">
 
         <h5> Código QR: </h5>
-        <img src="./imprimirQR?numero={{numero}}" />
-
+        {{#viaje}}
+        <img src="./imprimirQR?id_viaje={{id}}" />
+        {{/viaje}}
 
     </div>
 

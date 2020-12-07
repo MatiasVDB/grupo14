@@ -22,17 +22,17 @@ class ViajesModel
         return $this->database->query($sql);
     }
 
-    public function modificarViaje($id,$origen,$destino, $fechaFinalizacion, $fechaInicio, $fechaCarga, $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $patenteVehiculo, $chasisVehiculo){
-        $sql = "update viaje set origen = '$origen', destino = '$destino', fechaFinalizacion = '$fechaFinalizacion', fechaInicio = '$fechaInicio', fechaCarga ='$fechaCarga', tiempoReal = '$tiempoReal', ETA = '$ETA', ETD = '$ETD', kilometrosFinal = '$kilometrosFinal', kilometrosActuales = '$kilometrosActuales',combustibleFinal = '$combustibleFinal', combustibleConsumido = '$combustibleConsumido',patenteVehiculo = '$patenteVehiculo', chasisVehiculo = '$chasisVehiculo' where id = '$id'";
+    public function modificarViaje($id,$origen,$destino, $fechaFinalizacion, $fechaInicio, $fechaCarga, $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado){
+        $sql = "update viaje set origen = '$origen', destino = '$destino', fechaFinalizacion = '$fechaFinalizacion', fechaInicio = '$fechaInicio', fechaCarga ='$fechaCarga', tiempoReal = '$tiempoReal', ETA = '$ETA', ETD = '$ETD', kilometrosFinal = '$kilometrosFinal', kilometrosActuales = '$kilometrosActuales',combustibleFinal = '$combustibleFinal', combustibleConsumido = '$combustibleConsumido',idVehiculo = '$idVehiculo', tipoDocumentoChofer = '$tipoDocumentoChofer', numeroDeDocumentoChofer='$numeroDocumentoChofer', cuitCliente='$cuitCliente', idArrastrado='$idArrastrado'  where id = '$id'";
 
         return $this->database->query($sql);
     }
 
-    public function createViaje($origen,$destino, $fechaFinalizacion, $fechaInicio, $fechaCarga, $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $patenteVehiculo, $chasisVehiculo){
-        $sql = "insert into viaje( origen, destino, fechaFinalizacion, fechaInicio, fechaCarga, tiempoReal, ETA, ETD, kilometrosFinal, kilometrosActuales, combustibleFinal, combustibleConsumido, patenteVehiculo,chasisVehiculo)
-        values ('$origen','$destino', '$fechaFinalizacion', '$fechaInicio', '$fechaCarga', '$tiempoReal', '$ETA', '$ETD', '$kilometrosFinal', '$kilometrosActuales', '$combustibleFinal', '$combustibleConsumido', '$patenteVehiculo', '$chasisVehiculo')";
+    public function createViaje($origen, $destino, $fechaFinalizacion, $fechaInicio, $fechaCarga, $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDeDocumentoChofer, $cuitCliente, $idArrastrado){
+        $sql = "insert into VIAJE(origen, destino, fechaFinalizacion, fechaInicio, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado)
+        values ('$origen','$destino', '$fechaFinalizacion', '$fechaInicio', '$fechaCarga', '$tiempoReal', '$ETA', '$ETD', '$kilometrosActuales', '$kilometrosFinal', '$combustibleFinal', '$combustibleConsumido', '$idVehiculo', '$tipoDocumentoChofer', '$numeroDeDocumentoChofer', '$cuitCliente', '$idArrastrado')";
 
-        return $this->database->queryInsert($sql);
+        return $this->database->query($sql);
     }
 
     public function eliminar($id)

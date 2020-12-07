@@ -98,9 +98,17 @@ class ModuleInitializer
     public function createViajesController(){
         include_once("model/ViajesModel.php");
         include_once("controller/ViajesController.php");
+        include_once ("model/ArrastradosModel.php");
+        include_once ("model/TractoresModel.php");
+        include_once ("model/ClientesModel.php");
+        include_once ("model/EmpleadosModel.php");
 
         $model = new ViajesModel($this->database);
-        return new ViajesController($model, $this->renderer);
+        $modelArrastrados = new ArrastradosModel($this->database);
+        $modelTractores = new TractoresModel($this->database);
+        $modelClientes= new ClientesModel($this->database);
+        $modelEmpleados= new EmpleadosModel($this->database);
+        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $this->renderer);
     }
 
     public function createDatosProformaController(){

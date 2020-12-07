@@ -29,6 +29,9 @@ values (1, "Chofer"),
 insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
 values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4);
 
+insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
+values ("DNI", 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1);
+
 
 create table TRACTOR(
 id int not null auto_increment,
@@ -58,6 +61,7 @@ insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
 values("Granel", 500, "SI", "2", "SI", 5),
 ("Liquida", 200, "SI", "2", "SI", -40),
 ("Jaula", 8000, "NO", "0", "SI", 16);
+
 
 create table ARRASTRADO(
 id int not null auto_increment,
@@ -98,21 +102,23 @@ fechaCarga date,
 tiempoReal int,
 ETA date,
 ETD date,
-carga int,
 kilometrosActuales float,
+kilometrosFinal float,
 combustibleFinal float,
 combustibleConsumido float,
 idVehiculo int,
 tipoDocumentoChofer varchar(50),
 numeroDeDocumentoChofer int,
 cuitCliente int,
+idArrastrado int,
 primary key (id),
-foreign key(carga) references CARGA(id),
 foreign key(idVehiculo) references TRACTOR(id),
 foreign key(tipoDocumentoChofer,numeroDeDocumentoChofer) references USUARIO(tipoDeDocumento, numeroDeDocumento),
-foreign key(cuitCliente) references CLIENTE(CUIT));
+foreign key(cuitCliente) references CLIENTE(CUIT),
+foreign key(idArrastrado) references ARRASTRADO(id));
 
-insert into VIAJE (id, origen, destino) value (1, "Buenos Aires", "Cordoba");
+insert into VIAJE (origen, destino, fechaFinalizacion, fechaInicio, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado) 
+value ("Buenos Aires", "Cordoba", "2020-18-03", "2020-03-17", "2020-03-17", 23, "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, "DNI", 41823476, 244444, 1);
 
 create table PROFORMA(
 numero int primary key,

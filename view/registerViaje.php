@@ -53,52 +53,60 @@
             <label for="fechaCarga" >ETD</label>
             <input type="date" name="ETD" id="ETD" class="form-control" >
         </div>
+    </div>
 
+
+
+    <div class="form-row">
+
+    <div class="form-group col-md-12">
+
+    <label> <h6> Vehículo</h6></label>
+    <select class="custom-select" multiple name="idVehiculo">
+        <option selected>VEHICULOS</option>
+        {{#tractores}}
+        <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Modelo: {{modelo}}</option>
+
+        {{/tractores}}
+    </select>
+
+
+</div>
     </div>
 
 
     <div class="form-row">
 
+    <div class="form-group col-md-8">
 
-        <div class="form-group col-md-4">
-            <label for="kilometrosActuales" id="direccion">Kilometros actuales</label>
-            <input name="kilometrosActuales" class="form-control" type="number"  id="kilometrosActuales">
-        </div>
+        <label> <h6> Cliente</h6></label>
+        <select class="custom-select" multiple name="cuit">
+            <option selected>CLIENTES</option>
+            {{#clientes}}
+            <option value="{{CUIT}}">CUIT: {{CUIT}} - Denominación: {{denominacion}}</option>
 
-        <div class="form-group col-md-4">
-            <label for="kilometrosFinal" id="direccion">Kilometros final</label>
-            <input name="kilometrosFinal" class="form-control" type="number" id="kilometrosFinal">
-        </div>
+            {{/clientes}}
+        </select>
+
     </div>
+
+    </div>
+
 
     <div class="form-row">
+        <label> <h6> Chofer</h6></label>
+        <select class="custom-select" multiple name="dniChofer">
+            <option selected>CHOFERES</option>
+            {{#choferes}}
+            <option value="{{numeroDeDocumento}}">Tipo de documento: {{tipoDeDocumento}} - Numero de documento: {{numeroDeDocumento}} - Nombre: {{nombre}}</option>
 
-        <div class="form-group col-md-4">
-            <label for="combustibleFinal" id="direccion">Combustible final</label>
-            <input name="combustibleFinal" class="form-control" type="number" id="combustibleFinal">
-        </div>
+            {{/choferes}}
+        </select>
 
-        <div class="form-group col-md-4">
-            <label for="combustibleConsumido" id="direccion">Combustible consumido</label>
-            <input name="combustibleConsumido" class="form-control" type="number" id="combustibleConsumido">
-        </div>
     </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="patenteVehiculo">Patente vehiculo</label>
-            <select class="custom-select" size="3" name="patenteVehiculo">
-                <option selected value="AA124DC">AA124DC</option>
-            </select>
-        </div>
+    <br>
 
-        <div class="form-group col-md-6">
-            <label for="chasisVehiculo">Chasis vehiculo</label>
-            <select class="custom-select" size="3" name="chasisVehiculo">
-                <option selected value="R69904367">R69904367</option>
-            </select>
-        </div>
-    </div>
     <button class="btn btn-primary" id="aplicarRegistro" type="Registrar">Registrar</button>
 </form>
 
