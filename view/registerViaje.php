@@ -1,8 +1,10 @@
 {{>header}}
 
-<form class="col-md-8 align-middle" action="./registrarViaje" method="post">
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Registrar Viaje</h1>
+<div class="formularioContainer">
 
+    <h5 id="ingresar" class="mb-3 registerTxt">Registrar Viaje</h5>
+
+<form class="col-md-8 formulario" action="./registrarViaje" method="post">
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputOrigen" >Origen</label>
@@ -14,11 +16,8 @@
             <input type="text" name="destino" id="inputDestino" class="form-control" placeholder="Destino"  required>
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="fechaFinalizacion" >Fecha de finalizacion</label>
-            <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control" ">
-        </div>
     </div>
+
 
     <div class="form-row">
         <div class="form-group col-md-4">
@@ -26,19 +25,25 @@
             <input type="date" name="fechaInicio" id="fechaInicio" class="form-control"  ">
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="fechaCarga" >Fecha de carga</label>
-            <input type="date" name="fechaCarga" id="fechaCarga" class="form-control" ">
-        </div>
 
         <div class="form-group col-md-4">
-            <label for="tiempoReal" id="contacto1">Tiempo real</label>
-            <input name="tiempoReal" class="form-control" type="number" id="tiempoReal">
+            <label for="fechaFinalizacion" >Fecha de finalizacion</label>
+            <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control" ">
         </div>
 
     </div>
 
     <div class="form-row">
+
+        <div class="form-group col-md-8">
+            <label for="fechaCarga" >Fecha de carga</label>
+            <input type="date" name="fechaCarga" id="fechaCarga" class="form-control" ">
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
         <div class="form-group col-md-4">
             <label for="ETA" >ETA</label>
             <input type="date" name="ETA" id="ETA" class="form-control" >
@@ -49,6 +54,17 @@
             <input type="date" name="ETD" id="ETD" class="form-control" >
         </div>
 
+    </div>
+
+
+    <div class="form-row">
+
+
+        <div class="form-group col-md-4">
+            <label for="kilometrosActuales" id="direccion">Kilometros actuales</label>
+            <input name="kilometrosActuales" class="form-control" type="number"  id="kilometrosActuales">
+        </div>
+
         <div class="form-group col-md-4">
             <label for="kilometrosFinal" id="direccion">Kilometros final</label>
             <input name="kilometrosFinal" class="form-control" type="number" id="kilometrosFinal">
@@ -56,10 +72,6 @@
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="kilometrosActuales" id="direccion">Kilometros actuales</label>
-            <input name="kilometrosActuales" class="form-control" type="number"  id="kilometrosActuales">
-        </div>
 
         <div class="form-group col-md-4">
             <label for="combustibleFinal" id="direccion">Combustible final</label>
@@ -87,8 +99,11 @@
             </select>
         </div>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="Registrar">Registrar</button>
+    <button class="btn btn-primary" id="aplicarRegistro" type="Registrar">Registrar</button>
 </form>
+
+</div>
+
 </main>
 
 {{> footer}}

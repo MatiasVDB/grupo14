@@ -45,6 +45,10 @@ class EmpleadosController
             $data["empleado"] = $this->empleadoModel->getEmpleado($tipoDocumento, $numeroDocumento);
             echo $this->render->render("view/empleadoDetalleView.php", $data);
 
+
+        $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($tipoDocumento, $numeroDocumento);
+        echo $this->render->render( "view/empleadoDetalleView.php", $data );
+
     }
 
     public function procesarActualizacionEmpelado(){

@@ -1,148 +1,115 @@
 {{> header}}
 
-<div class="col">
+<div class="formularioContainer">
 
-    <h1> Proforma N°{{numero}} </h1>
+    <h5 class="registerTxt"> Imprimir Proforma </h5>
 
-</div>
+    {{#proforma}}
 
-<form action="" class="form-signin" method="post">
-    <br>
+    <p> Número {{numero}}</p>
+    <p> Fecha {{fecha}} </p>
 
-    <div class="form-check-inline">
+<form action="" class="col-md-8 formulario" method="post">
 
-        <div class="col">
-            <label for="inputNumero">Número</label>
-            <input name="numero" placeholder="{{numero}}" type="number" id="inputNumero" class="form-control" min="1000" disabled>
+            <input name="numero" placeholder="{{numero}}" type="hidden" id="inputNumero" class="form-control" min="1000" disabled>
 
             <p class="text-danger"> {{mensaje}} </p>
 
-        </div>
+            <input name="fecha" type="hidden" id="inputFecha" placeholder="{{fecha}}" class="form-control" disabled>
 
 
-        <div class="col">
-            <label for="inputTipo">Fecha</label>
-            <input name="fecha" type="text" id="inputFecha" placeholder="{{fecha}}" class="form-control" disabled>
+    <div class="form-row">
 
+        <div class="col-md-4">
+            <h5> Datos del Cliente </h5>
         </div>
 
     </div>
+
+    <div class="form-row">
+        {{#cliente}}
+        <div class="form-group col-md-6">
+
+            <label>Denominación</label>
+            <input type="text" class="form-control" id="disabledInput" placeholder="{{denominacion}}" disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>CUIT</label>
+            <input type="number" class="form-control" id="disabledInput" value="{{CUIT}}" name="CUIT_cliente"
+                   readonly="readonly">
+        </div>
+
+    </div>
+
+
+    <div class="form-row">
+        <div class="form-group col-md-8">
+            <label> Dirección </label>
+            <input type="text" class="form-control" id="disabledInput" placeholder="{{direccion}}" disabled>
+        </div>
+
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label>Teléfono</label>
+            <input type="tel" class="form-control" id="disabledInput" placeholder="{{telefono}}" disabled>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label>Email</label>
+
+            <input type="email" class="form-control" id="disabledInput" placeholder="{{email}}" disabled>
+        </div>
+
+    </div>
+
+
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label>Contacto Uno</label>
+            <input type="text" class="form-control" id="disabledInput" placeholder="{{contacto1}}" disabled>
+        </div>
+
+
+        <div class="form-group col-md-6">
+            <label>Contacto Dos</label>
+            <input type="text" class="form-control" id="disabledInput" placeholder="{{contacto2}}" disabled>
+        </div>
+
+
+    </div>
+
+    {{/cliente}}
 
     <br>
 
-    <div class="col">
-        <h6> Datos del Cliente </h6>
-    </div>
-    <div class="form-check-inline">
+    <div class="form-row">
 
-        {{#cliente}}
-        <div class="col">
-
-            <label class="sr-only" for="inlineFormInputGroup">denominación</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">DENOMINACIÓN</div>
-                </div>
-                <input type="text" class="form-control" id="disabledInput" placeholder="{{denominacion}}" disabled>
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">CUIT</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">CUIT</div>
-                </div>
-                <input type="number" class="form-control" id="disabledInput" value="{{CUIT}}" name="CUIT_cliente"
-                       readonly="readonly">
-            </div>
-        </div>
-    </div>
-
-
-    <div class="form-check-inline">
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">dirección</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">DIRECCIÓN</div>
-                </div>
-                <input type="text" class="form-control" id="disabledInput" placeholder="{{direccion}}" disabled>
-            </div>
-
-        </div>
-
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">telefono</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">TELÉFONO</div>
-                </div>
-                <input type="tel" class="form-control" id="disabledInput" placeholder="{{telefono}}" disabled>
-            </div>
-        </div>
-
-
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">email</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">EMAIL</div>
-                </div>
-                <input type="email" class="form-control" id="disabledInput" placeholder="{{email}}" disabled>
-            </div>
+        <div class="col-md-4">
+            <h5> Datos del Viaje </h5>
         </div>
 
     </div>
 
-
-    <div class="form-check-inline">
-
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">contactoUno</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">CONTACTO UNO</div>
-                </div>
-                <input type="text" class="form-control" id="disabledInput" placeholder="{{contacto1}}" disabled>
-            </div>
-        </div>
-
-        <div class="col">
-            <label class="sr-only" for="inlineFormInputGroup">contactoDos</label>
-            <div class="input-group mb-2">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">CONTACTO DOS</div>
-                </div>
-                <input type="text" class="form-control" id="disabledInput" placeholder="{{contacto2}}" disabled>
-            </div>
-
-
-        </div>
-
-        {{/cliente}}
-    </div>
-
-    <div class="col">
-        <h6> Datos del viaje </h6>
-    </div>
-
-    <div class="form-check-inline">
+    <div class="form-row">
         {{#viaje}}
-        <div class="col">
-            <input type="hidden" name="id_viaje" value="{{id}}">
 
+        <input type="hidden" name="id_viaje" value="{{id}}">
+
+        <div class="form-group col-md-6">
             <label> Origen </label>
             <input type="text" class="form-control" id="origen" placeholder="{{origen}}" name="origen" disabled>
 
         </div>
 
-    </div>
-
-    <br>
-
-    <div class="form-check-inline">
-        <div class="col">
+        <div class="form-group col-md-6">
 
             <label> Destino </label>
             <input type="text" class="form-control" id="destino" placeholder="{{destino}}" name="destino" disabled>
@@ -151,25 +118,20 @@
 
     </div>
 
-    <br>
-
-    <div class="form-check-inline">
 
 
-        <div class="col">
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
 
 
-            <label> Fecha de carga</label>
-            <input type="date" class="form-control" id="fechaCarga" placeholder="{{fechaCarga}}" name="fechaCarga"
+            <label> Fecha de inicio</label>
+            <input type="date" class="form-control" id="fechaCarga" placeholder="{{fechaInicio}}" name="fechaInicio"
                    disabled>
 
         </div>
 
-    </div>
-
-    <br>
-    <div class="form-check-inline">
-        <div class="col">
+        <div class="form-group col-md-6">
             <label> Tiempo esperado de arribo </label>
             <input type="time" class="form-control" id="ETA" placeholder="{{ETA}}" name="eta" disabled>
 
@@ -179,221 +141,142 @@
 
     {{/viaje}}
 
-    </div>
-
     <br>
+    <div class="form-row">
 
-    <div class="col">
-        <h6> Carga </h6>
+        <div class="col-md-4">
+            <h5> Costeo Estimado </h5>
+        </div>
+
     </div>
 
-    <div class="form-check-inline">
+    <div class="form-row">
 
-        {{#carga}}
+        <div class="form-group col-md-6">
+            <label> Kilometros </label>
+            <input type="number" class="form-control" id="email" placeholder="{{costeoEstimado_Kilometros}}"
+                   name="kilometrosCosteoEsperado" disabled >
 
-        <input type="hidden" value="{{id}}" name="id_carga">
+        </div>
 
-        <div class="col">
+        <div class="form-group col-md-6">
 
-            <label> Tipo </label>
-
-            <input type="text" class="form-control" id="tipo" placeholder="{{tipo}}" name="tipo" disabled>
+            <label> Combustible </label>
+            <input type="number" class="form-control" id="email" placeholder="${{costeoEstimado_Combustible}}"
+                   name="combustibleCosteoEsperado" disabled>
 
         </div>
 
     </div>
 
-    <br>
+    <div class="form-row">
 
-    <div class="form-check-inline">
+        <div class="form-group col-md-6">
 
-        <div class="col">
+            <label> Tiempo Estimado de Partida </label>
 
-            <label> Peso </label>
+            <input type="number" class="form-control" id="email" placeholder="${{costeoEstimado_ETD}}"
+                   name="etdCosteoEsperado" disabled>
 
-            <input type="number" class="form-control" id="peso" placeholder="{{pesoNeto}}" name="peso" disabled>
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label> Tiempo Estimado de Arribo </label>
+
+            <input type="number" class="form-control" id="email" placeholder="${{costeoEstimado_ETA}}"
+                   name="etaCosteoEsperado" disabled>
 
         </div>
 
     </div>
 
-    <br>
-    <div class="form-check-inline">
 
+    <div class="form-row">
 
-        <div class="col-2">
-            <label> Hazard</label>
-            <input type="text" placeholder="{{hazard}}" id="hazard" name="hazard" disabled>
-            <p> imoClass: {{imoClass}} </p>
+        <div class="form-group col-md-6">
+
+            <label> Viaticos </label>
+
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_Viaticos}}" name="viaticosCosteoEsperado"
+                   disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label> Pajes y Pesajes </label>
+
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_Peajes_Pesajes}}"
+                   name="peajesPesajesCosteoEsperado" disabled>
+
         </div>
 
 
     </div>
 
-    <br>
+    <div class="form-row">
 
-    <div class="form-check-inline">
 
-        <div class="col-2">
+        <div class="form-group col-md-6">
+
+            <label> Extras </label>
+
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_Extras}}" name="extrasCosteoEsperado"
+                   disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label> FEE </label>
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_FEE}}" name="feeCosteoEsperado" disabled>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+
+            <label> Hazard </label>
+
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_Hazard}}" name="hazardCosteoEsperado"
+                   disabled>
+
+        </div>
+
+
+        <div class="form-group col-md-6">
 
             <label> Reefer </label>
-            <input type="text" placeholder="{{reefer}}" id="reefer" name="reefer" disabled>
-            <p> temperatura: {{temperatura}}° </p>
-        </div>
 
-    </div>
-
-    {{/carga}}
-
-    <br>
-
-    <div class="col">
-        <h6> Costeo </h6>
-    </div>
-
-    <div class="form-check-inline">
-
-        <div class="col">
-            <label> Estimado </label>
-            <input type="number" class="form-control" id="email" placeholder="$ Kilometros"
-                   name="kilometrosCosteoEsperado" min="0">
+            <input type="number" class="form-control" id="email" placeholder="$ {{costeoEstimado_Kilometros}}" name="reeferCosteoEsperado"
+                   disabled>
 
         </div>
 
     </div>
 
     <br>
-    <br>
+    <div class="form-row">
 
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Combustible"
-                   name="combustibleCosteoEsperado" min="0">
-
+        <div class="col-md-4">
+            <h5> Chofer Asignado </h5>
         </div>
 
     </div>
 
+    <div class="form-row">
 
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Tiempo estimado de partida"
-                   name="etdCosteoEsperado" min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$Tiempo estimado de arribo"
-                   name="etaCosteoEsperado" min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Viaticos" name="viaticosCosteoEsperado"
-                   min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Peajes y pesajes"
-                   name="peajesPesajesCosteoEsperado" min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Extras" name="extrasCosteoEsperado"
-                   min="0">
-
-        </div>
-
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Hazard" name="hazardCosteoEsperado"
-                   min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ Reefer" name="reeferCosteoEsperado"
-                   min="0">
-
-        </div>
-
-    </div>
-
-    <br>
-    <br>
-    <div class="form-check-inline">
-
-        <div class="col">
-
-            <input type="number" class="form-control" id="email" placeholder="$ FEE" name="feeCosteoEsperado" min="0">
-
-        </div>
-
-    </div>
-
-    <br> <br>
-    <div class="col">
-        <h6> Chofer Asignado </h6>
-    </div>
-
-    <div class="form-check-inline">
-
-        <div class="col-4">
+        <div class="form-group col-md-4">
             {{#empleado}}
 
-            <input type="text" name="nombre" value="{{nombre}} {{numeroDeDocumento}}" disabled>
-
+            <input type="text" class="form-control" name="nombre" value="{{nombre}} {{numeroDeDocumento}}" disabled>
 
             <input type="hidden" value="{{tipoDeDocumento}}" name="tipoDeDocumento_usuario">
             <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
@@ -403,7 +286,6 @@
         </div>
 
     </div>
-
     <br> <br>
 
     <div class="col">
@@ -414,6 +296,8 @@
 
     </div>
 
+    {{/proforma}}
+
     <div class="col">
 
         <button type="button"onClick="window.print()" class="btn btn-primary">Imprimir</button>
@@ -421,5 +305,7 @@
     </div>
 
 </form>
+
+</div>
 
 {{> footer}}

@@ -22,7 +22,20 @@ class EmpleadosModel
 
     }
 
+    public function getEmpleado($tipoDocumento, $numeroDocumento){
+        $sql = "SELECT * FROM USUARIO where tipoDeDocumento = '$tipoDocumento' and numeroDeDocumento = '$numeroDocumento'";
 
+        return $this->database->query($sql);
+    }
+
+
+    public function getEmpleadoConNivelDeRol($tipoDeDocumento, $numeroDeDocumento){
+
+        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario and tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'");
+
+    }
+
+    
     public function getChoferes(){
 
         return $this->database->query("SELECT * FROM USUARIO where rolUsuario = 1");
@@ -33,11 +46,7 @@ class EmpleadosModel
         return $this->database->query("SELECT * FROM USUARIO where tipoDeDocumento = '$tipoDNI' and numeroDeDocumento = '$numeroDNI' and rolUsuario = '$rol'");
     }
 
-    public function getEmpleado($tipoDocumento, $numeroDocumento){
-        $sql = "SELECT * FROM USUARIO where tipoDeDocumento = '$tipoDocumento' and numeroDeDocumento = '$numeroDocumento'";
 
-        return $this->database->query($sql);
-    }
 
     public function modificarEmpleado($tipoDeDocumento, $numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario){
         $sql = "update  USUARIO set nombre = '$nombre', fechaDeNacimiento = '$fechaDeNacimiento', mail = '$email', rolUsuario = '$rolUsuario' where tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'";

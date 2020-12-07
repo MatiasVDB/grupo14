@@ -19,13 +19,30 @@ class ArrastradosController
     public function index()
     {
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
-            $data["arrastrados"] = $this->arrastradosModel->getArrastrados();
+            $data["arrastrados"] = $this->arrastradosModel->getArrastradosConTipoDeCarga();
+
             echo $this->render->render("view/arrastradosView.php", $data);
 
         }else{
 
             header("Location: main");
         }
+    }
+
+
+    public function registerArrastrado(){
+
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+
+            $data = array("arrastrados" => $this->arrastradosModel->getArrastrados(),"cargas" => $this->cargaModel->getCargas());
+            echo $this->render->render("view/registerArrastrado.php", $data);
+
+        }
+
+        else{
+            header("Location: ../main");
+        }
+
     }
 
     public function vistaActualizarArrastrado()
@@ -75,33 +92,17 @@ class ArrastradosController
 
     }
 
-    public function registerArrastrado()
-    { if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
-        $data = array("arrastrados" => $this->arrastradosModel->getArrastrados(),"cargas" => $this->cargaModel->getCargas());
-        echo $this->render->render("view/registerArrastrado.php", $data);
-    }else{
-        header("Location: ../main");
-    }
-
-    }
-
     public function registrarArrastrado(){
 
-        $pesoNeto = $_POST['peso'];
-        $hazard = $_POST['hazard'];
         $patente = $_POST['patente'];
-        $tipoCarga = $_POST['tipo'];
         $nroChasis = $_POST['chasis'];
-        $refrigeracion = $_POST['refrigeracion'];
         $carga = $_POST['carga'];
-
-
 
         $mensaje["error"] = "*El arrastrado ingresado, ya se encuentra registrado.";
 
         if(count($this->arrastradosModel->getArrastrado($patente, $nroChasis)) == 0){
 
-            $this->arrastradosModel->agregarArrastrado($patente, $nroChasis, $pesoNeto, $hazard, $tipoCarga, $refrigeracion, $carga);
+            $this->arrastradosModel->setArrastrado($patente, $nroChasis, $carga);
 
             header("Location: ../arrastrados");
         }

@@ -63,18 +63,13 @@ create table ARRASTRADO(
 id int not null auto_increment,
 patente varchar(40),
 numeroDeChasis int,
-tipoCarga varchar(40),
-refrigeracionCarga varchar(40),
-pesoNetoCarga varchar(40),
-hazardCarga varchar(40),
-idCarga int,
-primary key (id),
-foreign key(idCarga) references CARGA(id));
+id_carga int,
+primary key (id, patente, numeroDeChasis),
+foreign key(id_carga) references CARGA(id));
 
-insert into ARRASTRADO(patente, numeroDeChasis, tipoCarga, refrigeracionCarga, pesoNetoCarga, hazardCarga)
-values ("ABC-123", 29, "Liquida", "No", "10000KG", "Si");
-insert into ARRASTRADO(patente, numeroDeChasis, tipoCarga, refrigeracionCarga, pesoNetoCarga, hazardCarga)
-values ("DEF-456", 30, "Granos", "No", "9000KG", "No");
+insert into ARRASTRADO(id, patente, numeroDeChasis, id_carga)
+values (1, "AA100AS", 585822, 1);
+
 
 create table CLIENTE(
 CUIT INT,
@@ -120,30 +115,53 @@ foreign key(cuitCliente) references CLIENTE(CUIT));
 insert into VIAJE (id, origen, destino) value (1, "Buenos Aires", "Cordoba");
 
 create table PROFORMA(
-numero int null primary key,
+numero int primary key,
 fecha date,
 CUIT_cliente int,
 id_viaje int,
-id_carga int,
 tipoDeDocumento_chofer varchar(40),
- numeroDeDocumento_chofer int,
+numeroDeDocumento_chofer int,
+costeoEstimado_Kilometros int,
+costeoEstimado_Combustible int,
+costeoEstimado_ETD int,
+costeoEstimado_ETA int,
+costeoEstimado_Viaticos int,
+costeoEstimado_Peajes_Pesajes int,
+costeoEstimado_Extras int,
+costeoEstimado_FEE int,
+costeoEstimado_Hazard int,
+costeoEstimado_Reefer int,
  foreign key (CUIT_cliente) references CLIENTE(CUIT),
  foreign key (id_viaje) references VIAJE(id),
- foreign key (id_carga) references CARGA(id),
  foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
 
 
+select * from tractor; 
+ 
  select * from PROFORMA;
-
+ 
  select * from CARGA;
 
- /*select rolUsuario.nivel  from USUARIO join rol where tipoDeDocumento = "dni" and numeroDeDocumento = 40379084 and rolUsuario = 1;
- */
  SELECT * FROM VIAJE;
 
  select * from CLIENTE;
 
  select * from rol join usuario where rol.id = usuario.rolUsuario;
+
+ select * from rol;
+ 
+ select * from usuario;
+ 
+ select * from arrastrado;
+ 
+
+ 
+
+
+ 
+
+ 
+ 
 
 
 

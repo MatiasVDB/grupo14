@@ -2,9 +2,19 @@
 
 {{#tractor}}
 
-<form class="col-md-8 align-middle" action="../actualizarTractor" method="post">
+<div class="formularioContainer">
 
-    <h2> Actualización de Tractor</h2>
+    <h5 class="registerTxt"> Actualización de Tractor</h5>
+
+    <div>
+        <p> Marca {{marca}} </p>
+        <p> Patente {{patente}}</p>
+        <p> Chasis {{numeroDeChasis}}</p>
+
+    </div>
+
+<form class="col-md-8 formulario" action="../actualizarTractor" method="post">
+
 
     <br>
     <input type="hidden" name="id" value="{{id}}">
@@ -14,7 +24,10 @@
         <h5> Patente: {{patente}}</h5>
         <h5> Chasis: {{numeroDeChasis}}</h5>
 
-    </div>
+    <input type="hidden" name="patente" value="{{patente}}">
+
+    <input type="hidden" name="chasis" value="{{numeroDeChasis}}">
+
     <div class="form-row">
     <div class="form-group col-md-4 ">
         <label for="inputEmail4">Marca</label>
@@ -102,6 +115,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Actualizar</button>
 </form>
+
+</div>
 
 </main>
 

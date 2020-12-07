@@ -1,6 +1,13 @@
 {{>header}}
 
-<form class="col-md-8 align-middle" action="registrarTractor" method="post">
+
+<div class="formularioContainer">
+
+    <h5 class="registerTxt"> Registrar Tractor</h5>
+
+<form class="col-md-8 formulario" action="registrarTractor" method="post">
+
+
 
     <div class="form-row">
 
@@ -105,7 +112,10 @@
     <button type="submit" class="btn btn-primary">Registrar</button>
 </form>
 
+</div>
+
 </main>
+
 
 
 {{> footer}}

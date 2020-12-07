@@ -2,11 +2,14 @@
 
 {{#viaje}}
 
-<form class="col-md-8 align-middle" action="../procesarActualizacionViaje" method="post">
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Actualización de Viaje</h1>
+<div class="formularioContainer">
 
+    <h5 id="ingresar" class="mb-3 registerTxt">Actualización de Viaje</h5>
 
     <h6> Viaje: {{id}}</h6>
+
+
+<form class="col-md-8 formulario" action="../procesarActualizacionViaje" method="post">
     <div class="form-row">
         <div class="form-group col-md-4">
             <input type="hidden" name="id" value="{{id}}">
@@ -20,10 +23,7 @@
             <input type="text" name="destino" id="inputDestino" class="form-control" placeholder="Destino" value="{{destino}}" required>
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="fechaFinalizacion" >Fecha de finalizacion</label>
-            <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control"  value="{{fechaFinalizacion}}">
-        </div>
+
     </div>
 
     <div class="form-row">
@@ -32,17 +32,30 @@
             <input type="date" name="fechaInicio" id="fechaInicio" class="form-control"  value="{{fechaInicio}}">
         </div>
 
+
+        <div class="form-group col-md-4">
+            <label for="fechaFinalizacion" >Fecha de finalizacion</label>
+            <input type="date" name="fechaFinalizacion" id="fechaFinalizacion" class="form-control"  value="{{fechaFinalizacion}}">
+        </div>
+
+    </div>
+
+
+    <div class="form-row">
+
         <div class="form-group col-md-4">
             <label for="fechaCarga" >Fecha de carga</label>
             <input type="date" name="fechaCarga" id="fechaCarga" class="form-control"  value="{{fechaCarga}}">
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="tiempoReal" id="contacto1">Tiempo real</label>
-            <input name="tiempoReal" class="form-control" type="number" value="{{tiempoReal}}" id="tiempoReal">
+
+        <div class="form-group col-md-6">
+            <label for="cantidadCombustibleCargada" >Cantidad de combustible cargada</label>
+            <input type="number" name="cantidadCombustibleCargada" id="cantidadCombustibleCargada" class="form-control" value="" min="0">
         </div>
 
     </div>
+
 
     <div class="form-row">
         <div class="form-group col-md-4">
@@ -55,10 +68,7 @@
             <input type="date" name="ETD" id="ETD" class="form-control"  value="{{ETD}}">
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="kilometrosFinal" id="direccion">Kilometros final</label>
-            <input name="kilometrosFinal" class="form-control" type="number" value="{{kilometrosFinal}}" id="kilometrosFinal">
-        </div>
+
     </div>
 
     <div class="form-row">
@@ -67,15 +77,28 @@
             <input name="kilometrosActuales" class="form-control" type="number" value="{{kilometrosActuales}}" id="kilometrosActuales">
         </div>
 
+
         <div class="form-group col-md-4">
-            <label for="combustibleFinal" id="direccion">Combustible final</label>
-            <input name="combustibleFinal" class="form-control" type="number" value="{{combustibleFinal}}" id="combustibleFinal">
+            <label for="kilometrosFinal" id="direccion">Kilometros final</label>
+            <input name="kilometrosFinal" class="form-control" type="number" value="{{kilometrosFinal}}" id="kilometrosFinal">
         </div>
+
+    </div>
+
+
+    <div class="form-row">
 
         <div class="form-group col-md-4">
             <label for="combustibleConsumido" id="direccion">Combustible consumido</label>
             <input name="combustibleConsumido" class="form-control" type="number" value="{{combustibleConsumido}}" id="combustibleConsumido">
         </div>
+
+        <div class="form-group col-md-4">
+            <label for="combustibleFinal" id="direccion">Combustible final</label>
+            <input name="combustibleFinal" class="form-control" type="number" value="{{combustibleFinal}}" id="combustibleFinal">
+        </div>
+
+
     </div>
 
     <div class="form-row">
@@ -93,8 +116,11 @@
             </select>
         </div>
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="submit">Actualizar</button>
+    <button class="btn btn-primary" id="aplicarRegistro" type="submit">Actualizar</button>
 </form>
+
+</div>
+
 </main>
 
 {{/viaje}}

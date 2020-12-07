@@ -20,6 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
@@ -30,6 +31,32 @@
       <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/tractorDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractorDetalleView.php" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/EmpleadosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/EmpleadosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/EmpleadosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/EmpleadosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/arrastradoModificarView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradoModificarView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/arrastradosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradosView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cargaDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cargaDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/clienteDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/clienteDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/datosProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/datosProformaView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/empleadoDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/empleadoDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/proformaRegisterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/proformaRegisterView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerTractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerTractor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerViaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerViaje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/tractorDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractorDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,8 +86,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
     <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
@@ -112,8 +141,13 @@
       <workItem from="1606838873107" duration="4255000" />
       <workItem from="1607212160361" duration="10386000" />
       <workItem from="1607282054326" duration="4846000" />
+<<<<<<< Updated upstream
       <workItem from="1607287658302" duration="6112000" />
       <workItem from="1607352220512" duration="7422000" />
+=======
+      <workItem from="1607287910936" duration="12144000" />
+      <workItem from="1607348575985" duration="8637000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
@@ -198,11 +232,18 @@
     </state>
     <state x="522" y="163" key="refactoring.ChangeSignatureDialog/0.0.1360.728@0.0.1360.728" timestamp="1606682237771" />
     <state x="590" y="184" key="refactoring.ChangeSignatureDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604881525391" />
+<<<<<<< Updated upstream
     <state x="425" y="187" key="run.anything.popup" timestamp="1607359378297">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="376" y="165" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1605636980407" />
     <state x="425" y="187" key="run.anything.popup/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607359378297" />
+=======
+    <state x="376" y="165" width="672" height="677" key="run.anything.popup" timestamp="1607296468281">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="376" y="165" width="672" height="677" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1607296468281" />
+>>>>>>> Stashed changes
     <state x="425" y="187" key="run.anything.popup/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604889864056" />
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606842658841">
       <screen x="0" y="0" width="1360" height="728" />

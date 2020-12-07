@@ -1,16 +1,15 @@
 {{> header}}
 {{#carga}}
-<form action="../procesarActualizacionCarga" class="form-signin col-md-8 align-middle" method="post">
 
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Registro de Cargas</h1>
+<div class="formularioContainer">
 
+    <h5 id="ingresar" class="mb-3 registerTxt">Registro de Cargas</h5>
+
+<form action="../procesarActualizacionCarga" class="col-md-8 formulario" method="post">
 
     <div class="form-row">
 
-        <div class="form-group col-md-3">
-            <label for="id" >Id</label>
-            <input name="id" type="text" id="id" class="form-control" placeholder="id" readonly="readonly" value="{{id}}" required>
-        </div>
+            <input name="id" type="hidden" id="id" class="form-control" value="{{id}}" >
 
         <div class="form-group col-md-4">
             <label for="inputTipo" >Tipo</label>
@@ -75,9 +74,11 @@
 
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="submit">Actualizar</button>
+    <button class="btn btn-primary" id="aplicarRegistro" type="submit">Actualizar</button>
 
 </form>
+
+</div>
 
 {{/carga}}
 {{^carga}}

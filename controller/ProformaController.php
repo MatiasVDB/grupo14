@@ -7,17 +7,15 @@ class ProformaController
     private ProformaModel $proformaModel;
     private ClientesModel $clientesModel;
     private ViajesModel  $viajesModel;
-    private CargasModel $cargaModel;
     private EmpleadosModel $empleadosModel;
     private Render $render;
 
 
-    public function __construct(ProformaModel $proformaModel, ClientesModel $clientesModel, ViajesModel $viajesModel, CargasModel $cargaModel, EmpleadosModel $empleadosModel, Render $render)
+    public function __construct(ProformaModel $proformaModel, ClientesModel $clientesModel, ViajesModel $viajesModel, EmpleadosModel $empleadosModel, Render $render)
     {
         $this->proformaModel = $proformaModel;
         $this->clientesModel = $clientesModel;
         $this->viajesModel = $viajesModel;
-        $this->cargaModel = $cargaModel;
         $this->empleadosModel = $empleadosModel;
         $this->render = $render;
     }
@@ -35,44 +33,48 @@ class ProformaController
         }
     }
 
-
-
     public function mostrarDatosEnLaProforma(){
 
         $CUIT_cliente = $_POST["CUIT_cliente"];
         $ID_viaje = $_POST["id_viaje"];
-        $ID_carga = $_POST["id_carga"];
         $tipoDNI = $_POST["tipoDeDocumento_usuario"];
         $numeroDNI = $_POST["numeroDeDocumento_usuario"];
 
+
         $data = array("cliente" => $this->clientesModel->getCliente($CUIT_cliente), "viaje"=> $this->viajesModel->getViaje($ID_viaje),
-           "carga"=>$this->cargaModel->getCarga($ID_carga), "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
+           "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
 
 
         echo $this->render->render( "view/proformaRegisterView.php", $data);
 
     }
 
-
-
     public function insertarDatosEnLaProforma(){
         $numero = $_POST["numero"];
         $fecha = $_POST["fecha"];
         $CUIT = $_POST["CUIT_cliente"];
         $viaje = $_POST["id_viaje"];
-        $carga = $_POST["id_carga"];
         $tipoDNI = $_POST["tipoDeDocumento_usuario"];
         $numeroDNI = $_POST["numeroDeDocumento_usuario"];
+        $costeoKilometrosEsperado = $_POST["kilometrosCosteoEsperado"];
+        $costeoCombustibleEsperado = $_POST["combustibleCosteoEsperado"];
+        $costeoETDEsperado = $_POST["etdCosteoEsperado"];
+        $costeoETAEsperado = $_POST["etaCosteoEsperado"];
+        $costeoViaticosEsperado = $_POST["viaticosCosteoEsperado"];
+        $costeoPeajesPesajesEsperado = $_POST["peajesPesajesCosteoEsperado"];
+        $costeoExtrasEsperado= $_POST["extrasCosteoEsperado"];
+        $costeoFEEEsperado = $_POST["feeCosteoEsperado"];
+        $costeoHazardEsperado = $_POST["hazardCosteoEsperado"];
+        $costeoReeferEsperado = $_POST["reeferCosteoEsperado"];
 
-        $data = array("cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
-            "carga"=>$this->cargaModel->getCarga($carga), "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
-        $data["numero"]= $numero;
-        $data["fecha"]=$fecha;
-
+        $data = array("proforma"=>$this->proformaModel->getProforma($numero), "cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
+            "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
 
         if ($this->proformaModel->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero)){
 
-            $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $carga, $tipoDNI, $numeroDNI);
+            $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $tipoDNI, $numeroDNI, $costeoKilometrosEsperado, $costeoCombustibleEsperado,
+                $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
+                $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
 
             echo $this->render->render( "view/imprimirProformaView.php", $data);
 

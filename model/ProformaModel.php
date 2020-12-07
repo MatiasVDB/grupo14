@@ -28,13 +28,27 @@ class ProformaModel
 
     }
 
+    public function getProformas(){
 
-    public function setDatos($numero, $fecha, $CUIT, $viaje, $carga, $tipoDNI, $numeroDNI){
+        return $this->database->query("SELECT * FROM PROFORMA");
+    }
+
+    public function getProforma($numero){
+
+        return $this->database->query("select * from PROFORMA where numero = '$numero'");
+    }
+
+
+    public function setDatos($numero, $fecha, $CUIT, $viaje, $tipoDNI, $numeroDNI, $costeoKilometrosEsperado, $costeoCombustibleEsperado,
+                             $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
+                                $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado){
 
         if ($this->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero))
 
-        $sql = "INSERT INTO PROFORMA (numero, fecha, CUIT_cliente, id_viaje, id_carga, tipoDeDocumento_chofer, numeroDeDocumento_chofer) 
-        VALUES ('$numero', '$fecha', '$CUIT', '$viaje', '$carga', '$tipoDNI', '$numeroDNI')";
+        $sql = "INSERT INTO PROFORMA (numero, fecha, CUIT_cliente, id_viaje, tipoDeDocumento_chofer, numeroDeDocumento_chofer, costeoEstimado_Kilometros, costeoEstimado_Combustible, costeoEstimado_ETD, costeoEstimado_ETA,
+                                        costeoEstimado_Viaticos, costeoEstimado_Peajes_Pesajes, costeoEstimado_Extras, costeoEstimado_FEE, costeoEstimado_Hazard, costeoEstimado_Reefer) 
+        VALUES ('$numero', '$fecha', '$CUIT', '$viaje', '$tipoDNI', '$numeroDNI', '$costeoKilometrosEsperado', '$costeoCombustibleEsperado', '$costeoETDEsperado', '$costeoETAEsperado', '$costeoViaticosEsperado', '$costeoPeajesPesajesEsperado', 
+                '$costeoExtrasEsperado', '$costeoFEEEsperado', '$costeoHazardEsperado', '$costeoReeferEsperado')";
 
         $this->database->query($sql);
     }

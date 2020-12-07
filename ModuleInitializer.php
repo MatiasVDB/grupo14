@@ -115,25 +115,22 @@ class ModuleInitializer
         $model = new DatosProformaModel($this->database);
         $modelClientes = new ClientesModel($this->database);
         $modelViajes = new ViajesModel($this->database);
-        $modelCargas = new CargasModel($this->database);
         $modelEmpleados = new EmpleadosModel($this->database);
-        return new DatosProformaController($model, $modelClientes, $modelViajes, $modelCargas, $modelEmpleados, $this->renderer);
+        return new DatosProformaController($model, $modelClientes, $modelViajes, $modelEmpleados, $this->renderer);
     }
 
     public function createProformaController(){
         include_once("model/ProformaModel.php");
         include_once ("model/ClientesModel.php");
         include_once ("model/ViajesModel.php");
-        include_once ("model/CargasModel.php");
         include_once("model/EmpleadosModel.php");
         include_once("controller/ProformaController.php");
 
         $model = new ProformaModel($this->database);
         $modelClientes = new ClientesModel($this->database);
         $modelViajes = new ViajesModel($this->database);
-        $modelCargas = new CargasModel($this->database);
         $modelEmpleados = new EmpleadosModel($this->database);
-        return new ProformaController($model, $modelClientes, $modelViajes, $modelCargas, $modelEmpleados, $this->renderer);
+        return new ProformaController($model, $modelClientes, $modelViajes, $modelEmpleados, $this->renderer);
     }
 
     public function createEditarProformaController(){

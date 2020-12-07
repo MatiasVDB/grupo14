@@ -14,14 +14,21 @@ class ArrastradosModel
     public function getArrastrados(){
         return $this->database->query("SELECT * FROM ARRASTRADO");
     }
-    public function getArrastrado($id){
-        $sql = "SELECT * FROM ARRASTRADO where id = '$id' ";
 
-        return $this->database->query($sql);
+    public function getArrastradosConTipoDeCarga(){
+
+        return $this->database->query("SELECT * FROM ARRASTRADO JOIN CARGA WHERE carga.id = id_carga;");
+
     }
 
-    public function modificarArrastrado($id, $tipoCarga, $refrigeracionCarga, $pesoNetoCarga, $hazardCarga,  $carga){
-        $sql = "update ARRASTRADO set pesoNetoCarga = '$pesoNetoCarga', hazardCarga = '$hazardCarga', tipoCarga = '$tipoCarga',refrigeracionCarga = '$refrigeracionCarga', idCarga = '$carga' where id = '$id' ";
+    public function getArrastrado($id)
+    {
+        return $this->database->query("SELECT * FROM ARRASTRADO where id = '$id' ");
+
+    }
+
+    public function modificarArrastrado($id, $carga){
+        $sql = "update ARRASTRADO set id_carga = '$carga' where id = '$id'";
 
         return $this->database->query($sql);
     }
@@ -33,9 +40,10 @@ class ArrastradosModel
         return $this->database->query($sql);
     }
 
-    public function agregarArrastrado($patente, $numeroDeChasis, $pesoNetoCarga, $hazardCarga, $tipoCarga, $refrigeracionCarga, $carga){
-        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis, pesoNetoCarga, hazardCarga, tipoCarga, refrigeracionCarga, idCarga) 
-VALUES ('$patente', $numeroDeChasis, '$pesoNetoCarga', '$hazardCarga', '$tipoCarga', '$refrigeracionCarga', '$carga')";
+
+    public function setArrastrado($patente, $numeroDeChasis, $carga){
+        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis, id_carga) 
+        VALUES ('$patente', $numeroDeChasis, '$carga')";
 
         return $this->database->query($sql);
     }

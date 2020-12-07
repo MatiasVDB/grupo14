@@ -37,10 +37,7 @@
         <h6> Datos del Cliente </h6>
     </div>
     <div class="form-check-inline">
-
-
-
-
+        
         <div class="col">
             <label class="sr-only" for="inlineFormInputGroup">CUIT</label>
             <div class="input-group mb-2">

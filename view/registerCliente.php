@@ -1,25 +1,31 @@
 {{> header}}
-<form action="./registrarCliente" class="form-signin col-md-8 align-middle" method="post">
 
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Registro de Cliente</h1>
+<div class="formularioContainer">
 
+    <h5 id="ingresar" class="mb-3 registerTxt ">Registro de Cliente</h5>
+
+<form action="./registrarCliente" class="form-signin col-md-8 formulario" method="post">
 
     <div class="form-row">
 
         <div class="form-group col-md-3">
             <label for="CUIT" >CUIT</label>
-            <input name="cuit" type="text" id="cuit" class="form-control" placeholder="CUIT" required>
+            <input name="cuit" type="number" id="cuit" class="form-control" placeholder="CUIT" min="0" required>
         </div>
 
         <div class="form-group col-md-4">
-            <label for="inputDenominacion" >Denominacion</label>
+            <label for="inputDenominacion" >Denominación</label>
             <input name="denominacion" type="text" id="inputDenominacion" class="form-control" placeholder="Denominacion" required>
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="inputEmail" >Correo electrónico</label>
-            <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required>
-        </div>
+    </div>
+
+    <div class="form-row">
+
+    <div class="form-group col-md-7">
+        <label for="inputEmail" >Correo electrónico</label>
+        <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required>
+    </div>
 
     </div>
 
@@ -50,7 +56,7 @@
     <div class="form-row">
         <div class="form-group col-md-4">
 
-            <label for="date-input" id="telefono">Telefono</label>
+            <label for="date-input" id="telefono">Teléfono</label>
 
 
             <input name="telefono" class="form-control" type="tel"
@@ -58,8 +64,8 @@
 
         </div>
 
-        <div class="form-group col-md-4">
-            <label for="date-input" id="direccion">Direccion</label>
+        <div class="form-group col-md-6">
+            <label for="date-input" id="direccion">Dirección</label>
 
 
             <input name="direccion" class="form-control" type="text"
@@ -68,7 +74,10 @@
 
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="submit">Registrar</button>
+    <button class="btn btn-primary" id="aplicarRegistro" type="submit">Registrar</button>
 
 </form>
 
+</div>
+
+{{> footer}}

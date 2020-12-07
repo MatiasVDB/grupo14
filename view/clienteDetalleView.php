@@ -1,14 +1,13 @@
 {{> header}}
 {{#cliente}}
-<form action="../procesarActualizacionCliente" class="form-signin col-md-8 align-middle" method="post">
 
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Actualización de Cliente</h1>
+<div class="formularioContainer">
 
-    <br>
+    <h5 id="ingresar" class="mb-3 registerTxt">Actualización de Cliente</h5>
 
-    <h6> CUIT {{CUIT}}</h6>
+    <p> CUIT Cliente {{CUIT}}</p>
 
-
+<form action="../procesarActualizacionCliente" class="form-signin col-md-8 formulario" method="post">
 
     <div class="form-row">
 
@@ -17,13 +16,13 @@
             <input type="hidden" name="cuit" value="{{CUIT}}">
 
 
-            <label for="inputDenominacion" >Denominacion</label>
+            <label for="inputDenominacion" >Denominación</label>
             <input name="denominacion" type="text" id="inputDenominacion" class="form-control" placeholder="Denominacion"
                    value="{{denominacion}}" required>
 
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-5">
 
             <label for="inputEmail" >Correo electrónico</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico"
@@ -60,7 +59,7 @@
     <div class="form-row">
         <div class="form-group col-md-4">
 
-            <label for="date-input" id="telefono">Telefono</label>
+            <label for="date-input" id="telefono">Teléfono</label>
 
 
             <input name="telefono" class="form-control" type="text" value="{{telefono}}"
@@ -68,9 +67,9 @@
 
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
-            <label for="date-input" id="direccion">Direccion</label>
+            <label for="date-input" id="direccion">Dirección</label>
 
 
             <input name="direccion" class="form-control" type="text" value="{{direccion}}"
@@ -80,9 +79,11 @@
 
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="submit">Actualizar</button>
+    <button class="btn  btn-primary" id="aplicarRegistro" type="submit">Actualizar</button>
 
 </form>
+
+</div>
 
 {{/cliente}}
 {{^cliente}}

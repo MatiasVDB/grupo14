@@ -1,14 +1,17 @@
 {{> header}}
 {{#empleado}}
-<form action="../procesarActualizacionEmpelado" class="form-signin col-md-8 align-middle" method="post">
 
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Actualización de Empleado</h1>
-
-    <br>
-
-    <h6> DNI {{numeroDeDocumento}} Tipo {{tipoDeDocumento}} </h6>
+<div class="formularioContainer">
 
 
+    <h6 id="ingresar" class="mb-3 registerTxt">Actualización de Empleado</h6>
+
+    <p> Numero Documento {{numeroDeDocumento}} </p>
+
+    <p> Tipo Documento {{tipoDeDocumento}}</p>
+
+
+<form action="../procesarActualizacionEmpelado" class="col-md-8 formulario" method="post">
 
     <div class="form-row">
 
@@ -55,11 +58,11 @@
             <label for="exampleFormControlSelect1" id="exampleFormControlSelect1">Rol</label>
 
             <select class="form-control category-select" id="exampleFormControlSelect1" name="rolUsuario">
-                <option value="{{rolUsuario}}">{{rolUsuario}}</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
+                <option value="{{rolUsuario}}">{{nivel}} (actual)</option>
+                <option value="1">Chofer</option>
+                <option value="2">Supervisor</option>
+                <option value="3">Encargado del taller</option>
+                <option value="4">Administrador</option>
             </select>
 
             <br>
@@ -70,6 +73,8 @@
         </div>
 
 </form>
+
+</div>
 
 {{/empleado}}
 {{^empleado}}

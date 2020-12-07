@@ -1,15 +1,25 @@
 {{> header}}
-<form action="./registrarCarga" class="form-signin col-md-8 align-middle" method="post">
 
-    <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Registro de Cargas</h1>
 
+<div class="formularioContainer">
+
+    <h5 id="ingresar" class="mb-3 registerTxt">Registro de Cargas</h5>
+
+<form action="./registrarCarga" class="col-md-8 formulario" method="post">
 
     <div class="form-row">
 
-        <div class="form-group col-md-3">
-            <label for="id" >Id</label>
-            <input name="id" type="text" id="id" class="form-control" placeholder="id" required>
+        <div class="form-group col-md-2">
+
+        <label for="inputTipo" >ID</label>
+
+        <input type="number" name="id" id="inputId" class="form-control" placeholder="ID" required>
+
         </div>
+
+    </div>
+
+    <div class="form-row">
 
         <div class="form-group col-md-4">
             <label for="inputTipo" >Tipo</label>
@@ -83,7 +93,9 @@
 
 
     </div>
-    <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="submit">Registrar</button>
+    <button class="btn btn-primary" id="aplicarRegistro" type="submit">Registrar</button>
 
 </form>
+
+</div>
 

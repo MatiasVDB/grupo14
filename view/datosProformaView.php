@@ -1,13 +1,17 @@
 {{>header}}
 
 <div class="col-12">
-<h1> Carga de datos de la Proforma</h1>
+
 
 </div>
 
-<form action="proforma/mostrarDatosEnLaProforma" method="post">
+<div class="formularioContainer">
 
-        <div class="col-12">
+    <h5 class="registerTxt"> Carga de datos de la Proforma</h5>
+
+<form action="proforma/mostrarDatosEnLaProforma" class="formulario" method="post">
+
+    <div class="col-12">
 
     <label> <h6> Cliente </h6> </label>
     <select class="custom-select" multiple name="CUIT_cliente">
@@ -29,18 +33,6 @@
         <option value="{{id}}">Codigo: {{id}} - Origen: {{origen}} / Destino:{{destino}} </option>
 
         {{/viajes}}
-    </select>
-
-            <br> <br>
-
-
-            <label> <h6> Carga </h6> </label>
-    <select class="custom-select" multiple name="id_carga">
-        <option selected>TIPO DE CARGA</option>
-        {{#cargas}}
-        <option value="{{id}}">{{tipo}}</option>
-
-        {{/cargas}}
     </select>
 
             <br> <br>
@@ -69,7 +61,7 @@
         </div>
 </form>
 
-
+</div>
 
 
 
