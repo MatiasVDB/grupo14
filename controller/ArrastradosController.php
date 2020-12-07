@@ -16,7 +16,7 @@ class ArrastradosController
 
     public function index()
     {
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
             $data["arrastrados"] = $this->arrastradosModel->getArrastrados();
             echo $this->render->render("view/arrastradosView.php", $data);
 
@@ -28,11 +28,16 @@ class ArrastradosController
 
     public function vistaActualizarArrastrado()
     {
-        $id = $_GET["id"];
 
-
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 ) {
+          $id = $_GET["id"];
+          
         $data["arrastrado"] = $this->arrastradosModel->getArrastrado($id);
         echo $this->render->render("view/arrastradoModificarView.php", $data);
+        }else{
+            header("Location: /grupo14/main");
+        }
+
 
     }
 
@@ -67,9 +72,12 @@ class ArrastradosController
     }
 
     public function registerArrastrado()
-    {
+    { if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
         $data["arrastrado"] = $this->arrastradosModel->getArrastrados();
         echo $this->render->render("view/registerArrastrado.php", $data);
+    }else{
+        header("Location: ../main");
+    }
 
     }
 

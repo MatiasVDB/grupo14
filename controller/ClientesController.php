@@ -15,7 +15,7 @@ class ClientesController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 1){
             $data["clientes"] = $this->clienteModel->getClientes();
             echo $this->render->render( "view/clientesView.php", $data );
         }
@@ -25,6 +25,7 @@ class ClientesController
     }
 
     public function detalle(){
+
         $cuit = $_GET["CUIT"];
 
         $data["cliente"] = $this->clienteModel->getCliente($cuit);
@@ -72,11 +73,18 @@ class ClientesController
     }
 
     public function eliminar(){
-        $cuit = $_GET["CUIT"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+            $cuit = $_GET["CUIT"];
 
-        $this->clienteModel->eliminar($cuit );
+            $this->clienteModel->eliminar($cuit);
 
-        header("Location: ../clientes");
+            header("Location: ../clientes");
+
+        }else{
+
+            header("Location: ../main");
+
+        }
 
     }
 }

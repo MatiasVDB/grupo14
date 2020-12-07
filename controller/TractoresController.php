@@ -16,7 +16,7 @@ class TractoresController
 
     public function index(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4"){
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2){
         $data["tractores"] = $this->tractoresModel->getTractores();
         echo $this->render->render("view/tractoresView.php", $data);
 
@@ -29,14 +29,22 @@ class TractoresController
 
     }
 
-    public function detalle(){
+    public function detalle()
+    {
+
+
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
         $id = $_GET['id'];
 
         $data['tractor'] = $this->tractoresModel->getTractor($id);
 
-        echo $this->render->render("view/tractorDetalleView.php", $data);
 
+            echo $this->render->render("view/tractorDetalleView.php", $data);
+
+        }else{
+            header("Location: /grupo14/main");
+        }
     }
 
     public function registerTractor(){
@@ -85,6 +93,7 @@ class TractoresController
 
     public function actualizarTractor(){
 
+
         $marca = $_POST['marca'];
         $modelo = $_POST['modelo'];
         $kilometros = $_POST['kilometros'];
@@ -102,13 +111,19 @@ class TractoresController
 
     public function eliminarTractor(){
 
-        $id = $_GET['id'];
+
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+
+              $id = $_GET['id'];
 
         $this->tractoresModel->eliminar($id);
 
-       header("Location: ../tractores");
+            header("Location: ../tractores");
 
-        exit();
+            exit();
+        }else{
+            header("Location: ../main");
+        }
 
 
 
