@@ -15,7 +15,7 @@ class EmpleadosController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
 
         $data = array("empleados"=>$this->empleadoModel->getEmpleadosConNivelDeRol());
         echo $this->render->render( "view/empleadosView.php", $data );
@@ -37,12 +37,14 @@ class EmpleadosController
     }
 
     public function detalle(){
-        $tipoDocumento = $_GET["tipoDocumento"];
-        $numeroDocumento = $_GET["numeroDeDocumento"];
+
+            $tipoDocumento = $_GET["tipoDocumento"];
+            $numeroDocumento = $_GET["numeroDeDocumento"];
 
 
-        $data["empleado"] = $this->empleadoModel->getEmpleado($tipoDocumento, $numeroDocumento);
-        echo $this->render->render( "view/empleadoDetalleView.php", $data );
+            $data["empleado"] = $this->empleadoModel->getEmpleado($tipoDocumento, $numeroDocumento);
+            echo $this->render->render("view/empleadoDetalleView.php", $data);
+
     }
 
     public function procesarActualizacionEmpelado(){
@@ -61,6 +63,7 @@ class EmpleadosController
     }
 
     public function eliminar(){
+
         $tipoDocumento = $_GET["tipoDocumento"];
         $numeroDocumento = $_GET["numeroDeDocumento"];
 

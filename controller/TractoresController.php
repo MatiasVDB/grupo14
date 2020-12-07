@@ -16,7 +16,7 @@ class TractoresController
 
     public function index(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4"){
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2){
         $data["tractores"] = $this->tractoresModel->getTractores();
         echo $this->render->render("view/tractoresView.php", $data);
 
@@ -29,15 +29,22 @@ class TractoresController
 
     }
 
-    public function detalle(){
+    public function detalle()
+    {
 
-        $patente = $_GET['patente'];
-        $nroChasis = $_GET['chasis'];
 
-        $data['tractor'] = $this->tractoresModel->getTractor($patente,$nroChasis);
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
-        echo $this->render->render("view/tractorDetalleView.php", $data);
+            $patente = $_GET['patente'];
+            $nroChasis = $_GET['chasis'];
 
+            $data['tractor'] = $this->tractoresModel->getTractor($patente, $nroChasis);
+
+            echo $this->render->render("view/tractorDetalleView.php", $data);
+
+        }else{
+            header("Location: /grupo14/main");
+        }
     }
 
     public function registerTractor(){
@@ -86,6 +93,7 @@ class TractoresController
 
     public function actualizarTractor(){
 
+
         $marca = $_POST['marca'];
         $modelo = $_POST['modelo'];
         $patente = $_POST['patente'];
@@ -104,14 +112,19 @@ class TractoresController
 
     public function eliminarTractor(){
 
-        $patente = $_GET['patente'];
-        $nroChasis = $_GET['chasis'];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
-        $this->tractoresModel->eliminar($patente, $nroChasis);
+            $patente = $_GET['patente'];
+            $nroChasis = $_GET['chasis'];
 
-       header("Location: ../tractores");
+            $this->tractoresModel->eliminar($patente, $nroChasis);
 
-        exit();
+            header("Location: ../tractores");
+
+            exit();
+        }else{
+            header("Location: ../main");
+        }
 
 
 

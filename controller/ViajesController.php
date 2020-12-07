@@ -15,7 +15,7 @@ class ViajesController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
             $data["viajes"] = $this->viajesModel->getViajes();
             echo $this->render->render( "view/viajesView.php", $data );
         }
@@ -87,11 +87,20 @@ class ViajesController
         header("Location: ../viajes");
     }
 
-    public function eliminar(){
-        $id = $_GET["id"];
+    public function eliminar()
+    {
 
-        $this->viajesModel->eliminar($id);
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
-        header("Location: ../viajes");
+            $id = $_GET["id"];
+
+            $this->viajesModel->eliminar($id);
+
+            header("Location: ../viajes");
+
+        }else{
+            header("Location: ../main");
+        }
+
     }
 }

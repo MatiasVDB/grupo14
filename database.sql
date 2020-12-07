@@ -139,6 +139,5 @@ tipoDeDocumento_chofer varchar(40),
  
  select * from rol join usuario where rol.id = usuario.rolUsuario;
  
- 
 
        

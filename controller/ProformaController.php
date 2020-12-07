@@ -24,7 +24,7 @@ class ProformaController
 
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
 
 
             echo $this->render->render( "view/proformaRegisterView.php");
@@ -88,7 +88,7 @@ class ProformaController
     public function imprimirQR(){
         $numero = $_GET['numero'];
 
-        QRcode::png('https://localhost:7882/grupo14/editarProforma/editarDatosEnLaProforma?numero='.$numero);
+        QRcode::png('http://localhost:7882/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero);
     }
 
 }
