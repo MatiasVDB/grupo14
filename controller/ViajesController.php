@@ -5,12 +5,20 @@ include_once("helper/Configuration.php");
 class ViajesController
 {
     private ViajesModel $viajesModel;
+    private ArrastradosModel $arrastradosModel;
+    private TractoresModel $tractoresModel;
+    private ClientesModel $clientesModel;
+    private EmpleadosModel $empleadosModel;
     private Render $render;
 
 
-    public function __construct( $viajesModel,  $render)
+    public function __construct(ViajesModel $viajesModel, ArrastradosModel $arrastradosModel, TractoresModel $tractoresModel, ClientesModel $clientesModel, EmpleadosModel $empleadosModel, Render $render)
     {
         $this->viajesModel = $viajesModel;
+        $this->arrastradosModel= $arrastradosModel;
+        $this->tractoresModel= $tractoresModel;
+        $this->clientesModel= $clientesModel;
+        $this->empleadosModel= $empleadosModel;
         $this->render = $render;
     }
 
@@ -27,7 +35,8 @@ class ViajesController
     public function detalle(){
         $id = $_GET["id"];
 
-        $data["viaje"] = $this->viajesModel->getViaje($id);
+
+        $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "clientes"=> $this->clientesModel->getClientes(), "choferes"=> $this->empleadosModel->getChoferes());
         echo $this->render->render( "view/viajeDetalleView.php", $data );
     }
 
@@ -41,14 +50,18 @@ class ViajesController
         $tiempoReal= $_POST['tiempoReal'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
+        $idVehiculo= $_POST['idVehiculo'];
+        $idArrastrado= $_POST['idArrastrado'];
+        $numeroDocumentoChofer= $_POST["dniChofer"];
+        $getTipoDocumento= $this->empleadosModel->getTipoDocumento($numeroDocumentoChofer)[0];
+        $tipoDocumentoChofer= implode($getTipoDocumento);
+        $cuitCliente= $_POST["cuit"];
         $kilometrosFinal= $_POST['kilometrosFinal'];
         $kilometrosActuales= $_POST['kilometrosActuales'];
         $combustibleFinal= $_POST['combustibleFinal'];
         $combustibleConsumido= $_POST['combustibleConsumido'];
-        $patenteVehiculo= $_POST['patenteVehiculo'];
-        $chasisVehiculo= $_POST['chasisVehiculo'];
 
-        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $patenteVehiculo, $chasisVehiculo);
+        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
 
         header("Location: ../viajes");
     }
@@ -57,7 +70,9 @@ class ViajesController
 
         if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
-            echo $this->render->render("view/registerViaje.php");
+            $data = array("arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "clientes"=> $this->clientesModel->getClientes(), "choferes"=> $this->empleadosModel->getChoferes());
+
+            echo $this->render->render("view/registerViaje.php", $data);
         }
         else{
             header("Location: ../main");
@@ -73,16 +88,20 @@ class ViajesController
         $tiempoReal= $_POST['tiempoReal'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
-        $kilometrosFinal= $_POST['kilometrosFinal'];
-        $kilometrosActuales= $_POST['kilometrosActuales'];
-        $combustibleFinal= $_POST['combustibleFinal'];
-        $combustibleConsumido= $_POST['combustibleConsumido'];
-        $patenteVehiculo= $_POST['patenteVehiculo'];
-        $chasisVehiculo= $_POST['chasisVehiculo'];
+        $kilometrosFinal= 0.0;
+        $kilometrosActuales= 0.0;
+        $combustibleFinal= 0.0;
+        $combustibleConsumido= 0.0;
+        $idVehiculo= $_POST['idVehiculo'];
+        $idArrastrado= $_POST['idArrastrado'];
+        $numeroDocumentoChofer= $_POST["dniChofer"];
+        $getTipoDocumento= $this->empleadosModel->getTipoDocumento($numeroDocumentoChofer)[0];
+        $tipoDocumentoChofer= implode($getTipoDocumento);
+        $cuitCliente= $_POST["cuit"];
 
 
-        $this->viajesModel->createViaje( $origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $patenteVehiculo, $chasisVehiculo);
 
+        $this->viajesModel->createViaje($origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
 
         header("Location: ../viajes");
     }
