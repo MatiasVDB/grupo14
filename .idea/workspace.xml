@@ -21,15 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/arrastradoModificarView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradoModificarView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/arrastradosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradosView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tractorDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractorDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mainView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mainView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +105,7 @@
       <workItem from="1607212160361" duration="10386000" />
       <workItem from="1607282054326" duration="4846000" />
       <workItem from="1607287658302" duration="6112000" />
-      <workItem from="1607352220512" duration="7422000" />
+      <workItem from="1607352220512" duration="9077000" />
     </task>
     <servers />
   </component>
