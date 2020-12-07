@@ -20,8 +20,8 @@
             <th scope="col">Kilometros actuales </th>
             <th scope="col">Combustible final</th>
             <th scope="col">Combustible consumido</th>
-            <th scope="col">Patente vehiculo</th>
-            <th scope="col">Chasis vehiculo</th>
+            <th scope="col">Id vehiculo</th>
+            <th scope="col">Id arrastrado</th>
         </tr>
         </thead>
         <tbody>
@@ -40,8 +40,8 @@
             <td>{{kilometrosActuales}}</td>
             <td>{{combustibleFinal}}</td>
             <td>{{combustibleConsumido}}</td>
-            <td>{{patenteVehiculo}}</td>
-            <td>{{chasisVehiculo}}</td>
+            <td>{{idVehiculo}}</td>
+            <td>{{idArrastrado}}</td>
             <td>
                 <button type="button" class="btn btn-primary" onclick="location.href='./viajes/detalle/id={{id}}'"> Actualizar</button>
                 <button type="button" class="btn btn-danger" onclick="location.href='./viajes/eliminar?id={{id}}'" > Dar Baja</button>

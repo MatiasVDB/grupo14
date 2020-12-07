@@ -48,45 +48,62 @@
             <label for="fechaCarga" >ETD</label>
             <input type="date" name="ETD" id="ETD" class="form-control" >
         </div>
-
-        <div class="form-group col-md-4">
-            <label for="kilometrosFinal" id="direccion">Kilometros final</label>
-            <input name="kilometrosFinal" class="form-control" type="number" id="kilometrosFinal">
-        </div>
     </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-4">
-            <label for="kilometrosActuales" id="direccion">Kilometros actuales</label>
-            <input name="kilometrosActuales" class="form-control" type="number"  id="kilometrosActuales">
-        </div>
 
-        <div class="form-group col-md-4">
-            <label for="combustibleFinal" id="direccion">Combustible final</label>
-            <input name="combustibleFinal" class="form-control" type="number" id="combustibleFinal">
-        </div>
 
-        <div class="form-group col-md-4">
-            <label for="combustibleConsumido" id="direccion">Combustible consumido</label>
-            <input name="combustibleConsumido" class="form-control" type="number" id="combustibleConsumido">
-        </div>
+    <div>
+
+    <label> <h6> Vehículo</h6></label>
+    <select class="custom-select" multiple name="idVehiculo">
+        <option selected>VEHICULOS</option>
+        {{#tractores}}
+        <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Modelo: {{modelo}}</option>
+
+        {{/tractores}}
+    </select>
+
     </div>
 
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="patenteVehiculo">Patente vehiculo</label>
-            <select class="custom-select" size="3" name="patenteVehiculo">
-                <option selected value="AA124DC">AA124DC</option>
-            </select>
-        </div>
+    <div>
 
-        <div class="form-group col-md-6">
-            <label for="chasisVehiculo">Chasis vehiculo</label>
-            <select class="custom-select" size="3" name="chasisVehiculo">
-                <option selected value="R69904367">R69904367</option>
-            </select>
-        </div>
+    <label> <h6> Arrastrado</h6></label>
+    <select class="custom-select" multiple name="idArrastrado">
+        <option selected>ARRASTRADOS</option>
+        {{#arrastrados}}
+        <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Tipo de carga: {{tipoCarga}}</option>
+
+        {{/arrastrados}}
+    </select>
+
     </div>
+
+    <div>
+
+        <label> <h6> Cliente</h6></label>
+        <select class="custom-select" multiple name="cuit">
+            <option selected>CLIENTES</option>
+            {{#clientes}}
+            <option value="{{CUIT}}">CUIT: {{CUIT}} - Denominación: {{denominacion}}</option>
+
+            {{/clientes}}
+        </select>
+
+    </div>
+
+    <div>
+
+        <label> <h6> Chofer</h6></label>
+        <select class="custom-select" multiple name="dniChofer">
+            <option selected>CHOFERES</option>
+            {{#choferes}}
+            <option value="{{numeroDeDocumento}}">Tipo de documento: {{tipoDeDocumento}} - Numero de documento: {{numeroDeDocumento}} - Nombre: {{nombre}}</option>
+
+            {{/choferes}}
+        </select>
+
+    </div>
+
     <button class="btn btn-lg btn-primary btn-block" id="aplicarRegistro" type="Registrar">Registrar</button>
 </form>
 </main>
