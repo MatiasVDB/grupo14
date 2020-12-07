@@ -44,6 +44,20 @@ añoDeFabricacion int);
 insert into TRACTOR(marca, modelo, patente, numeroDeMotor, numeroDeChasis, kilometros, añoDeFabricacion)
 values ("IVECO", "Cursor", "AA124DC", 69904367, "R69904367", 7892356, 2013);
 
+create table CARGA(
+id int not null auto_increment,
+tipo varchar (15) not null,
+pesoNeto float not null,
+hazard varchar (2) not null,
+imoClass varchar(20),
+reefer varchar (2) not null,
+temperatura DECIMAL(5,2),
+primary key (id)
+);
+insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
+values("Granel", 500, "SI", "2", "SI", 5),
+("Liquida", 200, "SI", "2", "SI", -40),
+("Jaula", 8000, "NO", "0", "SI", 16);
 
 create table ARRASTRADO(
 id int not null auto_increment,
@@ -53,7 +67,9 @@ tipoCarga varchar(40),
 refrigeracionCarga varchar(40),
 pesoNetoCarga varchar(40),
 hazardCarga varchar(40),
-primary key (id));
+idCarga int,
+primary key (id),
+foreign key(idCarga) references CARGA(id));
 
 insert into ARRASTRADO(patente, numeroDeChasis, tipoCarga, refrigeracionCarga, pesoNetoCarga, hazardCarga)
 values ("ABC-123", 29, "Liquida", "No", "10000KG", "Si");
@@ -75,20 +91,7 @@ insert into CLIENTE(CUIT, denominacion, email, contacto1, contacto2, telefono, d
 values (244444, "Sancor", "blabla@hotmail.com", "55559999", "99995555", "44443333", "Buenos Aires, Ramos mejia, libertador 345"),
 (322444, "Winco", "blablop@hotmail.com", "55559999", "99995555", "44443333", "Buenos Aires, Ramos mejia, libertador 375");
 
-create table CARGA(
-id int not null auto_increment,
-tipo varchar (15) not null,
-pesoNeto float not null,
-hazard varchar (2) not null,
-imoClass varchar(20),
-reefer varchar (2) not null,
-temperatura DECIMAL(5,2),
-primary key (id)
-);
-insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
-values("Granel", 500, "SI", "2", "SI", 5),
-("Liquida", 200, "SI", "2", "SI", -40),
-("Jaula", 8000, "NO", "0", "SI", 16);
+
 
 create table VIAJE(
 id int not null auto_increment,
@@ -129,18 +132,18 @@ tipoDeDocumento_chofer varchar(40),
  foreign key (id_carga) references CARGA(id),
  foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
 
- 
+
  select * from PROFORMA;
- 
+
  select * from CARGA;
- 
+
  /*select rolUsuario.nivel  from USUARIO join rol where tipoDeDocumento = "dni" and numeroDeDocumento = 40379084 and rolUsuario = 1;
  */
  SELECT * FROM VIAJE;
- 
- select * from CLIENTE;
- 
- select * from rol join usuario where rol.id = usuario.rolUsuario;
- 
 
-       
+ select * from CLIENTE;
+
+ select * from rol join usuario where rol.id = usuario.rolUsuario;
+
+
+

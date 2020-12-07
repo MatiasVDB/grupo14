@@ -5,44 +5,39 @@
     <br>
 
     <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Agregar arrastrado</h1>
-    <label for="inputTipo" class="sr-only">Tipo de carga</label>
-    <input name="tipo" type="text" id="inputTipo" class="form-control" placeholder="Tipo de carga"   required>
 
-    <br>
-    Refrigeracion:
-    <div class="form-check-inline">
+    <div class="form-group col-md-4">
+        <label for="inputTipo" >Tipo</label>
+        <select class="form-control category-select" id="inputTipo" name="tipo">
+            <option value="Granel">Granel</option>
+            <option value="Liquida">Liquida</option>
+            <option value="20"">20"</option>
+            <option value="40"">40"</option>
+            <option value="Jaula">Jaula</option>
+            <option value="CarCarrier">CarCarrier</option>
+        </select>
+    </div>
 
-        <input class="form-check-input" type="radio" name="refrigeracion" id="refrigeracionNo" value="No" checked>
-        <label class="form-check-label" for="refrigeracionNoefrigeracionNo">
-            No
-        </label>
+    <div class="form-group col-md-4">
+        <label for="refrigeracion" >Refrigeracion</label>
+        <select class="form-control category-select" id="refrigeracion" name="refrigeracion">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
     </div>
-    <div class="form-check-inline">
-        <input class="form-check-input" type="radio" name="refrigeracion" id="refrigeracionSi" value="Si">
-        <label class="form-check-label" for="refrigeracionSi">
-            Si
-        </label>
-    </div>
-    <br>
-    <br>
+
+    <label for="inputPeso" class="sr-only">Peso neto</label>
     <input type="text" class="form-control" id="inputPeso" name="peso" placeholder="Peso neto" required>
 
-    <br>
-    Hazard:
-    <div class="form-check-inline">
 
-        <input class="form-check-input" type="radio" name="hazard" id="hazardNo" value="No" checked>
-        <label class="form-check-label" for="hazardNo">
-            No
-        </label>
+    <div class="form-group col-md-4">
+        <label for="hazard" >Hazard</label>
+        <select class="form-control category-select" id="hazard" name="hazard">
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
     </div>
 
-    <div class="form-check-inline">
-        <input class="form-check-input" type="radio" name="hazard" id="hazardSi" value="Si">
-        <label class="form-check-label" for="hazardSi">
-            Si
-        </label>
-    </div>
     <br>
     <br>
     <label for="inputPatente" class="sr-only">Patente</label>
@@ -53,6 +48,14 @@
     <br>
     <br>
 
+    <div class="form-group col-md-4">
+        <label for="hazard" >Carga</label>
+        <select class="form-control category-select" id="carga" name="carga">
+            {{#cargas}}
+            <option value="{{id}}">{{id}}, {{tipo}}</option>
+            {{/cargas}}
+        </select>
+    </div>
 
     <button class="btn btn-lg btn-primary btn-block" id="aplicarCambios" type="submit">Agregar</button>
 

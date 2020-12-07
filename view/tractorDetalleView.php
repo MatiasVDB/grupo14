@@ -10,10 +10,9 @@
     <input type="hidden" name="id" value="{{id}}">
 
     <div>
-        <h5> Marca {{marca}} </h5>
-        <h5> Patente {{patente}}</h5>
-        <h5> Chasis {{numeroDeChasis}}</h5>
-        <h5> Id {{id}}</h5>
+        <h5> Id: {{id}}</h5>
+        <h5> Patente: {{patente}}</h5>
+        <h5> Chasis: {{numeroDeChasis}}</h5>
 
     </div>
     <div class="form-row">

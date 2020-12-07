@@ -73,9 +73,11 @@ class ModuleInitializer
     public function createArrastradosController(){
         include_once("model/ArrastradosModel.php");
         include_once("controller/ArrastradosController.php");
+        include_once ("model/CargasModel.php");
+        $modelCargas = new CargasModel($this->database);
 
         $model = new ArrastradosModel($this->database);
-        return new ArrastradosController($model, $this->renderer);
+        return new ArrastradosController($model, $modelCargas, $this->renderer);
     }
 
     public function createClientesController(){

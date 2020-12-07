@@ -10,44 +10,54 @@
     <br>
 
     <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Modificar arrastrado</h1>
-    <label for="inputTipo" class="sr-only">Tipo de carga</label>
-    <input name="tipo" type="text" id="inputTipo" class="form-control" placeholder="Tipo de carga" value="{{tipoCarga}}"  required>
+
+    <div class="form-group col-md-4">
+        <label for="inputTipo" >Tipo</label>
+        <select class="form-control category-select" id="inputTipo" name="tipo">
+            <option value="{{tipoCarga}}">{{tipoCarga}}(Seleccionado)</option>
+            <option value="Granel">Granel</option>
+            <option value="Liquida">Liquida</option>
+            <option value="20"">20"</option>
+            <option value="40"">40"</option>
+            <option value="Jaula">Jaula</option>
+            <option value="CarCarrier">CarCarrier</option>
+        </select>
+    </div>
 
     <br>
-    Refrigeracion:
-    <div class="form-check-inline">
+    <div class="form-group col-md-4">
+        <label for="refrigeracion" >Refrigeracion</label>
+        <select class="form-control category-select" id="refrigeracion" name="refrigeracion">
+            <option value="{{refrigeracionCarga}}">{{refrigeracionCarga}}(Seleccionado)</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
+    </div>
 
-        <input class="form-check-input" type="radio" name="refrigeracion" id="refrigeracionNo" value="No" checked>
-        <label class="form-check-label" for="refrigeracionNoefrigeracionNo">
-            No
-        </label>
-    </div>
-    <div class="form-check-inline">
-        <input class="form-check-input" type="radio" name="refrigeracion" id="refrigeracionSi" value="Si">
-        <label class="form-check-label" for="refrigeracionSi">
-            Si
-        </label>
-    </div>
     <br>
     <br>
     <input type="text" class="form-control" id="inputPeso" name="peso" placeholder="Peso neto" value="{{pesoNetoCarga}}" required>
 
 <br>
-    Hazard:
-    <div class="form-check-inline">
-
-        <input class="form-check-input" type="radio" name="hazard" id="hazardNo" value="No" checked>
-        <label class="form-check-label" for="hazardNo">
-            No
-        </label>
+    <div class="form-group col-md-4">
+        <label for="hazard" >Hazard</label>
+        <select class="form-control category-select" id="hazard" name="hazard">
+            <option value="{{hazardCarga}}">{{hazardCarga}}(Seleccionado)</option>
+            <option value="Si">Si</option>
+            <option value="No">No</option>
+        </select>
     </div>
 
-    <div class="form-check-inline">
-        <input class="form-check-input" type="radio" name="hazard" id="hazardSi" value="Si">
-        <label class="form-check-label" for="hazardSi">
-            Si
-        </label>
+    <div class="form-group col-md-4">
+        <label for="hazard" >Carga</label>
+        <select class="form-control category-select" id="carga" name="carga">
+            <option value="{{idCarga}}">{{idCarga}} (Seleccionado)</option>
+            {{#cargas}}
+            <option value="{{id}}">{{id}}, {{tipo}}</option>
+            {{/cargas}}
+        </select>
     </div>
+
     <br>
     <br>
     <label for="inputPatente" class="sr-only">Patente</label>

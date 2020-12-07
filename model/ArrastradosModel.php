@@ -20,8 +20,8 @@ class ArrastradosModel
         return $this->database->query($sql);
     }
 
-    public function modificarArrastrado($id, $tipoCarga, $refrigeracionCarga, $pesoNetoCarga, $hazardCarga){
-        $sql = "update ARRASTRADO set pesoNetoCarga = '$pesoNetoCarga', hazardCarga = '$hazardCarga', tipoCarga = '$tipoCarga',refrigeracionCarga = '$refrigeracionCarga' where id = '$id' ";
+    public function modificarArrastrado($id, $tipoCarga, $refrigeracionCarga, $pesoNetoCarga, $hazardCarga,  $carga){
+        $sql = "update ARRASTRADO set pesoNetoCarga = '$pesoNetoCarga', hazardCarga = '$hazardCarga', tipoCarga = '$tipoCarga',refrigeracionCarga = '$refrigeracionCarga', idCarga = '$carga' where id = '$id' ";
 
         return $this->database->query($sql);
     }
@@ -33,9 +33,9 @@ class ArrastradosModel
         return $this->database->query($sql);
     }
 
-    public function agregarArrastrado($patente, $numeroDeChasis, $pesoNetoCarga, $hazardCarga, $tipoCarga, $refrigeracionCarga){
-        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis, pesoNetoCarga, hazardCarga, tipoCarga, refrigeracionCarga) 
-VALUES ('$patente', $numeroDeChasis, '$pesoNetoCarga', '$hazardCarga', '$tipoCarga', '$refrigeracionCarga')";
+    public function agregarArrastrado($patente, $numeroDeChasis, $pesoNetoCarga, $hazardCarga, $tipoCarga, $refrigeracionCarga, $carga){
+        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis, pesoNetoCarga, hazardCarga, tipoCarga, refrigeracionCarga, idCarga) 
+VALUES ('$patente', $numeroDeChasis, '$pesoNetoCarga', '$hazardCarga', '$tipoCarga', '$refrigeracionCarga', '$carga')";
 
         return $this->database->query($sql);
     }

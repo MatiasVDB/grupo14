@@ -14,6 +14,7 @@
             <th scope="col">Peso neto</th>
             <th scope="col">Refrigeracion</th>
             <th scope="col">Hazard</th>
+            <th scope="col">Carga </th>
             <th scope="col">Acciones </th>
         </tr>
         </thead>
@@ -30,6 +31,7 @@
             <td>{{pesoNetoCarga}}</td>
             <td>{{refrigeracionCarga}}</td>
             <td>{{hazardCarga}}</td>
+            <td>{{idCarga}}</td>
             <td><a href="http://localhost/grupo14/arrastrados/vistaActualizarArrastrado/id={{id}}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Actualizar</a>
             <a href="http://localhost/grupo14/arrastrados/eliminarArrastrado?id={{id}}" class="btn btn-danger btn-lg active" role="button" aria-pressed="true">Dar Baja</a></td>
         </tr>
