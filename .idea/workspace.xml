@@ -20,14 +20,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/CargasCombustibleModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cargasCombustibleView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/cargasView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CargasCombustibleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/CargasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cargasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCargaCombustible.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,7 +115,7 @@
       <workItem from="1607348575985" duration="8637000" />
       <workItem from="1607352220512" duration="9077000" />
       <workItem from="1607446266754" duration="3974000" />
-      <workItem from="1607512434449" duration="5707000" />
+      <workItem from="1607512434449" duration="8388000" />
     </task>
     <servers />
   </component>
@@ -176,11 +173,11 @@
     <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1606320128967" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607455310750" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604888137142" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607454415670">
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607544258391">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1606318702768" />
-    <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607454415670" />
+    <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607544258391" />
     <state x="604" y="336" key="NewPhpFileDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604891483858" />
     <state x="536" y="263" width="418" height="202" key="WebDeployment.AddServerDialog.v.1" timestamp="1604942191980">
       <screen x="0" y="0" width="1360" height="728" />

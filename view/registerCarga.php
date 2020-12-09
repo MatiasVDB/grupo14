@@ -7,17 +7,6 @@
 
 <form action="registrarCarga" class="col-md-8 formulario" method="post">
 
-    <div class="form-row">
-
-        <div class="form-group col-md-2">
-
-        <label for="inputTipo" >ID</label>
-
-        <input type="number" name="id" id="inputId" class="form-control" placeholder="ID" required>
-
-        </div>
-
-    </div>
 
     <div class="form-row">
         <div class="form-group col-md-8">
