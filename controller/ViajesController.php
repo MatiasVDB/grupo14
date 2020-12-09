@@ -12,13 +12,11 @@ class ViajesController
     private Render $render;
 
 
-    public function __construct(ViajesModel $viajesModel, ArrastradosModel $arrastradosModel, TractoresModel $tractoresModel, ClientesModel $clientesModel, EmpleadosModel $empleadosModel, Render $render)
+    public function __construct(ViajesModel $viajesModel, ArrastradosModel $arrastradosModel, TractoresModel $tractoresModel, Render $render)
     {
         $this->viajesModel = $viajesModel;
         $this->arrastradosModel= $arrastradosModel;
         $this->tractoresModel= $tractoresModel;
-        $this->clientesModel= $clientesModel;
-        $this->empleadosModel= $empleadosModel;
         $this->render = $render;
     }
 

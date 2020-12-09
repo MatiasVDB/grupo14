@@ -20,14 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model/CargasCombustibleModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/view/cargasCombustibleView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cargasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCargaCombustible.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
