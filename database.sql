@@ -137,6 +137,19 @@ costeoEstimado_Reefer int,
  foreign key (id_viaje) references VIAJE(id),
  foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
 
+create table combustible(
+id int not null auto_increment,
+idViaje int,
+numeroDeDocumento_chofer int,
+tipoDeDocumento_chofer varchar(5),
+lugar varchar(75),
+cantidad int,
+importe float,
+kilometrosRecorridos float,
+primary key (id, idViaje, numeroDeDocumento_chofer),
+foreign key (idViaje) references VIAJE(id),
+foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
+
 
 select * from tractor; 
  
@@ -154,18 +167,3 @@ select * from tractor;
  
  select * from usuario;
  
- alter table usuario drop id_viaje; 
- 
- select * from arrastrado;
- 
-
- 
-
-
- 
-
- 
- 
-
-
-
