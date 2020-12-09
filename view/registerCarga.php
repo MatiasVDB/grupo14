@@ -5,7 +5,7 @@
 
     <h5 id="ingresar" class="mb-3 registerTxt">Registro de Cargas</h5>
 
-<form action="./registrarCarga" class="col-md-8 formulario" method="post">
+<form action="registrarCarga" class="col-md-8 formulario" method="post">
 
     <div class="form-row">
 
@@ -14,6 +14,15 @@
         <label for="inputTipo" >ID</label>
 
         <input type="number" name="id" id="inputId" class="form-control" placeholder="ID" required>
+
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-8">
+
+            <p class="text-danger"> {{error}} </p>
 
         </div>
 
@@ -52,23 +61,15 @@
 
         <div class="form-group col-md-4">
 
-            <label for="imoClass">IMO Class</label>
-
-
-            <input name="imoClass" class="form-control" type="number"
-                   id="imoClass">
-
-        </div>
-
-        <div class="form-group col-md-4">
-
-            <label for="imoSclass">IMO SubClass</label>
-
-
-            <input name="imoSclass" class="form-control" type="number"
-                   id="imoSclass">
+            <label for="inputTipo" >IMO</label>
+            <select class="form-control category-select" id="inputTipo" name="imo">
+                <option value="No lleva"> No lleva  </option>
+                <option value="Class">Class</option>
+                <option value="Subclass">Subclass</option>
+            </select>
 
         </div>
+
 
     </div>
 

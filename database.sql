@@ -16,10 +16,12 @@ create table USUARIO(
     fechaDeNacimiento date not null,
     mail varchar(75) not null unique,
     rolUsuario int,
+    id_viaje int,
     PRIMARY KEY(tipoDeDocumento, numeroDeDocumento),
-    foreign key(rolUsuario) references ROL(id)
+    foreign key(rolUsuario) references ROL(id),
+    foreign key(id_viaje) references VIAJE(id)
     );
-
+    
 INSERT INTO ROL(id, nivel)
 values (1, "Chofer"),
 (2, "Supervisor"),
@@ -39,28 +41,13 @@ marca varchar(40),
 modelo varchar(40),
 patente varchar(40),
 numeroDeMotor int,
-numeroDeChasis varchar(40),
-primary key (id),
+chasis varchar(40),
 kilometros int,
-añoDeFabricacion int);
+añoDeFabricacion int,
+primary key (id, patente, chasis));
 
-insert into TRACTOR(marca, modelo, patente, numeroDeMotor, numeroDeChasis, kilometros, añoDeFabricacion)
-values ("IVECO", "Cursor", "AA124DC", 69904367, "R69904367", 7892356, 2013);
-
-create table CARGA(
-id int not null auto_increment,
-tipo varchar (15) not null,
-pesoNeto float not null,
-hazard varchar (2) not null,
-imoClass varchar(20),
-reefer varchar (2) not null,
-temperatura DECIMAL(5,2),
-primary key (id)
-);
-insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
-values("Granel", 500, "SI", "2", "SI", 5),
-("Liquida", 200, "SI", "2", "SI", -40),
-("Jaula", 8000, "NO", "0", "SI", 16);
+insert into TRACTOR(id, marca, modelo, patente, numeroDeMotor, chasis, kilometros, añoDeFabricacion)
+values (1,"IVECO", "Cursor", "AA124DC", 69904367, "R69904367", 7892356, 2013);
 
 
 create table ARRASTRADO(
@@ -74,6 +61,22 @@ foreign key(id_carga) references CARGA(id));
 insert into ARRASTRADO(id, patente, numeroDeChasis, id_carga)
 values (1, "AA100AS", 585822, 1);
 
+create table CARGA(
+id int not null auto_increment,
+tipo varchar (15) not null,
+pesoNeto float not null,
+hazard varchar (2) not null,
+imo varchar(10),
+reefer varchar (2) not null,
+temperatura DECIMAL(5,2),
+primary key (id)
+);
+
+
+insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
+values("Granel", 500, "SI", "2", "SI", 5),
+("Liquida", 200, "SI", "2", "SI", -40),
+("Jaula", 8000, "NO", "0", "SI", 16);
 
 create table CLIENTE(
 CUIT INT,
@@ -96,10 +99,8 @@ create table VIAJE(
 id int not null auto_increment,
 origen varchar(70) not null,
 destino varchar(70) not null,
-fechaFinalizacion date,
 fechaInicio date,
-fechaCarga date,
-tiempoReal int,
+fechaFinalizacion date,
 ETA date,
 ETD date,
 kilometrosActuales float,
@@ -107,14 +108,9 @@ kilometrosFinal float,
 combustibleFinal float,
 combustibleConsumido float,
 idVehiculo int,
-tipoDocumentoChofer varchar(50),
-numeroDeDocumentoChofer int,
-cuitCliente int,
 idArrastrado int,
 primary key (id),
 foreign key(idVehiculo) references TRACTOR(id),
-foreign key(tipoDocumentoChofer,numeroDeDocumentoChofer) references USUARIO(tipoDeDocumento, numeroDeDocumento),
-foreign key(cuitCliente) references CLIENTE(CUIT),
 foreign key(idArrastrado) references ARRASTRADO(id));
 
 insert into VIAJE (origen, destino, fechaFinalizacion, fechaInicio, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado) 
@@ -145,9 +141,9 @@ costeoEstimado_Reefer int,
 select * from tractor; 
  
  select * from PROFORMA;
- 
- select * from CARGA;
 
+ select * from CARGA;
+ 
  SELECT * FROM VIAJE;
 
  select * from CLIENTE;
@@ -157,6 +153,8 @@ select * from tractor;
  select * from rol;
  
  select * from usuario;
+ 
+ alter table usuario drop id_viaje; 
  
  select * from arrastrado;
  

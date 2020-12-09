@@ -17,8 +17,7 @@
                                 <th scope="col" class="border-0 text-uppercase font-medium">Tipo</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Peso neto</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Hazard</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">IMO Class</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">IMO SubClass</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">IMO</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Reefer</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">temperatura</th>
                             </tr>
@@ -42,12 +41,7 @@
 
                                 </td>
                                 <td>
-                                    <span class="text-muted">{{imoClass}}</span><br>
-
-                                </td>
-                                <td>
-
-                                    <span class="text-muted">{{imoSclass}}</span>
+                                    <span class="text-muted">{{imo}}</span><br>
 
                                 </td>
                                 <td>

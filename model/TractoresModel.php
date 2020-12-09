@@ -14,16 +14,22 @@ class TractoresModel
     public function getTractores(){
         return $this->database->query("SELECT * FROM TRACTOR");
     }
-    public function getTractor($id){
+    public function getTractor($patente, $chasis){
+        $sql = "SELECT * FROM TRACTOR where patente = '$patente' and chasis = '$chasis' ";
+
+        return $this->database->query($sql);
+    }
+
+    public function getTractorPorID($id){
         $sql = "SELECT * FROM TRACTOR where id = '$id' ";
 
         return $this->database->query($sql);
     }
 
-    public function createTractor($marca, $modelo, $patente, $nroMotor, $nroChasis, $kilometros, $anoDeFabricacion){
+    public function createTractor($marca, $modelo, $patente, $nroMotor, $chasis, $kilometros, $anoDeFabricacion){
 
-            $sql = "insert into TRACTOR(marca, modelo, patente, numeroDeMotor, numeroDeChasis, kilometros, añoDeFabricacion)
-                values('$marca', '$modelo','$patente','$nroMotor','$nroChasis','$kilometros','$anoDeFabricacion')";
+            $sql = "insert into TRACTOR(marca, modelo, patente, numeroDeMotor, chasis, kilometros, añoDeFabricacion)
+                values('$marca', '$modelo','$patente','$nroMotor','$chasis','$kilometros','$anoDeFabricacion')";
 
             return $this->database->query($sql);
 

@@ -21,17 +21,20 @@ class CargasModel
         return $this->database->query($sql);
     }
 
-    public function modificarCarga($id, $tipo, $pesoNeto, $hazard, $imoClass, $imoSclass, $reefer, $temperatura){
-        $sql = "update CARGA set tipo = '$tipo', pesoNeto = '$pesoNeto', hazard = '$hazard', imoClass = '$imoClass', imoSclass = '$imoSclass', reefer = '$reefer', temperatura='$temperatura' where id = '$id'";
+    public function modificarCarga($id, $tipo, $pesoNeto, $hazard, $imo, $reefer, $temperatura){
+        $sql = "update CARGA set tipo = '$tipo', pesoNeto = '$pesoNeto', hazard = '$hazard', imo = '$imo', reefer = '$reefer', temperatura='$temperatura' where id = '$id'";
 
-        return $this->database->query($sql);
+        return $this->database->execute($sql);
     }
 
-    public function createCarga($id, $tipo, $pesoNeto, $hazard, $imoClass, $imoSclass, $reefer, $temperatura){
-        $sql = "insert into CARGA(id, tipo, pesoNeto, hazard, imoClass, imoSclass, reefer, temperatura)
-        values ('$id', '$tipo', '$pesoNeto', '$hazard','$imoClass', '$imoSclass', '$reefer', '$temperatura')";
+    public function createCarga($id, $tipo, $pesoNeto, $hazard, $imo, $reefer, $temperatura){
 
-        return $this->database->queryInsert($sql);
+
+
+        $sql = "insert into CARGA(id, tipo, pesoNeto, hazard, imo, reefer, temperatura)
+        values ('$id', '$tipo', '$pesoNeto', '$hazard','$imo', '$reefer', '$temperatura')";
+
+        return $this->database->execute($sql);
     }
 
     public function eliminar($id)

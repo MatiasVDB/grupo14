@@ -1,5 +1,5 @@
 {{> header}}
-
+<br> <br> <br> <br>
 <div class="formularioContainer">
 
     <h5 class="registerTxt"> Imprimir Proforma </h5>
@@ -8,6 +8,8 @@
 
     <p> Número {{numero}}</p>
     <p> Fecha {{fecha}} </p>
+
+
 
 <form action="" class="col-md-8 formulario" method="post">
 
@@ -285,6 +287,8 @@
 
         </div>
 
+        {{/proforma}}
+
     </div>
     <br> <br>
 
@@ -297,7 +301,6 @@
 
     </div>
 
-    {{/proforma}}
 
     <div class="col">
 

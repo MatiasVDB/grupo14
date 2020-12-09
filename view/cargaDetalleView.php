@@ -43,15 +43,15 @@
         </div>
 
         <div class="form-group col-md-4">
-            <label for="imoClass">IMO Class</label>
 
-            <input name="imoClass" class="form-control" type="number" value="{{imoClass}}" id="imoClass">
-        </div>
+            <label for="inputTipo" >IMO</label>
+            <select class="form-control category-select" id="inputTipo" name="imo">
+                <option value="{{imo}}">{{imo}} (seleccionado)</option>
+                <option value="No lleva"> No lleva  </option>
+                <option value="Class">Class</option>
+                <option value="Subclass">Subclass</option>
+            </select>
 
-        <div class="form-group col-md-4">
-            <label for="imoSclass">IMO SubClass</label>
-
-            <input name="imoSclass" class="form-control" type="number" value="{{imoSclass}}" id="imoSclass">
         </div>
 
     </div>
