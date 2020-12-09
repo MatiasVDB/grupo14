@@ -28,6 +28,12 @@ class EmpleadosModel
         return $this->database->query($sql);
     }
 
+    public function getEmpleadoDNI($numeroDocumento){
+        $sql = "SELECT * FROM USUARIO where  numeroDeDocumento = '$numeroDocumento'";
+
+        return $this->database->query($sql);
+    }
+
 
     public function getEmpleadoConNivelDeRol($tipoDeDocumento, $numeroDeDocumento){
 
