@@ -149,6 +149,14 @@ class ModuleInitializer
         return new EditarProformaController($model, $this->renderer);
     }
 
+    public function createCargasCombustibleController(){
+        include_once("model/CargasCombustibleModel.php");
+        include_once("controller/CargasCombustibleController.php");
+
+        $model = new CargasCombustibleModel($this->database);
+        return new CargasCombustibleController($model, $this->renderer);
+    }
+
 
     public function createDefaultController()
     {
