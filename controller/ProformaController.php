@@ -67,8 +67,7 @@ class ProformaController
         $costeoHazardEsperado = $_POST["hazardCosteoEsperado"];
         $costeoReeferEsperado = $_POST["reeferCosteoEsperado"];
 
-        $data = array("proforma"=>$this->proformaModel->getProforma($numero), "cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
-            "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
+
 
         if ($this->proformaModel->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero)){
 
@@ -76,14 +75,31 @@ class ProformaController
                 $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
                 $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
 
-            echo $this->render->render( "view/imprimirProformaView.php", $data);
+
+            header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&tipoDNI=".md5($tipoDNI)."&numeroDNI=".md5($numeroDNI)."");
 
         }
         else{
             $data["mensaje"] = "*Número de Proforma existente, ingrese otro.";
-            echo $this->render->render( "view/proformaRegisterView.php", $data);
+           echo $this->render->render( "view/proformaRegisterView.php", $data);
         }
 
+
+    }
+
+    public function imprimirProforma(){
+
+      $numero = $_GET["numero"];
+      $CUIT = $_GET["CUIT"];
+      $viaje = $_GET["viaje"];
+      $tipoDNI = $_GET["tipoDNI"];
+      $numeroDNI = $_GET["numeroDNI"];
+
+
+       $data =  array("proforma"=> $this->proformaModel->getProforma($numero), "cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
+            "empleado"=>$this->empleadosModel->getEmpleado($tipoDNI, $numeroDNI));
+
+        echo $this->render->render( "view/imprimirProformaView.php", $data);
 
     }
 

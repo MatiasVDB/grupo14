@@ -36,12 +36,11 @@ class CargasController
         $tipo = $_POST ['tipo'];
         $pesoNeto = $_POST ['pesoNeto'];
         $hazard = $_POST['hazard'];
-        $imoClass = $_POST['imoClass'];
-        $imoSclass = $_POST['imoSclass'];
+        $imo= $_POST['imo'];
         $reefer = $_POST['reefer'];
         $temperatura = $_POST['temperatura'];
 
-        $this->cargaModel->modificarCarga($id, $tipo, $pesoNeto , $hazard, $imoClass,$imoSclass ,$reefer , $temperatura);
+        $this->cargaModel->modificarCarga($id, $tipo, $pesoNeto , $hazard, $imo ,$reefer , $temperatura);
 
         header("Location: ../cargas");
     }
@@ -62,15 +61,29 @@ class CargasController
         $tipo = $_POST ['tipo'];
         $pesoNeto = $_POST ['pesoNeto'];
         $hazard = $_POST['hazard'];
-        $imoClass = $_POST['imoClass'];
-        $imoSclass = $_POST['imoSclass'];
+        $imo = $_POST['imo'];
         $reefer = $_POST['reefer'];
         $temperatura = $_POST['temperatura'];
 
-        $this->cargaModel->createCarga($id, $tipo, $pesoNeto , $hazard, $imoClass,$imoSclass ,$reefer , $temperatura);
+        if(count($this->cargaModel->getCarga($id)) == 0){
+
+            $this->cargaModel->createCarga($id, $tipo, $pesoNeto , $hazard, $imo ,$reefer , $temperatura);
 
 
-        header("Location: ../cargas");
+            header("Location: ../cargas");
+
+
+        }
+
+        else{
+
+            $data["error"] = "*La ID ingresada ya se encuentra registrada, ingrese otra por favor.";
+
+            echo $this->render->render("view/registerCarga.php", $data);
+
+        }
+
+
     }
 
     public function eliminar(){

@@ -7,9 +7,10 @@
     <h5 class="registerTxt"> Actualización de Tractor</h5>
 
     <div>
+        <p> Id: {{id}}</p>
         <p> Marca {{marca}} </p>
         <p> Patente {{patente}}</p>
-        <p> Chasis {{numeroDeChasis}}</p>
+        <p> Chasis {{chasis}}</p>
 
     </div>
 
@@ -18,11 +19,6 @@
 
     <br>
     <input type="hidden" name="id" value="{{id}}">
-
-    <div>
-        <h5> Id: {{id}}</h5>
-        <h5> Patente: {{patente}}</h5>
-        <h5> Chasis: {{numeroDeChasis}}</h5>
 
     <input type="hidden" name="patente" value="{{patente}}">
 
@@ -33,7 +29,7 @@
         <label for="inputEmail4">Marca</label>
         <select class="custom-select" size="3" name="marca">
 
-            <option selected value="{{marca}}">{{marca}}</option>
+            <option selected value="{{marca}}">{{marca}} (Actual)</option>
             <option value="Scania">Scania</option>
             <option value="MAN">MAN</option>
             <option value="Mercedes Benz">Mercedes Benz</option>
@@ -69,7 +65,7 @@
 
         <label for="inputPassword4">Año</label>
         <select class="custom-select" size="6" name="año">
-            <option value="{{añoDeFabricacion}}" selected>{{añoDeFabricacion}}</option>
+            <option value="{{añoDeFabricacion}}" selected>{{añoDeFabricacion}} (Actual)</option>
             <option value="2020">2020</option>
             <option value="2019">2019</option>
             <option value="2018">2018</option>

@@ -37,7 +37,7 @@ class TractoresController
 
         $id = $_GET['id'];
 
-        $data['tractor'] = $this->tractoresModel->getTractor($id);
+        $data['tractor'] = $this->tractoresModel->getTractorPorID($id);
 
 
             echo $this->render->render("view/tractorDetalleView.php", $data);
@@ -69,15 +69,15 @@ class TractoresController
         $modelo = $_POST['modelo'];
         $patente = $_POST['patente'];
         $nroMotor = $_POST['motor'];
-        $nroChasis = $_POST['chasis'];
+        $chasis = $_POST['chasis'];
         $kilometros = $_POST['kilometros'];
         $anoDeFabricacion = $_POST['año'];
 
         $mensaje["error"] = "*El tractor ingresado, ya se encuentra registrado.";
 
-        if(count($this->tractoresModel->getTractor($patente, $nroChasis)) == 0){
+        if(count($this->tractoresModel->getTractor($patente, $chasis)) == 0){
 
-            $this->tractoresModel->createTractor($marca,$modelo,$patente,$nroMotor,$nroChasis,$kilometros,$anoDeFabricacion);
+            $this->tractoresModel->createTractor($marca,$modelo,$patente,$nroMotor,$chasis,$kilometros,$anoDeFabricacion);
 
             header("Location: ../tractores");
         }
