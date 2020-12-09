@@ -292,7 +292,7 @@
 
         <h5> Código QR: </h5>
         {{#viaje}}
-        <img src="./imprimirQR?id_viaje={{id}}" />
+        <img src="./imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumentoChofer}}&tipoDeDocumento_chofer={{tipoDocumentoChofer}}" />
         {{/viaje}}
 
     </div>
