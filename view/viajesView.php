@@ -10,10 +10,9 @@
             <th scope="col">Id</th>
             <th scope="col">Origen</th>
             <th scope="col">Destino</th>
-            <th scope="col">Fecha de finalizacion</th>
             <th scope="col">Fecha de inicio</th>
+            <th scope="col">Fecha de finalizacion</th>
             <th scope="col">Fecha de carga</th>
-            <th scope="col">Tiempo real</th>
             <th scope="col">ETA</th>
             <th scope="col">ETD</th>
             <th scope="col">Kilometros final </th>
@@ -30,10 +29,9 @@
             <td>{{id}}</td>
             <td>{{origen}}</td>
             <td>{{destino}}</td>
-            <td>{{fechaFinalizacion}}</td>
             <td>{{fechaInicio}}</td>
+            <td>{{fechaFinalizacion}}</td>
             <td>{{fechaCarga}}</td>
-            <td>{{tiempoReal}}</td>
             <td>{{ETA}}</td>
             <td>{{ETD}}</td>
             <td>{{kilometrosFinal}}</td>

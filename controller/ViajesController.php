@@ -70,7 +70,7 @@ class ViajesController
 
         if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
 
-            $data = array("arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "clientes"=> $this->clientesModel->getClientes(), "choferes"=> $this->empleadosModel->getChoferes());
+            $data = array("arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores());
 
             echo $this->render->render("view/registerViaje.php", $data);
         }
@@ -85,7 +85,6 @@ class ViajesController
         $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $fechaInicio = $_POST['fechaInicio'];
         $fechaCarga = $_POST['fechaCarga'];
-        $tiempoReal= $_POST['tiempoReal'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
         $kilometrosFinal= 0.0;
@@ -94,14 +93,9 @@ class ViajesController
         $combustibleConsumido= 0.0;
         $idVehiculo= $_POST['idVehiculo'];
         $idArrastrado= $_POST['idArrastrado'];
-        $numeroDocumentoChofer= $_POST["dniChofer"];
-        $getTipoDocumento= $this->empleadosModel->getTipoDocumento($numeroDocumentoChofer)[0];
-        $tipoDocumentoChofer= implode($getTipoDocumento);
-        $cuitCliente= $_POST["cuit"];
 
 
-
-        $this->viajesModel->createViaje($origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
+        $this->viajesModel->createViaje($origen, $destino, $fechaInicio, $fechaFinalizacion, $fechaCarga , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
 
         header("Location: ../viajes");
     }
