@@ -27,15 +27,26 @@
             <br> <br>
 
     <label> <h6> Viaje</h6></label>
-    <select class="custom-select" multiple name="id_viaje">
-        <option selected>DATOS DEL VIAJE</option>
-        {{#viajes}}
-        <option value="{{id}}">Codigo: {{id}} - Origen: {{origen}} / Destino:{{destino}} </option>
+        <select class="custom-select" multiple name="id_viaje">
+            <option selected>DATOS DEL VIAJE</option>
+            {{#viajes}}
+            <option value="{{id}}">Codigo: {{id}} - Origen: {{origen}} / Destino:{{destino}} </option>
 
-        {{/viajes}}
-    </select>
+            {{/viajes}}
+        </select>
 
-            <br> <br>
+        <br> <br>
+
+        <label> <h6>Carga</h6></label>
+        <select class="custom-select" multiple name="id_carga">
+            <option selected>DATOS DE LA CARGA</option>
+            {{#viajes}}
+            <option value="{{id_carga}}"> ID Carga: {{id}} / Tipo: {{tipo}} </option>
+
+            {{/viajes}}
+        </select>
+
+        <br> <br>
 
             <label> <h6> Chofer </h6></label>
     <select class="custom-select" multiple>

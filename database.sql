@@ -1,4 +1,3 @@
-drop database if EXISTS grupo14;
 create SCHEMA grupo14;
 use grupo14;
 
@@ -29,10 +28,8 @@ values (1, "Chofer"),
 (4, "Administrador");
 
 insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
-values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4);
-
-insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
-values ("DNI", 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1);
+values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
+("DNI", 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1);
 
 
 create table TRACTOR(
@@ -73,10 +70,10 @@ primary key (id)
 );
 
 
-insert into CARGA( TIPO, PESONETO, HAZARD, IMOCLASS, REEFER, TEMPERATURA)
-values("Granel", 500, "SI", "2", "SI", 5),
-("Liquida", 200, "SI", "2", "SI", -40),
-("Jaula", 8000, "NO", "0", "SI", 16);
+insert into CARGA(ID, TIPO, PESONETO, HAZARD, IMO, REEFER, TEMPERATURA)
+values(1,"Granel", 500, "SI", "Class", "SI", 5),
+(2,"Liquida", 200, "SI", "Subclass", "SI", -40),
+(3,"Jaula", 8000, "NO", "Ninguna", "SI", 16);
 
 create table CLIENTE(
 CUIT INT,
@@ -113,8 +110,8 @@ primary key (id),
 foreign key(idVehiculo) references TRACTOR(id),
 foreign key(idArrastrado) references ARRASTRADO(id));
 
-insert into VIAJE (origen, destino, fechaFinalizacion, fechaInicio, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado) 
-value ("Buenos Aires", "Cordoba", "2020-18-03", "2020-03-17", "2020-03-17", 23, "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, "DNI", 41823476, 244444, 1);
+insert into VIAJE (origen, destino, fechaInicio, fechaFinalizacion,  ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, idArrastrado) 
+value ("Buenos Aires", "Cordoba", '2020-03-18', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, 1);
 
 create table PROFORMA(
 numero int primary key,
@@ -158,6 +155,9 @@ select * from tractor;
  select * from CARGA;
  
  SELECT * FROM VIAJE;
+ 
+ select * from VIAJE join ARRASTRADO on viaje.iDArrastrado = arrastrado.id 
+ join CARGA where carga.id = arrastrado.id_carga;
 
  select * from CLIENTE;
 

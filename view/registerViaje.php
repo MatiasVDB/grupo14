@@ -65,7 +65,7 @@
     <select class="custom-select" multiple name="idVehiculo">
         <option selected>VEHICULOS</option>
         {{#tractores}}
-        <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Modelo: {{modelo}}</option>
+        <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Chasis: {{chasis}} - Modelo: {{modelo}}</option>
 
         {{/tractores}}
     </select>
@@ -79,29 +79,16 @@
 
     <div class="form-group col-md-8">
 
-        <label> <h6> Cliente</h6></label>
-        <select class="custom-select" multiple name="cuit">
-            <option selected>CLIENTES</option>
-            {{#clientes}}
-            <option value="{{CUIT}}">CUIT: {{CUIT}} - Denominación: {{denominacion}}</option>
+        <label> <h6> Equipo Arrastrado</h6></label>
+        <select class="custom-select" multiple name="idArrastrado">
+            <option selected>ARRASTRADOS</option>
+            {{#arrastrados}}
+            <option value="{{id}">ID: {{id}} - Patente: {{patente}} - Numero de Chasis: {{numeroDeChasis}} </option>
 
-            {{/clientes}}
+            {{/arrastrados}}
         </select>
 
     </div>
-
-    </div>
-
-
-    <div class="form-row">
-        <label> <h6> Chofer</h6></label>
-        <select class="custom-select" multiple name="dniChofer">
-            <option selected>CHOFERES</option>
-            {{#choferes}}
-            <option value="{{numeroDeDocumento}}">Tipo de documento: {{tipoDeDocumento}} - Numero de documento: {{numeroDeDocumento}} - Nombre: {{nombre}}</option>
-
-            {{/choferes}}
-        </select>
 
     </div>
 

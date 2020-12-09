@@ -152,6 +152,78 @@
     {{/viaje}}
 
     <br>
+
+
+    <div class="form-row">
+
+        <div class="col-md-4">
+            <h5> Datos de la Carga </h5>
+        </div>
+
+    </div>
+
+    <div class="form-row">
+        {{#carga}}
+
+        <input type="hidden" name="id_carga" value="{{id}}">
+
+        <div class="form-group col-md-6">
+            <label> Tipo </label>
+            <input type="text" class="form-control" id="tipo" placeholder="{{tipo}}" name="tipo" disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+
+            <label> Peso Neto </label>
+            <input type="number" class="form-control" id="pesoNeto" placeholder="{{pesoNeto}}" name="pesoNeto" disabled>
+
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+
+
+            <label> Hazard</label>
+            <input type="text" class="form-control" id="hazard" placeholder="{{hazard}}" name="hazard"
+                   disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+            <label> IMO </label>
+            <input type="text" class="form-control" id="imo" placeholder="{{imo}}" name="imo" disabled>
+
+        </div>
+
+    </div>
+
+    <div class="form-row">
+
+        <div class="form-group col-md-6">
+
+
+            <label> Reefer</label>
+            <input type="text" class="form-control" id="reefer" placeholder="{{reefer}}" name="reefer"
+                   disabled>
+
+        </div>
+
+        <div class="form-group col-md-6">
+            <label> Temperatura </label>
+            <input type="text" class="form-control" id="temperatura" placeholder="{{temperatura}}" name="temperatura" disabled>
+
+        </div>
+
+    </div>
+
+    {{/carga}}
+
+    <br>
+
     <div class="form-row">
 
         <div class="col-md-4">

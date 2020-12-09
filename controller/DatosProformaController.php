@@ -24,7 +24,7 @@ class datosProformaController
     public function index(){
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
 
-            $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajes(), "empleados" => $this->empleadosModel->getChoferes());
+            $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajesConArrastradosYCargas(), "empleados" => $this->empleadosModel->getChoferes());
 
 
             echo $this->render->render("view/datosProformaView.php", $data);
