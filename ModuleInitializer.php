@@ -106,9 +106,7 @@ class ModuleInitializer
         $model = new ViajesModel($this->database);
         $modelArrastrados = new ArrastradosModel($this->database);
         $modelTractores = new TractoresModel($this->database);
-        $modelClientes= new ClientesModel($this->database);
-        $modelEmpleados= new EmpleadosModel($this->database);
-        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $this->renderer);
+        return new ViajesController($model, $modelArrastrados, $modelTractores, $this->renderer);
     }
 
     public function createDatosProformaController(){
