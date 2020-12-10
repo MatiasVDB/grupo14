@@ -22,10 +22,10 @@ class EmpleadosModel
 
     }
 
-    public function getEmpleado($tipoDocumento, $numeroDocumento){
-        $sql = "SELECT * FROM USUARIO where tipoDeDocumento = '$tipoDocumento' and numeroDeDocumento = '$numeroDocumento'";
+    public function getEmpleado($numeroDocumento){
+        $sql = "SELECT * FROM USUARIO where numeroDeDocumento = '$numeroDocumento'";
 
-        return $this->database->query($sql);
+        return $this->database->execute($sql);
     }
 
     public function getEmpleadoDNI($numeroDocumento){
@@ -35,9 +35,9 @@ class EmpleadosModel
     }
 
 
-    public function getEmpleadoConNivelDeRol($tipoDeDocumento, $numeroDeDocumento){
+    public function getEmpleadoConNivelDeRol($numeroDeDocumento){
 
-        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario and tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'");
+        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario  and numeroDeDocumento = '$numeroDeDocumento'");
 
     }
 
@@ -59,15 +59,15 @@ class EmpleadosModel
 
 
 
-    public function modificarEmpleado($tipoDeDocumento, $numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario){
-        $sql = "update  USUARIO set nombre = '$nombre', fechaDeNacimiento = '$fechaDeNacimiento', mail = '$email', rolUsuario = '$rolUsuario' where tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'";
+    public function modificarEmpleado( $numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario){
+        $sql = "update  USUARIO set nombre = '$nombre', fechaDeNacimiento = '$fechaDeNacimiento', mail = '$email', rolUsuario = '$rolUsuario' where  numeroDeDocumento = '$numeroDeDocumento'";
 
         return $this->database->query($sql);
     }
 
-    public function eliminar($tipoDocumento, $numeroDocumento)
+    public function eliminar($numeroDocumento)
     {
-        $sql = "delete from usuario where tipoDeDocumento = '$tipoDocumento' and numeroDeDocumento = '$numeroDocumento'";
+        $sql = "delete from usuario where  numeroDeDocumento = '$numeroDocumento'";
 
         return $this->database->query($sql);
     }

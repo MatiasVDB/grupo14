@@ -8,12 +8,12 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-3">
+        <div class="form-group col-md-6">
             <label for="CUIT" >CUIT</label>
             <input name="cuit" type="number" id="cuit" class="form-control" placeholder="CUIT" min="0" required>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputDenominacion" >Denominación</label>
             <input name="denominacion" type="text" id="inputDenominacion" class="form-control" placeholder="Denominacion" required>
         </div>
@@ -22,7 +22,7 @@
 
     <div class="form-row">
 
-    <div class="form-group col-md-7">
+    <div class="form-group col-md-12">
         <label for="inputEmail" >Correo electrónico</label>
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required>
     </div>
@@ -31,7 +31,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="contacto1">Contacto 1</label>
 
@@ -41,7 +41,7 @@
 
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="contacto2">Contacto 2</label>
 
@@ -54,7 +54,7 @@
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="telefono">Teléfono</label>
 

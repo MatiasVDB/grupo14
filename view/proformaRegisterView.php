@@ -9,7 +9,7 @@
     <div class="form-row">
 
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputNumero">Número</label>
             <input name="numero" type="number" id="inputNumero" class="form-control" min="1000" required>
 
@@ -55,7 +55,7 @@
 
 
     <div class="form-row">
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-12">
             <label> Dirección </label>
                 <input type="text" class="form-control" id="disabledInput" placeholder="{{direccion}}" disabled>
             </div>
@@ -97,8 +97,6 @@
         </div>
 
         {{/cliente}}
-
-<br>
 
     <div class="form-row">
 
@@ -346,37 +344,23 @@
 
     <br>
     <div class="form-row">
-
         <div class="col-md-4">
             <h5> Chofer Asignado </h5>
         </div>
-
     </div>
 
     <div class="form-row">
 
         <div class="form-group col-md-4">
             {{#empleado}}
-
             <input type="text" class="form-control" name="nombre" value="{{nombre}} {{numeroDeDocumento}}" disabled>
-
-            <input type="hidden" value="DNI" name="tipoDeDocumento_usuario">
             <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
-
             {{/empleado}}
-
         </div>
-
     </div>
-
-<br>
-
         <button type="submit" class="btn btn-primary">Enviar al chofer</button>
 
-
-
         </form>
-
 </div>
 
             {{> footer}}

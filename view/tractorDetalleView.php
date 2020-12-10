@@ -25,9 +25,9 @@
     <input type="hidden" name="chasis" value="{{numeroDeChasis}}">
 
     <div class="form-row">
-    <div class="form-group col-md-4 ">
+    <div class="form-group col-md-12 ">
         <label for="inputEmail4">Marca</label>
-        <select class="custom-select" size="3" name="marca">
+        <select class="custom-select" size="6" name="marca">
 
             <option selected value="{{marca}}">{{marca}} (Actual)</option>
             <option value="Scania">Scania</option>

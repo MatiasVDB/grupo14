@@ -18,20 +18,20 @@ id int not null auto_increment,
 tipo varchar (15) not null,
 pesoNeto float not null,
 hazard varchar (2) not null,
-imo varchar(10),
+imo float,
 reefer varchar (2) not null,
 temperatura DECIMAL(5,2),
 primary key (id)
 );
 
 insert into CARGA(TIPO, PESONETO, HAZARD, IMO, REEFER, TEMPERATURA)
-values("Granel", 500, "SI", "Class", "SI", 5),
-("Liquida", 200, "SI", "Subclass", "SI", -40),
-("Jaula", 8000, "NO", "Ninguna", "SI", 16),
-("Granel", 4500, "SI", "Class", "SI", -55),
-("Liquida", 2200, "SI", "Subclass", "SI", -45),
-("Granel", 5100, "SI", "Class", "SI", 15),
-("Granel", 1500, "SI", "Class", "SI", 15);
+values("Granel", 500, "SI", 1, "SI", 5),
+("Liquida", 200, "SI", 1.1, "SI", -40),
+("Jaula", 8000, "NO", 0, "SI", 16),
+("Granel", 4500, "SI", 1.1, "SI", -55),
+("Liquida", 2200, "SI", 2.2, "SI", -45),
+("Granel", 5100, "SI", 3.3, "SI", 15),
+("Granel", 1500, "SI", 4.1, "SI", 15);
 
 create table TRACTOR(
 id int not null auto_increment,
@@ -60,19 +60,19 @@ create table ARRASTRADO(
 id int not null auto_increment,
 patente varchar(40),
 numeroDeChasis int,
+tipo varchar(50),
 id_carga int,
 primary key (id, patente, numeroDeChasis),
 foreign key(id_carga) references CARGA(id));
 
-insert into ARRASTRADO(patente, numeroDeChasis, id_carga)
-values ("AA100AS", 585822, 1),
-("AC125AD", 605737, 1),
-("AB135AG", 705687, 1),
-("AD166AS", 815082, 2),
-("AA189AD", 775167, 2),
-("AC208AG", 642287, 3),
-("AB230AS", 678666, 4),
-("AD252AD", 758967, 5);
+insert into ARRASTRADO(patente, numeroDeChasis, id_carga, tipo)
+values ("AA100AS", 585822, 1, "Araña"),
+("AC125AD", 605737, 2, "Araña"),
+("AB135AG", 705687, 3, "Granel"),
+("AD166AS", 815082, 4, "Araña"),
+("AA189AD", 775167, 5, "Jaula"),
+("AC208AG", 642287, 6, "Araña"),
+("AB230AS", 678666, 7, "Araña");
 
 
 
@@ -97,14 +97,13 @@ foreign key(idArrastrado) references ARRASTRADO(id));
 insert into VIAJE (origen, destino, fechaInicio, fechaFinalizacion,  ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, idArrastrado)
 value ("Buenos Aires", "Cordoba", '2020-03-18', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, 1),
 ("Santa Fe", "Cordoba", '2020-03-16', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 2, 2),
-("Santa Fe", "Cordoba", '2020-03-15', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 2, 2),
-("Corrientes", "Cordoba", '2020-03-14', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0,3, 3),
-("Corrientes", "Cordoba", '2020-03-20', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 4, 4),
-("Cordoba", "Buenos aires", '2020-03-21', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, 1);
+("Santa Fe", "Cordoba", '2020-03-15', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 2, 3),
+("Corrientes", "Cordoba", '2020-03-14', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0,3, 4),
+("Corrientes", "Cordoba", '2020-03-20', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 4, 5),
+("Cordoba", "Buenos aires", '2020-03-21', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, 6);
 
 
 create table USUARIO(
-    tipoDeDocumento varchar(50) not null,
     numeroDeDocumento INT NOT null,
     nombre varchar(50) not null  ,
     password varchar(50) not null,
@@ -112,20 +111,20 @@ create table USUARIO(
     mail varchar(75) not null unique,
     rolUsuario int,
     id_viaje int,
-    PRIMARY KEY(tipoDeDocumento, numeroDeDocumento),
+    PRIMARY KEY( numeroDeDocumento),
     foreign key(rolUsuario) references ROL(id),
     foreign key(id_viaje) references VIAJE(id)
     );
     
 
 
-insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
-values ("DNI", 41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
-("DNI", 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1),
-("DNI", 41214566, "Pablo","1234", "1998-06-09", "pablo@hotmail.com", 1),
-("DNI", 42343476, "Juan","1234", "1998-06-09", "juan@hotmail.com", 1),
-("DNI", 41456476, "Peter","1234", "1998-06-09", "peter@hotmail.com", 1),
-("DNI", 41852376, "Matisco","1234", "1998-06-09", "matisco@hotmail.com", 2);
+insert into USUARIO(numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
+values (41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
+( 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1),
+(41214566, "Pablo","1234", "1998-06-09", "pablo@hotmail.com", 1),
+(42343476, "Juan","1234", "1998-06-09", "juan@hotmail.com", 1),
+(41456476, "Peter","1234", "1998-06-09", "peter@hotmail.com", 1),
+(41852376, "Matisco","1234", "1998-06-09", "matisco@hotmail.com", 2);
 
 
 
@@ -159,7 +158,6 @@ numero int primary key,
 fecha date,
 CUIT_cliente int,
 id_viaje int,
-tipoDeDocumento_chofer varchar(40),
 numeroDeDocumento_chofer int,
 costeoEstimado_Kilometros int,
 costeoEstimado_Combustible int,
@@ -173,20 +171,19 @@ costeoEstimado_Hazard int,
 costeoEstimado_Reefer int,
  foreign key (CUIT_cliente) references CLIENTE(CUIT),
  foreign key (id_viaje) references VIAJE(id),
- foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
+ foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
 create table combustible(
 id int not null auto_increment,
 idViaje int,
 numeroDeDocumento_chofer int,
-tipoDeDocumento_chofer varchar(5),
 lugar varchar(75),
 cantidad int,
 importe float,
 kilometrosRecorridos float,
 primary key (id, idViaje, numeroDeDocumento_chofer),
 foreign key (idViaje) references VIAJE(id),
-foreign key (tipoDeDocumento_chofer, numeroDeDocumento_chofer) references USUARIO(tipoDeDocumento, numeroDeDocumento));
+foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
 
 select * from tractor; 

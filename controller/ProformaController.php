@@ -44,7 +44,6 @@ class ProformaController
         $data = array("cliente" => $this->clientesModel->getCliente($CUIT_cliente), "viaje"=> $this->viajesModel->getViaje($ID_viaje),
            "carga"=>$this->cargasModel->getCarga($carga),"empleado"=>$this->empleadosModel->getEmpleadoDNI($numeroDNI));
 
-
         echo $this->render->render( "view/proformaRegisterView.php", $data);
 
     }
@@ -55,7 +54,6 @@ class ProformaController
         $CUIT = $_POST["CUIT_cliente"];
         $viaje = $_POST["id_viaje"];
         $carga = $_POST["id_carga"];
-        $tipoDNI = $_POST["tipoDeDocumento_usuario"];
         $numeroDNI = $_POST["numeroDeDocumento_usuario"];
         $costeoKilometrosEsperado = $_POST["kilometrosCosteoEsperado"];
         $costeoCombustibleEsperado = $_POST["combustibleCosteoEsperado"];
@@ -72,12 +70,12 @@ class ProformaController
 
         if ($this->proformaModel->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero)){
 
-            $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $tipoDNI, $numeroDNI, $costeoKilometrosEsperado, $costeoCombustibleEsperado,
+            $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $numeroDNI, $costeoKilometrosEsperado, $costeoCombustibleEsperado,
                 $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
                 $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
 
 
-            header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&carga=$carga&tipoDNI=$tipoDNI&numeroDNI=$numeroDNI");
+            header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&carga=$carga&numeroDNI=$numeroDNI");
 
         }
         else{
