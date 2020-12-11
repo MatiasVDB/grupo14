@@ -24,15 +24,11 @@ class RegisterModel
 
     }
 
-    public function ingresarUsuarioALaBD($tipoDeDocumento, $numeroDeDocumento,$nombre, $password, $fechaDeNacimiento, $email){
-
-        if($this->validarQueElEmailIngresadoNoEsteRegistrado($email))
-
-            $sql = "insert into USUARIO(tipoDeDocumento, numeroDeDocumento, nombre, password, fechaDeNacimiento, mail, rolUsuario)
-            values ('$tipoDeDocumento','$numeroDeDocumento','$nombre','$password','$fechaDeNacimiento','$email',null)";
-
-            $this->database->query($sql);
-
-
+    public function ingresarUsuarioALaBD($numeroDeDocumento,$nombre, $password, $fechaDeNacimiento, $email){
+        if($this->validarQueElEmailIngresadoNoEsteRegistrado($email)){
+            $sql = "insert into USUARIO( numeroDeDocumento, nombre, password, fechaDeNacimiento, mail, rolUsuario)
+            values ('$numeroDeDocumento','$nombre','$password','$fechaDeNacimiento','$email',null)";
+            $this->database->execute($sql);
+        }
     }
 }

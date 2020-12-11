@@ -17,7 +17,7 @@ class CargasController
     public function index(){
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 1){
             $data["cargas"] = $this->cargaModel->getCargas();
-            echo $this->render->render( "view/registerCargaCombustible.php", $data );
+            echo $this->render->render( "view/cargasView.php", $data );
         }
         else{
             header("Location: main");
@@ -32,11 +32,14 @@ class CargasController
     }
 
     public function procesarActualizacionCarga(){
+        $imo=0;
+        if (!empty($_POST["imo"])) {
+            $imo= $_POST['imo'];
+        }
         $id = $_POST['id'];
         $tipo = $_POST ['tipo'];
         $pesoNeto = $_POST ['pesoNeto'];
         $hazard = $_POST['hazard'];
-        $imo= $_POST['imo'];
         $reefer = $_POST['reefer'];
         $temperatura = $_POST['temperatura'];
 
@@ -57,11 +60,15 @@ class CargasController
     }
 
     public function registrarCarga(){
+
+        $imo=0;
+        if (!empty($_POST["imo"])) {
+            $imo= $_POST['imo'];
+        }
         $id = $_POST['id'];
         $tipo = $_POST ['tipo'];
         $pesoNeto = $_POST ['pesoNeto'];
         $hazard = $_POST['hazard'];
-        $imo = $_POST['imo'];
         $reefer = $_POST['reefer'];
         $temperatura = $_POST['temperatura'];
 

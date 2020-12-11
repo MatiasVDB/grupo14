@@ -106,7 +106,7 @@ class ModuleInitializer
         $model = new ViajesModel($this->database);
         $modelArrastrados = new ArrastradosModel($this->database);
         $modelTractores = new TractoresModel($this->database);
-        $modelClientes= new ClientesModel($this->database);
+        $modelClientes = new ClientesModel($this->database);
         $modelEmpleados= new EmpleadosModel($this->database);
         return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $this->renderer);
     }
@@ -131,14 +131,16 @@ class ModuleInitializer
         include_once("model/ProformaModel.php");
         include_once ("model/ClientesModel.php");
         include_once ("model/ViajesModel.php");
+        include ("model/CargasModel.php");
         include_once("model/EmpleadosModel.php");
         include_once("controller/ProformaController.php");
 
         $model = new ProformaModel($this->database);
         $modelClientes = new ClientesModel($this->database);
         $modelViajes = new ViajesModel($this->database);
+        $modelCargas = new CargasModel($this->database);
         $modelEmpleados = new EmpleadosModel($this->database);
-        return new ProformaController($model, $modelClientes, $modelViajes, $modelEmpleados, $this->renderer);
+        return new ProformaController($model, $modelClientes, $modelViajes, $modelCargas, $modelEmpleados, $this->renderer);
     }
 
     public function createEditarProformaController(){

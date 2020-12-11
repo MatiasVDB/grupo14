@@ -27,18 +27,14 @@ class RegisterController
 
     public function procesarFormulario()
     {
-
-        $tipoDeDocumento = $_POST['tipoDocumento'];
-        $numeroDeDocumento = $_POST ['nroDocumento'];
+        $numeroDeDocumento = $_POST ['dni'];
         $nombre = $_POST ['nombre'];
         $password = $_POST['password'];
         $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
         $email = $_POST['email'];
 
-
         if ($this->registerModel->validarQueElEmailIngresadoNoEsteRegistrado($email)) {
-
-            $this->registerModel->ingresarUsuarioALaBD($tipoDeDocumento, $numeroDeDocumento, $nombre, $password, $fechaDeNacimiento, $email);
+            $this->registerModel->ingresarUsuarioALaBD($numeroDeDocumento, $nombre, $password, $fechaDeNacimiento, $email);
 
             header("Location: ../home");
 

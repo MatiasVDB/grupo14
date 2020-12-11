@@ -1,23 +1,10 @@
 {{> header}}
-
-
 <div class="formularioContainer">
 
     <h5 id="ingresar" class="mb-3 registerTxt">Registro de Cargas</h5>
 
 <form action="registrarCarga" class="col-md-8 formulario" method="post">
 
-    <div class="form-row">
-
-        <div class="form-group col-md-2">
-
-        <label for="inputTipo" >ID</label>
-
-        <input type="number" name="id" id="inputId" class="form-control" placeholder="ID" required>
-
-        </div>
-
-    </div>
 
     <div class="form-row">
         <div class="form-group col-md-8">
@@ -30,7 +17,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputTipo" >Tipo</label>
             <select class="form-control category-select" id="inputTipo" name="tipo">
                 <option value="Granel">Granel</option>
@@ -42,7 +29,7 @@
             </select>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputPeso" >Peso neto</label>
             <input type="number" name="pesoNeto" id="inputPeso" class="form-control" placeholder="Peso neto" required>
         </div>
@@ -51,7 +38,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputHazard" >Hazard</label>
             <select class="form-control category-select" id="inputHazard" name="hazard">
                 <option value="si">Si</option>
@@ -59,22 +46,16 @@
             </select>
         </div>
 
-        <div class="form-group col-md-4">
-
-            <label for="inputTipo" >IMO</label>
-            <select class="form-control category-select" id="inputTipo" name="imo">
-                <option value="No lleva"> No lleva  </option>
-                <option value="Class">Class</option>
-                <option value="Subclass">Subclass</option>
-            </select>
-
+        <div class="form-group col-md-6">
+            <label for="imo" >IMO</label>
+            <input type="number" name="imo" id="imo" class="form-control" placeholder="IMO">
         </div>
 
 
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
             <label for="inputReefer" >Reefer</label>
             <select class="form-control category-select" id="inputReefer" name="reefer">
                 <option value="si">Si</option>
@@ -82,7 +63,7 @@
             </select>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="temperatura">Temperatura</label>
 

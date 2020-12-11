@@ -98,7 +98,7 @@ class CargasCombustibleController
         $cantidad = $_POST['cantidad'];
         $importe = $_POST['importe'];
         $kilometrosRecorridos= $_POST['kilometrosRecorridos'];
-        
+
         $this->cargasCombustibleModel->setCargaCombustible($idViaje,$numeroDeDocumento_chofer, $tipoDeDocumento_chofer, $lugar, $cantidad, $importe, $kilometrosRecorridos );
             header("Location: http://localhost/grupo14/cargasCombustibleView");
     }

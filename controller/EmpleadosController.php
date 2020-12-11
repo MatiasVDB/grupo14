@@ -38,21 +38,15 @@ class EmpleadosController
 
     public function detalle(){
 
-            $tipoDocumento = $_GET["tipoDocumento"];
             $numeroDocumento = $_GET["numeroDeDocumento"];
 
 
-            $data["empleado"] = $this->empleadoModel->getEmpleado($tipoDocumento, $numeroDocumento);
-            echo $this->render->render("view/empleadoDetalleView.php", $data);
-
-
-        $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($tipoDocumento, $numeroDocumento);
+        $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($numeroDocumento);
         echo $this->render->render( "view/empleadoDetalleView.php", $data );
 
     }
 
     public function procesarActualizacionEmpelado(){
-        $tipoDeDocumento = $_POST['tipoDocumento'];
         $numeroDeDocumento = $_POST ['numeroDeDocumento'];
         $nombre = $_POST ['nombre'];
         $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
@@ -61,17 +55,16 @@ class EmpleadosController
 
 
 
-        $this->empleadoModel->modificarEmpleado($tipoDeDocumento, $numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario);
+        $this->empleadoModel->modificarEmpleado($numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario);
 
         header("Location: ../empleados");
     }
 
     public function eliminar(){
 
-        $tipoDocumento = $_GET["tipoDocumento"];
         $numeroDocumento = $_GET["numeroDeDocumento"];
 
-        $this->empleadoModel->eliminar($tipoDocumento, $numeroDocumento);
+        $this->empleadoModel->eliminar( $numeroDocumento);
 
         header("Location: ../empleados");
 
