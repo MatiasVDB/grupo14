@@ -27,7 +27,7 @@ class CargasCombustibleController
 
     public function registerCargaCombustible(){
 
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 1 or 2) {
             // VER
             // EJEMPLO DE URL localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje=1&numeroDeDocumento_chofer=41823476&tipoDeDocumento_chofer=DNI
             $idViaje= $_GET['idViaje'];
