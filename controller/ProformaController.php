@@ -53,7 +53,6 @@ class ProformaController
         $fecha = $_POST["fecha"];
         $CUIT = $_POST["CUIT_cliente"];
         $viaje = $_POST["id_viaje"];
-        $carga = $_POST["id_carga"];
         $numeroDNI = $_POST["numeroDeDocumento_usuario"];
         $costeoKilometrosEsperado = $_POST["kilometrosCosteoEsperado"];
         $costeoCombustibleEsperado = $_POST["combustibleCosteoEsperado"];
@@ -67,21 +66,31 @@ class ProformaController
         $costeoReeferEsperado = $_POST["reeferCosteoEsperado"];
 
 
+//        echo("$numero, $fecha, $CUIT, $viaje,  $numeroDNI --,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
+//        $costeoETDEsperado,$costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado,$costeoExtrasEsperado
+//        ,$costeoFEEEsperado, $costeoHazardEsperado,$costeoReeferEsperado
+//        ");
 
+        echo ("1");
         if ($this->proformaModel->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero)){
+            echo ("2");
 
             $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $numeroDNI, $costeoKilometrosEsperado, $costeoCombustibleEsperado,
                 $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
                 $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
 
 
-            header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&carga=$carga&numeroDNI=$numeroDNI");
+            //header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&numeroDNI=$numeroDNI");
+            echo ("3");
 
         }
         else{
+            echo ("4");
+
             $data["mensaje"] = "*Número de Proforma existente, ingrese otro.";
-           echo $this->render->render( "view/proformaRegisterView.php", $data);
+           //echo $this->render->render( "view/proformaRegisterView.php", $data);
         }
+        echo ("5");
 
 
     }
@@ -91,13 +100,12 @@ class ProformaController
       $numero = $_GET["numero"];
       $CUIT = $_GET["CUIT"];
       $viaje = $_GET["viaje"];
-      $carga = $_GET["carga"];
-      $tipoDNI = $_GET["tipoDNI"];
+
       $numeroDNI = $_GET["numeroDNI"];
 
 
        $data =  array("proforma"=> $this->proformaModel->getProforma($numero), "cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
-           "carga"=>$this->cargasModel->getCarga($carga), "empleado"=>$this->empleadosModel->getEmpleado(($tipoDNI), $numeroDNI));
+           "empleado"=>$this->empleadosModel->getEmpleado($numeroDNI));
 
         echo $this->render->render( "view/imprimirProformaView.php", $data);
 
@@ -106,8 +114,8 @@ class ProformaController
     public function imprimirQR(){
         $numero = $_GET['id_viaje'];
         $numeroDocumento = $_GET['numeroDeDocumento_chofer'];
-        $tipoDocumento = $_GET['tipoDeDocumento_chofer'];
-        QRcode::png('localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje='.$numero .'&numeroDeDocumento_chofer='.$numeroDocumento.'&tipoDeDocumento_chofer='.$tipoDocumento);
+        //$tipoDocumento = $_GET['tipoDeDocumento_chofer'];
+        QRcode::png('localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje='.$numero .'&numeroDeDocumento_chofer='.$numeroDocumento);
         // QRcode::png('http://localhost/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero)
     }
 

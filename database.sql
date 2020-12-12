@@ -173,6 +173,11 @@ costeoEstimado_Reefer int,
  foreign key (id_viaje) references VIAJE(id),
  foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
+insert into proforma(numero, fecha, CUIT_cliente, id_viaje, numeroDeDocumento_chofer)
+values(1, "2020-03-17",
+213443, 2, 41214566)
+
+
 create table combustible(
 id int not null auto_increment,
 idViaje int,

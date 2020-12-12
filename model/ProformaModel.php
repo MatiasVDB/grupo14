@@ -43,14 +43,14 @@ class ProformaModel
                              $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
                                 $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado){
 
-        if ($this->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero))
+        //if ($this->validarQueElNumeroDeProformaIngresadoNoEsteRegistrado($numero)){}
 
         $sql = "INSERT INTO PROFORMA (numero, fecha, CUIT_cliente, id_viaje, numeroDeDocumento_chofer, costeoEstimado_Kilometros, costeoEstimado_Combustible, costeoEstimado_ETD, costeoEstimado_ETA,
                                         costeoEstimado_Viaticos, costeoEstimado_Peajes_Pesajes, costeoEstimado_Extras, costeoEstimado_FEE, costeoEstimado_Hazard, costeoEstimado_Reefer) 
-        VALUES ('$numero', '$fecha', '$CUIT', '$viaje', , '$numeroDNI', '$costeoKilometrosEsperado', '$costeoCombustibleEsperado', '$costeoETDEsperado', '$costeoETAEsperado', '$costeoViaticosEsperado', '$costeoPeajesPesajesEsperado', 
+        VALUES ('$numero', '$fecha', '$CUIT', '$viaje', '$numeroDNI', '$costeoKilometrosEsperado', '$costeoCombustibleEsperado', '$costeoETDEsperado', '$costeoETAEsperado', '$costeoViaticosEsperado', '$costeoPeajesPesajesEsperado', 
                 '$costeoExtrasEsperado', '$costeoFEEEsperado', '$costeoHazardEsperado', '$costeoReeferEsperado')";
 
-        $this->database->query($sql);
+        $this->database->execute($sql);
     }
 
 

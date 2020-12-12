@@ -65,30 +65,29 @@ class CargasController
         if (!empty($_POST["imo"])) {
             $imo= $_POST['imo'];
         }
-        $id = $_POST['id'];
         $tipo = $_POST ['tipo'];
         $pesoNeto = $_POST ['pesoNeto'];
         $hazard = $_POST['hazard'];
         $reefer = $_POST['reefer'];
         $temperatura = $_POST['temperatura'];
 
-        if(count($this->cargaModel->getCarga($id)) == 0){
+        //if(count($this->cargaModel->getCarga($id)) == 0){
 
-            $this->cargaModel->createCarga($id, $tipo, $pesoNeto , $hazard, $imo ,$reefer , $temperatura);
+            $this->cargaModel->createCarga( $tipo, $pesoNeto , $hazard, $imo ,$reefer , $temperatura);
 
 
             header("Location: ../cargas");
 
 
-        }
+        //}
 
-        else{
+        /*else{
 
             $data["error"] = "*La ID ingresada ya se encuentra registrada, ingrese otra por favor.";
 
             echo $this->render->render("view/registerCarga.php", $data);
 
-        }
+        }*/
 
 
     }

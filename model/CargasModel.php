@@ -27,12 +27,12 @@ class CargasModel
         return $this->database->execute($sql);
     }
 
-    public function createCarga($id, $tipo, $pesoNeto, $hazard, $imo, $reefer, $temperatura){
+    public function createCarga( $tipo, $pesoNeto, $hazard, $imo, $reefer, $temperatura){
 
 
 
-        $sql = "insert into CARGA(id, tipo, pesoNeto, hazard, imo, reefer, temperatura)
-        values ('$id', '$tipo', '$pesoNeto', '$hazard','$imo', '$reefer', '$temperatura')";
+        $sql = "insert into CARGA( tipo, pesoNeto, hazard, imo, reefer, temperatura)
+        values ('$tipo', '$pesoNeto', '$hazard','$imo', '$reefer', '$temperatura')";
 
         return $this->database->execute($sql);
     }

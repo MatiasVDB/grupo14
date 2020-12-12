@@ -5,7 +5,7 @@
 
 <form action="registrarCarga" class="col-md-8 formulario" method="post">
 
-
+<!--
     <div class="form-row">
         <div class="form-group col-md-3">
 
@@ -17,7 +17,7 @@
 
         </div>
 
-    </div>
+    </div> -->
 
     <div class="form-row">
 

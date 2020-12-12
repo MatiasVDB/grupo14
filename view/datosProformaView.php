@@ -53,7 +53,7 @@
         <option selected>SELECCIÓN DE CHOFER</option>
 
         {{#empleados}}
-        <option value="{{numeroDeDocumento}}"  >{{nombre}} </option>
+        <option value="{{numeroDeDocumento}}"  >{{nombre}}({{numeroDeDocumento}}) </option>
         {{/empleados}}
 
     </select>
