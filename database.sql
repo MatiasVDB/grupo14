@@ -199,7 +199,9 @@ select * from tractor;
 
  select * from CLIENTE;
 
- select * from rol join usuario where rol.id = usuario.rolUsuario;
+ select * from usuario left join rol on usuario.rolUsuario = rol.id;
+ 
+  select * from usuario left join rol on usuario.rolUsuario = rol.id where numeroDeDocumento = 86896324;
 
  select * from rol;
  

@@ -18,7 +18,7 @@ class EmpleadosModel
 
     public function getEmpleadosConNivelDeRol(){
 
-        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario");
+        return $this->database->query(" select * from usuario left join rol on usuario.rolUsuario = rol.id;");
 
     }
 
@@ -37,11 +37,10 @@ class EmpleadosModel
 
     public function getEmpleadoConNivelDeRol($numeroDeDocumento){
 
-        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario  and numeroDeDocumento = '$numeroDeDocumento'");
+        return $this->database->query("select * from usuario left join rol on usuario.rolUsuario  = rol.id where numeroDeDocumento = '$numeroDeDocumento'");
 
     }
 
-    
     public function getChoferes(){
 
         return $this->database->query("SELECT * FROM USUARIO where rolUsuario = 1");
@@ -53,8 +52,8 @@ class EmpleadosModel
 
     }
 
-    public function getEmpleadosPorRol($tipoDNI, $numeroDNI, $rol){
-        return $this->database->query("SELECT * FROM USUARIO where tipoDeDocumento = '$tipoDNI' and numeroDeDocumento = '$numeroDNI' and rolUsuario = '$rol'");
+    public function getEmpleadosPorRol($numeroDNI, $rol){
+        return $this->database->query("SELECT * FROM USUARIO where numeroDeDocumento = '$numeroDNI' and rolUsuario = '$rol'");
     }
 
 
@@ -62,7 +61,7 @@ class EmpleadosModel
     public function modificarEmpleado( $numeroDeDocumento, $nombre, $fechaDeNacimiento, $email, $rolUsuario){
         $sql = "update  USUARIO set nombre = '$nombre', fechaDeNacimiento = '$fechaDeNacimiento', mail = '$email', rolUsuario = '$rolUsuario' where  numeroDeDocumento = '$numeroDeDocumento'";
 
-        return $this->database->query($sql);
+        $this->database->execute($sql);
     }
 
     public function eliminar($numeroDocumento)

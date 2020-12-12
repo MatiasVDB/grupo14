@@ -25,7 +25,7 @@ class LoginController
         $email = $_POST['email'];
         $password = $_POST['password'];
 
-        if($this->loginModel->validarLogin($email,$password) == true){
+        if($this->loginModel->validarLogin($email,$password)){
 
             $mensaje["login"] = "Login exitoso";
 
