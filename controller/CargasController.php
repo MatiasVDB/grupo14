@@ -15,7 +15,22 @@ class CargasController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 1){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1){
+            switch ($_SESSION['logueado']){
+
+                case 1:
+                    $data['empleadosNav']= "disabled";
+                    $data['viajesNav']= "disabled";
+                    $data['cargarProformaNav']="disabled";
+                    $data['registrarTractorNav']="disabled";
+                    $data['registrarArrastradoNav']="disabled";
+                    $data['actualizarCarga']="disabled";
+                    $data['eliminarCarga']="disabled";
+                    $data['agregarCarga']="disabled";
+                    break;
+
+
+            }
             $data["cargas"] = $this->cargaModel->getCargas();
             echo $this->render->render( "view/cargasView.php", $data );
         }
@@ -25,10 +40,14 @@ class CargasController
     }
 
     public function detalle(){
-        $id = $_GET["id"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+            $id = $_GET["id"];
 
-        $data["carga"] = $this->cargaModel->getCarga($id);
-        echo $this->render->render( "view/cargaDetalleView.php", $data );
+            $data["carga"] = $this->cargaModel->getCarga($id);
+            echo $this->render->render("view/cargaDetalleView.php", $data);
+        }else{
+            header("Location: ../main");
+        }
     }
 
     public function procesarActualizacionCarga(){
@@ -50,7 +69,7 @@ class CargasController
 
     public function registerCarga(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
 
             echo $this->render->render("view/registerCarga.php");
         }
@@ -94,11 +113,15 @@ class CargasController
     }
 
     public function eliminar(){
-        $id = $_GET["id"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+            $id = $_GET["id"];
 
-        $this->cargaModel->eliminar($id );
+            $this->cargaModel->eliminar($id);
 
-        header("Location: ../cargas");
+            header("Location: ../cargas");
+        }else{
+            header("Location: ../main");
+        }
 
     }
 }

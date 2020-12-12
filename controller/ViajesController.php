@@ -24,7 +24,7 @@ class ViajesController
 
     public function index(){
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
-            $data["viajes"] = $this->viajesModel->getViajes();
+                    $data["viajes"] = $this->viajesModel->getViajes();
             echo $this->render->render( "view/viajesView.php", $data );
         }
         else{

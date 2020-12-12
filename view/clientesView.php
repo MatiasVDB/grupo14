@@ -33,8 +33,8 @@
                                 <td> <span class="text-muted">{{telefono}}</span> </td>
                                 <td> <span class="text-muted">{{direccion}}</span> </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./clientes/detalle/CUIT={{CUIT}}'"> Actualizar</button>
-                                    <button type="button" class="btn btn-danger" onclick="location.href='./clientes/eliminar?CUIT={{CUIT}}'" > Dar Baja</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='./clientes/detalle/CUIT={{CUIT}}'" {{actualizarCliente}}> Actualizar</button>
+                                    <button type="button" class="btn btn-danger" onclick="location.href='./clientes/eliminar?CUIT={{CUIT}}'" {{borrarCliente}}> Dar Baja</button>
                                 </td>
                             </tr>
                             {{/clientes}}
@@ -45,7 +45,7 @@
             </div>
         </div>
         <div class="col text-center mt-4 mb-4">
-            <a href="clientes/registerCliente" class="btn btn-primary btn-lg" role="button" aria-pressed="true">Agregar Cliente</a>
+            <a href="clientes/registerCliente" class="btn btn-primary btn-lg {{agregarCliente}}" role="button" aria-pressed="true" >Agregar Cliente</a>
         </div>
     </div>
 </main>

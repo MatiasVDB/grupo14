@@ -29,8 +29,8 @@
                                 <td class="text-muted">{{patente}}</td>
                                 <td class="text-muted">{{numeroDeChasis}}</td>
                                 <td class="text-muted">{{tipo}}</td>
-                                <td><a href="http://localhost/grupo14/arrastrados/detalleArrastrado/id={{id}}" class="btn btn-primary" role="button" aria-pressed="true">Actualizar</a>
-                                    <a href="http://localhost/grupo14/arrastrados/eliminarArrastrado?id={{id}}" class="btn btn-danger" role="button" aria-pressed="true">Dar Baja</a></td>
+                                <td><a href="http://localhost/grupo14/arrastrados/detalleArrastrado/id={{id}}" class="btn btn-primary {{actualizarArrastrado}}" role="button" aria-pressed="true">Actualizar</a>
+                                    <a href="http://localhost/grupo14/arrastrados/eliminarArrastrado?id={{id}}" class="btn btn-danger {{eliminarArrastrado}}" role="button" aria-pressed="true">Dar Baja</a></td>
                             </tr>
 
                             {{/arrastrados}}
@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="col text-center mt-4 mb-4">
-            <a href="http://localhost/grupo14/arrastrados/registerArrastrado" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Agregar arrastrado</a>
+            <a href="http://localhost/grupo14/arrastrados/registerArrastrado" class="btn btn-primary btn-lg {{agregarArrastrado}}" role="button" aria-pressed="true">Agregar arrastrado</a>
         </div>
     </div>
 </main>

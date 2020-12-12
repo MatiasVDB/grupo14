@@ -15,7 +15,31 @@ class ClientesController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 1){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1){
+            switch ($_SESSION['logueado']){
+
+                case 1:
+                    $data['empleadosNav']= "disabled";
+                    $data['viajesNav']= "disabled";
+                    $data['cargarProformaNav']="disabled";
+                    $data['registrarTractorNav']="disabled";
+                    $data['registrarArrastradoNav']="disabled";
+                    $data['actualizarCliente']="disabled";
+                    $data['borrarCliente']="disabled";
+                    $data['agregarCliente']="disabled";
+                    break;
+
+                case 2:
+
+                    break;
+
+
+                case 4:
+
+                    break;
+
+
+            }
             $data["clientes"] = $this->clienteModel->getClientes();
             echo $this->render->render( "view/clientesView.php", $data );
         }
@@ -25,6 +49,7 @@ class ClientesController
     }
 
     public function detalle(){
+
 
         $cuit = $_GET["CUIT"];
 
@@ -48,7 +73,7 @@ class ClientesController
 
     public function registerCliente(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
 
             echo $this->render->render("view/registerCliente.php");
         }
@@ -73,7 +98,7 @@ class ClientesController
     }
 
     public function eliminar(){
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
             $cuit = $_GET["CUIT"];
 
             $this->clienteModel->eliminar($cuit);
