@@ -23,9 +23,15 @@ class LoginModel
 
         if (count($query) == 1 ) {
 
-
-
             switch ($query[0]['rolUsuario']){
+
+                case 0:
+
+                    session_start();
+                    $_SESSION['logueado'] = 0;
+                    $_SESSION['username'] = $email;
+
+                    break;
 
                 case 1:
                     session_start();

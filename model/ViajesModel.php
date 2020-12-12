@@ -43,7 +43,7 @@ class ViajesModel
         $sql = "insert into VIAJE(origen, destino, fechaInicio, fechaFinalizacion, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado)
         values ('$origen','$destino', '$fechaInicio','$fechaFinalizacion', '$fechaCarga', '$ETA', '$ETD', '$kilometrosActuales', '$kilometrosFinal', '$combustibleFinal', '$combustibleConsumido', '$idVehiculo', '$idArrastrado')";
 
-        return $this->database->query($sql);
+        $this->database->execute($sql);
     }
 
     public function eliminar($id)
