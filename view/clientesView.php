@@ -20,6 +20,7 @@
                                 <th scope="col" class="border-0 text-uppercase font-medium">Contacto 2</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Telefono</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Direccion</th>
+                                <th scope="col" class="border-0 text-uppercase font-medium">Acciones</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -68,6 +69,8 @@
                 </div>
             </div>
         </div>
+
+        <br>
         <div class="col text-center">
             <a href="clientes/registerCliente" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Agregar Cliente</a>
         </div>

@@ -4,7 +4,7 @@
 
     <h5 id="ingresar" class="mb-3 registerTxt">Registrar Viaje</h5>
 
-<form class="col-md-8 formulario" action="./registrarViaje" method="post">
+<form class="col-md-8 formulario" action="registrarViaje" method="post">
     <div class="form-row">
         <div class="form-group col-md-4">
             <label for="inputOrigen" >Origen</label>
@@ -77,13 +77,13 @@
 
     <div class="form-row">
 
-    <div class="form-group col-md-8">
+    <div class="form-group col-md-12">
 
-        <label> <h6> Equipo Arrastrado</h6></label>
+        <label> <h6> Arrastrado</h6></label>
         <select class="custom-select" multiple name="idArrastrado">
-            <option selected>ARRASTRADOS</option>
+            <option value="{{idArrastrado}}" selected>ID: {{idArrastrado}} (Selecionado)</option>
             {{#arrastrados}}
-            <option value="{{id}">ID: {{id}} - Patente: {{patente}} - Numero de Chasis: {{numeroDeChasis}} </option>
+            <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}}</option>
 
             {{/arrastrados}}
         </select>

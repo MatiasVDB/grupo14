@@ -21,9 +21,19 @@
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/EmpleadosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/EmpleadosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ViajesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ViajesModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cargasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cargasView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/clientesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/clientesView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/datosProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/datosProformaView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerViaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerViaje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +125,7 @@
       <workItem from="1607352220512" duration="9077000" />
       <workItem from="1607446266754" duration="3974000" />
       <workItem from="1607512434449" duration="8388000" />
+      <workItem from="1607792154138" duration="459000" />
     </task>
     <servers />
   </component>

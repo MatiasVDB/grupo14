@@ -31,7 +31,7 @@ class EmpleadosModel
 
     public function getEmpleadoConNivelDeRol($tipoDeDocumento, $numeroDeDocumento){
 
-        return $this->database->query("select * from rol join usuario where rol.id = usuario.rolUsuario and tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'");
+        return $this->database->query("select * from rol left join usuario where rol.id = usuario.rolUsuario and tipoDeDocumento = '$tipoDeDocumento' and numeroDeDocumento = '$numeroDeDocumento'");
 
     }
 

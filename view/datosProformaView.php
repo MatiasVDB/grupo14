@@ -49,11 +49,13 @@
         <br> <br>
 
             <label> <h6> Chofer </h6></label>
-    <select class="custom-select" multiple>
+    <select class="custom-select" multiple name="tipoDeDocumento">
         <option selected>SELECCIÓN DE CHOFER</option>
-        {{#empleados}}
 
-        <option>{{nombre}}
+        {{#empleados}}
+        <option>
+
+            {{nombre}}
 
             <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
 
@@ -61,9 +63,10 @@
 
         </option>
 
-
         {{/empleados}}
+
     </select>
+
 
 <br> <br>
 

@@ -107,7 +107,7 @@
         <select class="custom-select" multiple name="idVehiculo">
             <option value="{{idVehiculo}}" selected>ID: {{idVehiculo}}</option>
             {{#tractores}}
-            <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Modelo: {{modelo}}</option>
+            <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Chasis: {{numeroDeChasis}} - Modelo: {{modelo}}</option>
 
             {{/tractores}}
         </select>
@@ -116,42 +116,20 @@
 
     <div>
 
+        <br>
+
         <label> <h6> Arrastrado</h6></label>
         <select class="custom-select" multiple name="idArrastrado">
-            <option value="{{idArrastrado}}" selected>ID: {{idArrastrado}}</option>
+            <option value="{{idArrastrado}}" selected>ID: {{idArrastrado}} (Selecionado)</option>
             {{#arrastrados}}
-            <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Tipo de carga: {{tipoCarga}}</option>
+            <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}}</option>
 
             {{/arrastrados}}
         </select>
 
     </div>
 
-    <div>
-
-        <label> <h6> Cliente</h6></label>
-        <select class="custom-select" multiple name="cuit">
-            <option value="{{cuitCliente}}" selected>CUIT: {{cuitCliente}}</option>
-            {{#clientes}}
-            <option value="{{CUIT}}">CUIT: {{CUIT}} - Denominación: {{denominacion}}</option>
-
-            {{/clientes}}
-        </select>
-
-    </div>
-
-    <div>
-
-        <label> <h6> Chofer</h6></label>
-        <select class="custom-select" multiple name="dniChofer">
-            <option value="{{numeroDeDocumentoChofer}}" selected>{{tipoDocumentoChofer}} - {{numeroDeDocumentoChofer}}</option>
-            {{#choferes}}
-            <option value="{{numeroDeDocumento}}">Tipo de documento: {{tipoDeDocumento}} - Numero de documento: {{numeroDeDocumento}} - Nombre: {{nombre}}</option>
-
-            {{/choferes}}
-        </select>
-
-    </div>
+    <br>
     <button class="btn btn-primary" id="aplicarRegistro" type="submit">Actualizar</button>
 </form>
 

@@ -167,3 +167,5 @@ select * from tractor;
  
  select * from usuario;
  
+ select * from arrastrado;
+ 

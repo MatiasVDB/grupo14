@@ -22,9 +22,7 @@ class LoginModel
 
 
         if (count($query) == 1 ) {
-
-
-
+            
             switch ($query[0]['rolUsuario']){
 
                 case 1:
