@@ -17,8 +17,44 @@ class MainController
     public function index()
     {
     if (isset($_SESSION['logueado'])){
+        switch ($_SESSION['logueado']){
+            case 0:
+                $data['empleadosNav']= "disabled";
+                $data['viajesNav']= "disabled";
+                $data['cargarProformaNav']="disabled";
+                $data['registrarTractorNav']="disabled";
+                $data['registrarArrastradoNav']="disabled";
+                $data['clientesNav']="disabled";
+                $data['cargasNav']="disabled";
+                $data['flotaArrastradosNav']="disabled";
+                $data['flotaTractoresNav']="disabled";
 
-        echo $this->render->render("view/mainView.php");
+                break;
+
+            case 1:
+                $data['empleadosNav']= "disabled";
+                $data['viajesNav']= "disabled";
+                $data['cargarProformaNav']="disabled";
+                $data['registrarTractorNav']="disabled";
+                $data['registrarArrastradoNav']="disabled";
+                break;
+
+         
+
+            case 3:
+                $data['empleadosNav']= "disabled";
+                $data['viajesNav']= "disabled";
+                $data['cargarProformaNav']="disabled";
+                $data['registrarTractorNav']="disabled";
+                $data['registrarArrastradoNav']="disabled";
+                $data['clientesNav']="disabled";
+                $data['cargasNav']="disabled";
+                break;
+
+
+
+        }
+        echo $this->render->render("view/mainView.php", $data);
 
     }
 

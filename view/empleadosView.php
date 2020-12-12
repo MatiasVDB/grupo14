@@ -46,7 +46,7 @@
 
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./empleados/detalle/numeroDeDocumento={{numeroDeDocumento}}'"> Actualizar</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='./empleados/detalle/numeroDeDocumento={{numeroDeDocumento}}'" {{actualizar}}> Actualizar</button>
                                     <button type="button" class="btn btn-danger" onclick="location.href='./empleados/eliminar?numeroDeDocumento={{numeroDeDocumento}}'" > Dar Baja</button>
                                 </td>
                             </tr>

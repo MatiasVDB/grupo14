@@ -124,6 +124,10 @@ values (41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
 (41214566, "Pablo","1234", "1998-06-09", "pablo@hotmail.com", 1),
 (42343476, "Juan","1234", "1998-06-09", "juan@hotmail.com", 1),
 (41456476, "Peter","1234", "1998-06-09", "peter@hotmail.com", 1),
+(41111111, "Chofer","1234", "1998-06-09", "chofer@hotmail.com", 1),
+(42222222, "Supervisor","1234", "1998-06-09", "supervisor@hotmail.com", 2),
+(43333333, "Mecanico","1234", "1998-06-09", "mecanico@hotmail.com", 3),
+(44444444, "Admin","1234", "1998-06-09", "admin@hotmail.com", 4),
 (41852376, "Matisco","1234", "1998-06-09", "matisco@hotmail.com", 2);
 
 

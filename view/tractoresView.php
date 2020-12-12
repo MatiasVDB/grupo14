@@ -35,8 +35,8 @@
                                 <td class="text-muted">{{numeroDeMotor}}</td>
                                 <td class="text-muted">{{chasis}}</td>
                                 <td class="text-muted">{{kilometros}}</td>
-                                <td><a href="http://localhost/grupo14/tractores/detalle/tractorDetalle?id={{id}}" class="btn btn-primary " role="button" aria-pressed="true">Actualizar</a>
-                                    <a href="http://localhost/grupo14/tractores/eliminarTractor?id={{id}}" class="btn btn-danger" role="button" aria-pressed="true">Dar Baja</a>
+                                <td><a href="http://localhost/grupo14/tractores/detalle/tractorDetalle?id={{id}}" class="btn btn-primary {{actualizarTractor}}" role="button" aria-pressed="true" >Actualizar</a>
+                                    <a href="http://localhost/grupo14/tractores/eliminarTractor?id={{id}}" class="btn btn-danger {{eliminarTractor}}" role="button" aria-pressed="true" >Dar Baja</a>
                                 </td>
                             </tr>
                             {{/tractores}}
@@ -50,7 +50,7 @@
 </main>
 
     <div class="col text-center mt-4 mb-4">
-        <a href="http://localhost/grupo14/tractores/registerTractor" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Agregar Tractor</a>
+        <a href="http://localhost/grupo14/tractores/registerTractor" class="btn btn-primary btn-lg {{agregarTractor}}" role="button" aria-pressed="true">Agregar Tractor</a>
     </div>
 </div>
 

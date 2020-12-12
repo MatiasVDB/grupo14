@@ -49,8 +49,8 @@
                                     <span class="text-muted">{{temperatura}}</span>
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./cargas/detalle/id={{id}}'"> Actualizar</button>
-                                    <button type="button" class="btn btn-danger" onclick="location.href='./cargas/eliminar?id={{id}}'" > Dar Baja</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='./cargas/detalle/id={{id}}'" {{actualizarCarga}}> Actualizar</button>
+                                    <button type="button" class="btn btn-danger" onclick="location.href='./cargas/eliminar?id={{id}}'" {{eliminarCarga}}> Dar Baja</button>
                                 </td>
                                 {{/cargas}}
                             </tr>
@@ -61,7 +61,7 @@
             </div>
         </div>
         <div class="col text-center mt-4 mb-4">
-            <a href="cargas/registerCarga" class="btn btn-primary btn-lg " role="button" aria-pressed="true">Agregar Carga</a>
+            <a href="cargas/registerCarga" class="btn btn-primary btn-lg {{agregarCarga}}" role="button" aria-pressed="true">Agregar Carga</a>
         </div>
     </div>
 {{> footer}}

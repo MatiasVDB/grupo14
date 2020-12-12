@@ -16,7 +16,20 @@ class CargasCombustibleController
 
     public function index()
     {
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1) {
+            switch ($_SESSION['logueado']){
+
+                case 1:
+                    $data['empleadosNav']= "disabled";
+                    $data['viajesNav']= "disabled";
+                    $data['cargarProformaNav']="disabled";
+                    $data['registrarTractorNav']="disabled";
+                    $data['registrarArrastradoNav']="disabled";
+
+                    break;
+
+
+            }
             $data["cargas"] = $this->cargasCombustibleModel->getCargasCombustible();
             echo $this->render->render("view/cargasCombustibleView.php", $data);
         }else{
@@ -27,7 +40,10 @@ class CargasCombustibleController
 
     public function registerCargaCombustible(){
 
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 1 or 2) {
+
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1) {
+
+
             // VER
             // EJEMPLO DE URL localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje=1&numeroDeDocumento_chofer=41823476&tipoDeDocumento_chofer=DNI
             $idViaje= $_GET['idViaje'];

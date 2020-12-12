@@ -16,8 +16,21 @@ class EmpleadosController
 
     public function index(){
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
+            switch ($_SESSION['logueado']){
 
-        $data = array("empleados"=>$this->empleadoModel->getEmpleadosConNivelDeRol());
+                case 2:
+                    $data['actualizar']="disabled";
+                    break;
+
+
+                case 4:
+
+                    break;
+
+
+            }
+
+        $data["empleados"]=$this->empleadoModel->getEmpleadosConNivelDeRol();
         echo $this->render->render( "view/empleadosView.php", $data );
 
         }
@@ -39,11 +52,15 @@ class EmpleadosController
 
     public function detalle(){
 
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
             $numeroDocumento = $_GET["numeroDeDocumento"];
 
 
-        $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($numeroDocumento);
-        echo $this->render->render( "view/empleadoDetalleView.php", $data );
+            $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($numeroDocumento);
+            echo $this->render->render("view/empleadoDetalleView.php", $data);
+        }else{
+            header("Location: ../main");
+        }
 
     }
 
