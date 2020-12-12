@@ -40,10 +40,10 @@
         <label> <h6>Carga</h6></label>
         <select class="custom-select" multiple name="id_carga">
             <option selected>DATOS DE LA CARGA</option>
-            {{#viajes}}
-            <option value="{{id_carga}}"> ID Carga: {{id}} / Tipo: {{tipo}} </option>
+            {{#cargas}}
+            <option value="{{id}}"> ID Carga: {{id}} / Tipo: {{tipo}} </option>
 
-            {{/viajes}}
+            {{/cargas}}
         </select>
 
         <br> <br>

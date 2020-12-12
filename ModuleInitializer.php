@@ -73,11 +73,9 @@ class ModuleInitializer
     public function createArrastradosController(){
         include_once("model/ArrastradosModel.php");
         include_once("controller/ArrastradosController.php");
-        include_once ("model/CargasModel.php");
-        $modelCargas = new CargasModel($this->database);
 
         $model = new ArrastradosModel($this->database);
-        return new ArrastradosController($model, $modelCargas, $this->renderer);
+        return new ArrastradosController($model, $this->renderer);
     }
 
     public function createClientesController(){
@@ -124,7 +122,8 @@ class ModuleInitializer
         $modelClientes = new ClientesModel($this->database);
         $modelViajes = new ViajesModel($this->database);
         $modelEmpleados = new EmpleadosModel($this->database);
-        return new DatosProformaController($model, $modelClientes, $modelViajes, $modelEmpleados, $this->renderer);
+        $modelCargas = new CargasModel($this->database);
+        return new DatosProformaController($model, $modelClientes, $modelViajes, $modelEmpleados, $modelCargas, $this->renderer);
     }
 
     public function createProformaController(){

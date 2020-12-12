@@ -61,18 +61,16 @@ id int not null auto_increment,
 patente varchar(40),
 numeroDeChasis int,
 tipo varchar(50),
-id_carga int,
-primary key (id, patente, numeroDeChasis),
-foreign key(id_carga) references CARGA(id));
+primary key (id, patente, numeroDeChasis));
 
-insert into ARRASTRADO(patente, numeroDeChasis, id_carga, tipo)
-values ("AA100AS", 585822, 1, "Araña"),
-("AC125AD", 605737, 2, "Araña"),
-("AB135AG", 705687, 3, "Granel"),
-("AD166AS", 815082, 4, "Araña"),
-("AA189AD", 775167, 5, "Jaula"),
-("AC208AG", 642287, 6, "Araña"),
-("AB230AS", 678666, 7, "Araña");
+insert into ARRASTRADO(patente, numeroDeChasis, tipo)
+values ("AA100AS", 585822, "Araña"),
+("AC125AD", 605737,  "Araña"),
+("AB135AG", 705687, "Granel"),
+("AD166AS", 815082,  "Araña"),
+("AA189AD", 775167,  "Jaula"),
+("AC208AG", 642287,  "Araña"),
+("AB230AS", 678666,  "Araña");
 
 
 
@@ -163,6 +161,7 @@ fecha date,
 CUIT_cliente int,
 id_viaje int,
 numeroDeDocumento_chofer int,
+id_carga int,
 costeoEstimado_Kilometros int,
 costeoEstimado_Combustible int,
 costeoEstimado_ETD int,
@@ -175,11 +174,12 @@ costeoEstimado_Hazard int,
 costeoEstimado_Reefer int,
  foreign key (CUIT_cliente) references CLIENTE(CUIT),
  foreign key (id_viaje) references VIAJE(id),
+foreign key (id_carga) references carga(id),
  foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
 insert into proforma(numero, fecha, CUIT_cliente, id_viaje, numeroDeDocumento_chofer)
 values(1, "2020-03-17",
-213443, 2, 41214566)
+213443, 2, 41214566);
 
 
 create table combustible(
@@ -202,9 +202,7 @@ select * from tractor;
  select * from CARGA;
  
  SELECT * FROM VIAJE;
- 
- select * from VIAJE join ARRASTRADO on viaje.iDArrastrado = arrastrado.id 
- join CARGA where carga.id = arrastrado.id_carga;
+
 
  select * from CLIENTE;
 

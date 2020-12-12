@@ -159,9 +159,9 @@
         </div>
 
     </div>
+    {{#carga}}
 
     <div class="form-row">
-        {{#carga}}
 
         <input type="hidden" name="id_carga" value="{{id}}">
 

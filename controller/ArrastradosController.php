@@ -5,13 +5,11 @@ class ArrastradosController
 {
 
     private ArrastradosModel $arrastradosModel;
-    private CargasModel $cargaModel;
     private Render $render;
 
-    public function __construct(ArrastradosModel $arrastradosModel, CargasModel $cargaModel, Render $render)
+    public function __construct(ArrastradosModel $arrastradosModel,  Render $render)
     {
         $this->arrastradosModel = $arrastradosModel;
-        $this->cargaModel = $cargaModel;
         $this->render = $render;
     }
 
@@ -61,7 +59,7 @@ class ArrastradosController
 
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
 
-            $data = array("arrastrados" => $this->arrastradosModel->getArrastrados(),"cargas" => $this->cargaModel->getCargas());
+            $data = array("arrastrados" => $this->arrastradosModel->getArrastrados());
             echo $this->render->render("view/registerArrastrado.php", $data);
 
         }
@@ -77,7 +75,7 @@ class ArrastradosController
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
           $id = $_GET["id"];
 
-        $data = array("arrastrado" => $this->arrastradosModel->getArrastrado($id),"cargas" => $this->cargaModel->getCargas());
+        $data = array("arrastrado" => $this->arrastradosModel->getArrastrado($id));
 
             echo $this->render->render("view/arrastradoModificarView.php", $data);
         }else{
@@ -120,13 +118,12 @@ class ArrastradosController
 
         $patente = $_POST['patente'];
         $nroChasis = $_POST['chasis'];
-        $carga = $_POST['carga'];
 
         $mensaje["error"] = "*El arrastrado ingresado, ya se encuentra registrado.";
 
         if(count($this->arrastradosModel->getArrastrado($patente, $nroChasis)) == 0){
 
-            $this->arrastradosModel->setArrastrado($patente, $nroChasis, $carga);
+            $this->arrastradosModel->setArrastrado($patente, $nroChasis);
 
             header("Location: ../arrastrados");
         }

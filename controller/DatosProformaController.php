@@ -8,14 +8,16 @@ class datosProformaController
     private ClientesModel $clientesModel;
     private ViajesModel  $viajesModel;
     private EmpleadosModel $empleadosModel;
+    private CargasModel $cargasModel;
     private Render $render;
 
 
-    public function __construct(DatosProformaModel $datosProformaModel, ClientesModel $clientesModel, ViajesModel $viajesModel, EmpleadosModel $empleadosModel, Render $render)
+    public function __construct(DatosProformaModel $datosProformaModel, ClientesModel $clientesModel, ViajesModel $viajesModel, EmpleadosModel $empleadosModel, CargasModel $cargasModel, Render $render)
     {
         $this->datosProformaModel = $datosProformaModel;
         $this->clientesModel = $clientesModel;
         $this->viajesModel = $viajesModel;
+        $this->cargasModel = $cargasModel;
         $this->empleadosModel= $empleadosModel;
         $this->render = $render;
     }
@@ -24,7 +26,8 @@ class datosProformaController
     public function index(){
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
 
-            $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajesConArrastradosYCargas(), "empleados" => $this->empleadosModel->getChoferes());
+            $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajes(), "empleados" => $this->empleadosModel->getChoferes(),
+                "cargas" => $this->cargasModel->getCargas());
 
 
             echo $this->render->render("view/datosProformaView.php", $data);
