@@ -52,11 +52,15 @@ class EmpleadosController
 
     public function detalle(){
 
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
             $numeroDocumento = $_GET["numeroDeDocumento"];
 
 
-        $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($numeroDocumento);
-        echo $this->render->render( "view/empleadoDetalleView.php", $data );
+            $data["empleado"] = $this->empleadoModel->getEmpleadoConNivelDeRol($numeroDocumento);
+            echo $this->render->render("view/empleadoDetalleView.php", $data);
+        }else{
+            header("Location: ../main");
+        }
 
     }
 

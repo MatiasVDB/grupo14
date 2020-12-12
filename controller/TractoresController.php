@@ -59,7 +59,7 @@ class TractoresController
     {
 
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4 or 2") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
 
         $id = $_GET['id'];
 

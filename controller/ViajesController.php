@@ -68,7 +68,7 @@ class ViajesController
 
     public function registerViaje(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
 
             $data = array("arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores());
 
@@ -102,7 +102,7 @@ class ViajesController
     public function eliminar()
     {
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == "4") {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
 
             $id = $_GET["id"];
 
