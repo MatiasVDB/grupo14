@@ -19,7 +19,7 @@ class ArrastradosController
     public function index()
     {
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
-            $data["arrastrados"] = $this->arrastradosModel->getArrastradosConTipoDeCarga();
+            $data["arrastrados"] = $this->arrastradosModel->getArrastrados();
 
             echo $this->render->render("view/arrastradosView.php", $data);
 
@@ -45,9 +45,8 @@ class ArrastradosController
 
     }
 
-    public function vistaActualizarArrastrado()
+    public function detalleArrastrado()
     {
-
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 ) {
           $id = $_GET["id"];
 
@@ -57,21 +56,16 @@ class ArrastradosController
         }else{
             header("Location: /grupo14/main");
         }
-
-
     }
 
     public function actualizarArrastrado()
     {
-
-        $pesoNeto = $_POST['peso'];
-        $hazard = $_POST['hazard'];
-        $tipoCarga = $_POST['tipo'];
         $id = $_POST['id'];
-        $refrigeracion = $_POST['refrigeracion'];
-        $carga = $_POST['carga'];
+        $tipo = $_POST['tipo'];
 
-        $data['datos'] = $this->arrastradosModel->modificarArrastrado($id, $tipoCarga, $refrigeracion, $pesoNeto, $hazard, $carga);
+        echo ("$id, $tipo");
+
+        $data['datos'] = $this->arrastradosModel->modificarArrastrado($id, $tipo);
 
         header("Location: ../arrastrados");
 

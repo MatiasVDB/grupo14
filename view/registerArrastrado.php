@@ -8,14 +8,14 @@
 
 
         <div class="form-row">
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
                 <label>Patente</label>
                 <input name="patente" id="inputPatente" class="form-control" placeholder="Patente" required>
 
             </div>
 
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
                 <label>Chasis</label>
                 <input name="chasis" id="inputChasis" class="form-control" placeholder="Chasis" required>
 
@@ -27,29 +27,24 @@
 
         <div class="form-row">
 
-            <div class="form-group col-md-8">
+            <div class="col-md-12">
 
-                <label> Tipo De Carga</label>
+                <label> Tipo de carga  </label>
 
-                <select class="custom-select" name="carga" required>
-                    <option selected>Carga</option>
-                    <option value="1">Granel</option>
-                    <option value="2">Liquida</option>
-                    <option value="3">Jaula</option>
-                    <option value="4"
-                    ">20"</option>
-                    <option value="5"
-                    ">40"</option>
-                    <option value="6">Jaula</option>
-                    <option value="7">CarCarrier</option>
+                <select class="form-control category-select" id="inputTipo" name="tipo">
+                    <option value="{{tipo}}">{{tipo}}(Seleccionado)</option>
+                    <option value="Araña">Araña</option>
+                    <option value="Jaula">Jaula</option>
+                    <option value="Tanque"">Tanque</option>
+                    <option value="Granel"">Granel</option>
+                    <option value="CarCarrier">CarCarrier</option>
                 </select>
-
             </div>
 
         </div>
 
 
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <button type="submit" class="btn btn-primary mt-4 mb-4">Registrar</button>
 
         {{error}}
 

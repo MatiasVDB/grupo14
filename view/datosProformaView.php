@@ -49,34 +49,17 @@
         <br> <br>
 
             <label> <h6> Chofer </h6></label>
-    <select class="custom-select" multiple name="tipoDeDocumento">
+    <select class="custom-select"  multiple name="numeroDeDocumento_usuario">
         <option selected>SELECCIÓN DE CHOFER</option>
 
         {{#empleados}}
-        <option>
-
-            {{nombre}}
-
-            <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
-
-            <input type="hidden" value="{{tipoDeDocumento}}" name="tipoDeDocumento_usuario">
-
-        </option>
-
+        <option value="{{numeroDeDocumento}}"  >{{nombre}} </option>
         {{/empleados}}
 
     </select>
-
-
-<br> <br>
-
             <button type="submit" class="btn btn-primary"> Enviar Datos </button>
-
         </div>
 </form>
-
 </div>
-
-
 
 {{>footer}}

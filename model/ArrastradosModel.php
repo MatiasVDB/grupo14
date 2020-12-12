@@ -29,10 +29,10 @@ class ArrastradosModel
 
     }
 
-    public function modificarArrastrado($id, $carga){
-        $sql = "update ARRASTRADO set id_carga = '$carga' where id = '$id'";
+    public function modificarArrastrado($id, $tipo){
+        $sql = "update ARRASTRADO set tipo = '$tipo' where id = '$id'";
 
-        return $this->database->query($sql);
+        return $this->database->execute($sql);
     }
 
     public function eliminarArrastrado($id)

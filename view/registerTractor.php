@@ -21,23 +21,21 @@
             <input type="text" class="form-control" id="inputText4" name="chasis">
         </div>
 
+        <div class="form-group col-md-4 ">
+            <label for="inputEmail4">Marca</label>
+            <select class="custom-select" size="1" name="marca">
+                <option value="Scania">Iveco</option>
+                <option value="Scania">Scania</option>
+                <option value="MAN">MAN</option>
+                <option value="Mercedes Benz">Mercedes Benz</option>
+                <option value="Volvo">Volvo</option>
+                <option value="Renault">Renault</option>
+                <option value="Isuzu">Isuzu</option>
+            </select>
+        </div>
     </div>
 
-    <div class="form-row">
-    <div class="form-group col-md-4 ">
-        <label for="inputEmail4">Marca</label>
-        <select class="custom-select" size="3" name="marca">
-            <option value="Scania">Iveco</option>
-            <option value="Scania">Scania</option>
-            <option value="MAN">MAN</option>
-            <option value="Mercedes Benz">Mercedes Benz</option>
-            <option value="Volvo">Volvo</option>
-            <option value="Renault">Renault</option>
-            <option value="Isuzu">Isuzu</option>
-        </select>
-    </div>
 
-    </div>
 
     <div class="form-row">
 

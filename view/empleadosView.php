@@ -13,36 +13,31 @@
                         <table class="table no-wrap user-table mb-0">
                             <thead>
                             <tr>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Nombre</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Tipo de documento</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Documento</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Email</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Nacimiento</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Rol</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Administrar</th>
+                                <th scope="col" class="border-0 font-medium">Documento</th>
+                                <th scope="col" class="border-0 font-medium">Nombre</th>
+                                <th scope="col" class="border-0 font-medium">Email</th>
+                                <th scope="col" class="border-0 font-medium">Nacimiento</th>
+                                <th scope="col" class="border-0 font-medium">Rol</th>
+                                <th scope="col" class="border-0 font-medium">Administrar</th>
                             </tr>
                             </thead>
                             <tbody>
                             {{#empleados}}
                             <tr>
+
                                 <td>
-                                    <h5 class="font-medium mb-0">{{nombre}}</h5>
+                                    <h6 class="font-medium mb-0">{{numeroDeDocumento}}</h6>
 
                                 </td>
                                 <td>
-                                    <span class="text-muted">{{tipoDeDocumento}}</span><br>
+                                    <span class="text-muted">{{nombre}}</span>
+                                </td>
+                                <td>
+                                    <span class="text-muted">{{mail}}</span>
 
                                 </td>
                                 <td>
-                                    <span class="text-muted">{{numeroDeDocumento}}</span><br>
-
-                                </td>
-                                <td>
-                                    <span class="text-muted">{{mail}}</span><br>
-
-                                </td>
-                                <td>
-                                    <span class="text-muted">{{fechaDeNacimiento}}</span><br>
+                                    <span class="text-muted">{{fechaDeNacimiento}}</span>
 
                                 </td>
                                 <td>
@@ -51,8 +46,8 @@
 
                                 </td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./empleados/detalle/tipoDocumento={{tipoDeDocumento}}&numeroDeDocumento={{numeroDeDocumento}}'"> Actualizar</button>
-                                    <button type="button" class="btn btn-danger" onclick="location.href='./empleados/eliminar?tipoDocumento={{tipoDeDocumento}}&numeroDeDocumento={{numeroDeDocumento}}'" > Dar Baja</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='./empleados/detalle/numeroDeDocumento={{numeroDeDocumento}}'"> Actualizar</button>
+                                    <button type="button" class="btn btn-danger" onclick="location.href='./empleados/eliminar?numeroDeDocumento={{numeroDeDocumento}}'" > Dar Baja</button>
                                 </td>
                             </tr>
                             {{/empleados}}

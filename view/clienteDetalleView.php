@@ -11,7 +11,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <input type="hidden" name="cuit" value="{{CUIT}}">
 
@@ -22,7 +22,7 @@
 
         </div>
 
-        <div class="form-group col-md-5">
+        <div class="form-group col-md-6">
 
             <label for="inputEmail" >Correo electrónico</label>
             <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Correo electrónico"
@@ -34,7 +34,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="contacto1">Contacto 1</label>
 
@@ -44,7 +44,7 @@
 
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="contacto2">Contacto 2</label>
 
@@ -57,7 +57,7 @@
     </div>
 
     <div class="form-row">
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label for="date-input" id="telefono">Teléfono</label>
 
