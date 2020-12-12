@@ -36,7 +36,7 @@ class ViajesController
         $id = $_GET["id"];
 
 
-        $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "clientes"=> $this->clientesModel->getClientes(), "choferes"=> $this->empleadosModel->getChoferes());
+        $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores());
         echo $this->render->render( "view/viajeDetalleView.php", $data );
     }
 
@@ -82,8 +82,8 @@ class ViajesController
     public function registrarViaje(){
         $origen = $_POST ['origen'];
         $destino = $_POST ['destino'];
-        $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $fechaInicio = $_POST['fechaInicio'];
+        $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $fechaCarga = $_POST['fechaCarga'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
@@ -93,7 +93,6 @@ class ViajesController
         $combustibleConsumido= 0.0;
         $idVehiculo= $_POST['idVehiculo'];
         $idArrastrado= $_POST['idArrastrado'];
-
 
         $this->viajesModel->createViaje($origen, $destino, $fechaInicio, $fechaFinalizacion, $fechaCarga , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
 

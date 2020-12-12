@@ -10,6 +10,45 @@
             </div>
         </div>
 
+        <div class="row">
+
+            <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="../../public/img/1291276.jpg" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Lista de Empleados</h5>
+                <p class="card-text">Sección para dar de alta, actualizar y elminar empleados de la aplicación.</p>
+            </div>
+
+            <div class="card-body">
+                <a href="Empleados" class="card-link btn btn-primary btn-lg btn-block">Acceder</a>
+            </div>
+        </div>
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="../../public/img/1291276.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Lista de Empleados</h5>
+                        <p class="card-text">Sección para dar de alta, actualizar y elminar empleados de la aplicación.</p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Card link</a>
+                        <a href="#" class="card-link">Another link</a>
+                    </div>
+            </div>
+
+        </div>
+
+
+
 
         <div class="row">
             <div class="col-md-4">

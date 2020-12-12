@@ -21,39 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/EmpleadosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/EmpleadosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/RegisterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/EmpleadosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/EmpleadosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ProformaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProformaModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/RegisterModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/RegisterModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/arrastradoModificarView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradoModificarView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/arrastradosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradosView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cargaDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cargaDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/cargasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cargasView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/clienteDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/clienteDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/clientesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/clientesView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/datosProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/datosProformaView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/empleadoDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/empleadoDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/empleadosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/empleadosView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/proformaRegisterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/proformaRegisterView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerTractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerTractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerViaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerViaje.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tractorDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractorDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tractoresView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractoresView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/usuariosView.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajesView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/LoginModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/mainView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mainView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,6 +117,8 @@
       <workItem from="1607348575985" duration="8637000" />
       <workItem from="1607352220512" duration="9077000" />
       <workItem from="1607446266754" duration="3974000" />
+      <workItem from="1607512434449" duration="8388000" />
+      <workItem from="1607792154138" duration="459000" />
       <workItem from="1607512434449" duration="10669000" />
     </task>
     <servers />

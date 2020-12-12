@@ -7,7 +7,11 @@
 
 
     <div class="form-row">
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-3">
+
+            <label for="inputPeso" >Identificación</label>
+
+            <input type="number" name="id" id="id" class="form-control" placeholder="ID" required>
 
             <p class="text-danger"> {{error}} </p>
 

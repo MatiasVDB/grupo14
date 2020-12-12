@@ -51,9 +51,11 @@
             <label> <h6> Chofer </h6></label>
     <select class="custom-select"  multiple name="numeroDeDocumento_usuario">
         <option selected>SELECCIÓN DE CHOFER</option>
+
         {{#empleados}}
         <option value="{{numeroDeDocumento}}"  >{{nombre}} </option>
         {{/empleados}}
+
     </select>
             <button type="submit" class="btn btn-primary"> Enviar Datos </button>
         </div>

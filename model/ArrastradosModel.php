@@ -12,7 +12,9 @@ class ArrastradosModel
     }
 
     public function getArrastrados(){
-        return $this->database->query("SELECT * FROM ARRASTRADO");
+
+        $sql = "SELECT * FROM ARRASTRADO";
+        return $this->database->query($sql);
     }
 
     public function getArrastradosConTipoDeCarga(){

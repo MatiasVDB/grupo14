@@ -44,8 +44,9 @@ class EmpleadosController
     public function getEmpleadosPorRol(){
 
         $rol = $_GET["rol"];
+        $numeroDNI = $_GET["rol"];
 
-        $data["empleado"] = $this->empleadoModel->getEmpleadosPorRol($rol);
+        $data["empleado"] = $this->empleadoModel->getEmpleadosPorRol($numeroDNI, $rol);
         echo $this->render->render( "view/empleadoDetalleView.php", $data);
     }
 
