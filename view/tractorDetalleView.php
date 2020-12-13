@@ -6,7 +6,7 @@
 
     <h5 class="registerTxt"> Actualización de Tractor</h5>
 
-    <div>
+    <div class="mb-5">
         <p> Id: {{id}}</p>
         <p> Marca {{marca}} </p>
         <p> Patente {{patente}}</p>
@@ -17,7 +17,7 @@
 <form class="col-md-8 formulario" action="../actualizarTractor" method="post">
 
 
-    <br>
+
     <input type="hidden" name="id" value="{{id}}">
 
     <input type="hidden" name="patente" value="{{patente}}">

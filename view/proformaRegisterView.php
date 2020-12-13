@@ -6,7 +6,7 @@
 
 <form action="insertarDatosEnLaProforma" class="col-md-8 formulario" method="post">
 
-    <div class="form-row">
+    <div class="form-row mb-4">
 
 
         <div class="form-group col-md-6">
@@ -26,11 +26,10 @@
 
     </div>
 
-    <br>
 
     <div class="form-row">
 
-    <div class="col-md-4">
+    <div class="col-md-4 mb-2">
         <h5> Datos del Cliente </h5>
     </div>
 
@@ -80,7 +79,7 @@
 
 
 
-    <div class="form-row">
+    <div class="form-row mb-4">
 
         <div class="form-group col-md-6">
             <label>Contacto Uno</label>
@@ -128,7 +127,7 @@
 
 
 
-    <div class="form-row">
+    <div class="form-row mb-4">
 
         <div class="form-group col-md-6">
 
@@ -149,7 +148,6 @@
 
     {{/viaje}}
 
-    <br>
 
 
     <div class="form-row">
@@ -199,7 +197,7 @@
 
     </div>
 
-    <div class="form-row">
+    <div class="form-row mb-4">
 
         <div class="form-group col-md-6">
 
@@ -220,7 +218,7 @@
 
     {{/carga}}
 
-    <br>
+
 
     <div class="form-row">
 
@@ -319,7 +317,7 @@
     </div>
 
 
-    <div class="form-row">
+    <div class="form-row mb-4">
 
         <div class="form-group col-md-6">
 
@@ -342,7 +340,7 @@
 
     </div>
 
-    <br>
+
     <div class="form-row">
         <div class="col-md-4">
             <h5> Chofer Asignado </h5>
@@ -358,7 +356,7 @@
             {{/empleado}}
         </div>
     </div>
-        <button type="submit" class="btn btn-primary">Enviar al chofer</button>
+        <button type="submit" class="btn btn-primary mb-4 mt-4">Enviar al chofer</button>
 
         </form>
 </div>

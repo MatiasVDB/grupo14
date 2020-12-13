@@ -14,7 +14,7 @@
     <div class="col-12">
 
     <label> <h6> Cliente </h6> </label>
-    <select class="custom-select" multiple name="CUIT_cliente">
+    <select class="custom-select mb-4" multiple name="CUIT_cliente">
         <option selected>DENOMINACION</option>
 
 
@@ -24,10 +24,10 @@
         {{/clientes}}
     </select>
 
-            <br> <br>
+
 
     <label> <h6> Viaje</h6></label>
-        <select class="custom-select" multiple name="id_viaje">
+        <select class="custom-select mb-4" multiple name="id_viaje">
             <option selected>DATOS DEL VIAJE</option>
             {{#viajes}}
             <option value="{{id}}">Codigo: {{id}} - Origen: {{origen}} / Destino:{{destino}} </option>
@@ -35,10 +35,10 @@
             {{/viajes}}
         </select>
 
-        <br> <br>
+
 
         <label> <h6>Carga</h6></label>
-        <select class="custom-select" multiple name="id_carga">
+        <select class="custom-select mb-4" multiple name="id_carga">
             <option selected>DATOS DE LA CARGA</option>
             {{#cargas}}
             <option value="{{id}}"> ID Carga: {{id}} / Tipo: {{tipo}} </option>
@@ -46,10 +46,10 @@
             {{/cargas}}
         </select>
 
-        <br> <br>
+
 
             <label> <h6> Chofer </h6></label>
-    <select class="custom-select"  multiple name="numeroDeDocumento_usuario">
+    <select class="custom-select mb-5"  multiple name="numeroDeDocumento_usuario">
         <option selected>SELECCIÓN DE CHOFER</option>
 
         {{#empleados}}

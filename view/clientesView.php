@@ -26,7 +26,7 @@
                             {{#clientes}}
                             <tr>
                                 <td> <h6 class="font-medium mb-0">{{CUIT}}</h6> </td>
-                                <td> <span class="text-muted">{{denominacion}}</span><br> </td>
+                                <td> <span class="text-muted mb-0">{{denominacion}}</span><br> </td>
                                 <td> <span class="text-muted">{{email}}</span><br> </td>
                                 <td> <span class="text-muted">{{contacto1}}</span><br> </td>
                                 <td> <span class="text-muted">{{contacto2}}</span><br> </td>

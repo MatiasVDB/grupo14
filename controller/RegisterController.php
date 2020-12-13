@@ -32,6 +32,7 @@ class RegisterController
         $password = $_POST['password'];
         $fechaDeNacimiento = $_POST['fechaDeNacimiento'];
         $email = $_POST['email'];
+        $password= md5($password);
 
         if ($this->registerModel->validarQueElEmailIngresadoNoEsteRegistrado($email)) {
             $this->registerModel->ingresarUsuarioALaBD($numeroDeDocumento, $nombre, $password, $fechaDeNacimiento, $email);

@@ -117,16 +117,16 @@ create table USUARIO(
 
 
 insert into USUARIO(numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
-values (41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
-( 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1),
-(41214566, "Pablo","1234", "1998-06-09", "pablo@hotmail.com", 1),
-(42343476, "Juan","1234", "1998-06-09", "juan@hotmail.com", 1),
-(41456476, "Peter","1234", "1998-06-09", "peter@hotmail.com", 1),
-(41111111, "Chofer","1234", "1998-06-09", "chofer@hotmail.com", 1),
-(42222222, "Supervisor","1234", "1998-06-09", "supervisor@hotmail.com", 2),
-(43333333, "Mecanico","1234", "1998-06-09", "mecanico@hotmail.com", 3),
-(44444444, "Admin","1234", "1998-06-09", "admin@hotmail.com", 4),
-(41852376, "Matisco","1234", "1998-06-09", "matisco@hotmail.com", 2);
+values (41263730, "Agustin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "1234@hotmail.com", 4),
+( 41823476, "Roberto","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "roberto@hotmail.com", 1),
+(41214566, "Pablo","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "pablo@hotmail.com", 1),
+(42343476, "Juan","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "juan@hotmail.com", 1),
+(41456476, "Peter","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "peter@hotmail.com", 1),
+(41111111, "Chofer","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "chofer@hotmail.com", 1),
+(42222222, "Supervisor","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "supervisor@hotmail.com", 2),
+(43333333, "Mecanico","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "mecanico@hotmail.com", 3),
+(44444444, "Admin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "admin@hotmail.com", 4),
+(41852376, "Matisco","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "matisco@hotmail.com", 2);
 
 
 

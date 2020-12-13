@@ -23,9 +23,9 @@
     <h1 id="ingresar" class="h3 mb-3 font-weight-normal">Bienvenido a Trucks Road</h1>
 
     <a  style="text-decoration: none" href="login">
-        <button class="btn btn-lg btn-secondary btn-block"  type="button" onclick="">Ingresar al sistema</button>
+        <button class="btn btn-lg btn-secondary btn-block mb-3"  type="button" onclick="">Ingresar al sistema</button>
     </a>
-    <br>
+
     <a  style="text-decoration: none" href="register">
         <button class="btn btn-lg btn-secondary btn-block"  type="button" onclick="">Registrarse</button>
     </a>
