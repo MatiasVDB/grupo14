@@ -47,7 +47,7 @@
 
 
     <div class="form-row">
-        <div class="form-group col-md-8">
+        <div class="form-group col-md-12">
             <label> Dirección </label>
             <input type="text" class="form-control" id="disabledInput" placeholder="{{direccion}}" disabled>
         </div>
@@ -143,7 +143,6 @@
 
     {{/viaje}}
 
-    <br>
 
     <div class="form-row">
 
@@ -152,9 +151,9 @@
         </div>
 
     </div>
+    {{#carga}}
 
     <div class="form-row">
-        {{#carga}}
 
         <input type="hidden" name="id_carga" value="{{id}}">
 

@@ -61,18 +61,16 @@ id int not null auto_increment,
 patente varchar(40),
 numeroDeChasis int,
 tipo varchar(50),
-id_carga int,
-primary key (id, patente, numeroDeChasis),
-foreign key(id_carga) references CARGA(id));
+primary key (id, patente, numeroDeChasis));
 
-insert into ARRASTRADO(patente, numeroDeChasis, id_carga, tipo)
-values ("AA100AS", 585822, 1, "Araña"),
-("AC125AD", 605737, 2, "Araña"),
-("AB135AG", 705687, 3, "Granel"),
-("AD166AS", 815082, 4, "Araña"),
-("AA189AD", 775167, 5, "Jaula"),
-("AC208AG", 642287, 6, "Araña"),
-("AB230AS", 678666, 7, "Araña");
+insert into ARRASTRADO(patente, numeroDeChasis, tipo)
+values ("AA100AS", 585822, "Araña"),
+("AC125AD", 605737,  "Araña"),
+("AB135AG", 705687, "Granel"),
+("AD166AS", 815082,  "Araña"),
+("AA189AD", 775167,  "Jaula"),
+("AC208AG", 642287,  "Araña"),
+("AB230AS", 678666,  "Araña");
 
 
 
@@ -119,16 +117,16 @@ create table USUARIO(
 
 
 insert into USUARIO(numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
-values (41263730, "Agustin","1234", "1998-06-09", "1234@hotmail.com", 4),
-( 41823476, "Roberto","1234", "1998-06-09", "roberto@hotmail.com", 1),
-(41214566, "Pablo","1234", "1998-06-09", "pablo@hotmail.com", 1),
-(42343476, "Juan","1234", "1998-06-09", "juan@hotmail.com", 1),
-(41456476, "Peter","1234", "1998-06-09", "peter@hotmail.com", 1),
-(41111111, "Chofer","1234", "1998-06-09", "chofer@hotmail.com", 1),
-(42222222, "Supervisor","1234", "1998-06-09", "supervisor@hotmail.com", 2),
-(43333333, "Mecanico","1234", "1998-06-09", "mecanico@hotmail.com", 3),
-(44444444, "Admin","1234", "1998-06-09", "admin@hotmail.com", 4),
-(41852376, "Matisco","1234", "1998-06-09", "matisco@hotmail.com", 2);
+values (41263730, "Agustin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "1234@hotmail.com", 4),
+( 41823476, "Roberto","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "roberto@hotmail.com", 1),
+(41214566, "Pablo","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "pablo@hotmail.com", 1),
+(42343476, "Juan","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "juan@hotmail.com", 1),
+(41456476, "Peter","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "peter@hotmail.com", 1),
+(41111111, "Chofer","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "chofer@hotmail.com", 1),
+(42222222, "Supervisor","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "supervisor@hotmail.com", 2),
+(43333333, "Mecanico","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "mecanico@hotmail.com", 3),
+(44444444, "Admin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "admin@hotmail.com", 4),
+(41852376, "Matisco","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "matisco@hotmail.com", 2);
 
 
 
@@ -163,6 +161,7 @@ fecha date,
 CUIT_cliente int,
 id_viaje int,
 numeroDeDocumento_chofer int,
+id_carga int,
 costeoEstimado_Kilometros int,
 costeoEstimado_Combustible int,
 costeoEstimado_ETD int,
@@ -175,11 +174,12 @@ costeoEstimado_Hazard int,
 costeoEstimado_Reefer int,
  foreign key (CUIT_cliente) references CLIENTE(CUIT),
  foreign key (id_viaje) references VIAJE(id),
+foreign key (id_carga) references carga(id),
  foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
 insert into proforma(numero, fecha, CUIT_cliente, id_viaje, numeroDeDocumento_chofer)
 values(1, "2020-03-17",
-213443, 2, 41214566)
+213443, 2, 41214566);
 
 
 create table combustible(
@@ -202,9 +202,7 @@ select * from tractor;
  select * from CARGA;
  
  SELECT * FROM VIAJE;
- 
- select * from VIAJE join ARRASTRADO on viaje.iDArrastrado = arrastrado.id 
- join CARGA where carga.id = arrastrado.id_carga;
+
 
  select * from CLIENTE;
 

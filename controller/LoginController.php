@@ -24,6 +24,7 @@ class LoginController
 
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $password = md5($password);
 
         if($this->loginModel->validarLogin($email,$password)){
 

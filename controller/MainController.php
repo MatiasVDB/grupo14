@@ -28,6 +28,7 @@ class MainController
                 $data['cargasNav']="disabled";
                 $data['flotaArrastradosNav']="disabled";
                 $data['flotaTractoresNav']="disabled";
+                $data['proformasNav']="disabled";
 
                 break;
 
@@ -37,6 +38,7 @@ class MainController
                 $data['cargarProformaNav']="disabled";
                 $data['registrarTractorNav']="disabled";
                 $data['registrarArrastradoNav']="disabled";
+                $data['proformasNav']="disabled";
                 break;
 
          
@@ -49,6 +51,7 @@ class MainController
                 $data['registrarArrastradoNav']="disabled";
                 $data['clientesNav']="disabled";
                 $data['cargasNav']="disabled";
+                $data['proformasNav']="disabled";
                 break;
 
 
