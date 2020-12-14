@@ -192,6 +192,9 @@ primary key (id, idViaje, numeroDeDocumento_chofer),
 foreign key (idViaje) references VIAJE(id),
 foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
+insert into combustible(id, idViaje, numeroDeDocumento_chofer, lugar, cantidad, importe, kilometrosRecorridos)
+values(1, 1, 41823476, "Ciudadela", 100, 400, 50);
+
 
 select * from tractor; 
  

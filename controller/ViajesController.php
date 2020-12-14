@@ -9,16 +9,18 @@ class ViajesController
     private TractoresModel $tractoresModel;
     private ClientesModel $clientesModel;
     private EmpleadosModel $empleadosModel;
+    private CargasCombustibleModel $cargasCombustibleModel;
     private Render $render;
 
 
-    public function __construct(ViajesModel $viajesModel, ArrastradosModel $arrastradosModel, TractoresModel $tractoresModel, ClientesModel $clientesModel,EmpleadosModel $empleadosModel, Render $render)
+    public function __construct(ViajesModel $viajesModel, ArrastradosModel $arrastradosModel, TractoresModel $tractoresModel, ClientesModel $clientesModel,EmpleadosModel $empleadosModel, CargasCombustibleModel $cargasCombustibleModel, Render $render)
     {
         $this->viajesModel = $viajesModel;
         $this->arrastradosModel= $arrastradosModel;
         $this->tractoresModel= $tractoresModel;
         $this->clientesModel= $clientesModel;
         $this->empleadosModel= $empleadosModel;
+        $this->cargasCombustibleModel= $cargasCombustibleModel;
         $this->render = $render;
     }
 
@@ -36,7 +38,7 @@ class ViajesController
         $id = $_GET["id"];
 
 
-        $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores());
+        $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "cargas"=> $this->cargasCombustibleModel->getCargasCombustibleViaje($id));
         echo $this->render->render( "view/viajeDetalleView.php", $data );
     }
 

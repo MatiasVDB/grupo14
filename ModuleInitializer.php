@@ -100,13 +100,15 @@ class ModuleInitializer
         include_once ("model/TractoresModel.php");
         include_once ("model/ClientesModel.php");
         include_once ("model/EmpleadosModel.php");
+        include_once ("model/CargasCombustibleModel.php");
 
         $model = new ViajesModel($this->database);
         $modelArrastrados = new ArrastradosModel($this->database);
         $modelTractores = new TractoresModel($this->database);
         $modelClientes = new ClientesModel($this->database);
         $modelEmpleados= new EmpleadosModel($this->database);
-        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $this->renderer);
+        $cargasCombustibleModel= new CargasCombustibleModel($this->database);
+        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $cargasCombustibleModel, $this->renderer);
     }
 
     public function createDatosProformaController(){
