@@ -351,11 +351,7 @@
 
             <input type="text" class="form-control" name="nombre" value="{{nombre}} {{numeroDeDocumento}}" disabled>
 
-            <input type="hidden" value="{{tipoDeDocumento}}" name="tipoDeDocumento_usuario">
-            <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
-
             {{/empleado}}
-
         </div>
 
 

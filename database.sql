@@ -108,10 +108,8 @@ create table USUARIO(
     fechaDeNacimiento date not null,
     mail varchar(75) not null unique,
     rolUsuario int,
-    id_viaje int,
     PRIMARY KEY( numeroDeDocumento),
-    foreign key(rolUsuario) references ROL(id),
-    foreign key(id_viaje) references VIAJE(id)
+    foreign key(rolUsuario) references ROL(id)
     );
     
 

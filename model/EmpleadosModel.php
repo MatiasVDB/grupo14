@@ -25,7 +25,7 @@ class EmpleadosModel
     public function getEmpleado($numeroDocumento){
         $sql = "SELECT * FROM USUARIO where numeroDeDocumento = '$numeroDocumento'";
 
-        return $this->database->execute($sql);
+        return $this->database->query($sql);
     }
 
     public function getEmpleadoDNI($numeroDocumento){
