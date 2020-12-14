@@ -37,6 +37,7 @@
                                 <td class="text-muted">{{kilometros}}</td>
                                 <td><a href="http://localhost/grupo14/tractores/detalle/tractorDetalle?id={{id}}" class="btn btn-primary {{actualizarTractor}}" role="button" aria-pressed="true" >Actualizar</a>
                                     <a href="http://localhost/grupo14/tractores/eliminarTractor?id={{id}}" class="btn btn-danger {{eliminarTractor}}" role="button" aria-pressed="true" >Dar Baja</a>
+                                    <a href="http://localhost/grupo14/mantenimiento?id_tractor={{id}}" class="btn btn-warning active {{mantenimiento}}" role="button" aria-pressed="true">Mantenimiento</a>
                                 </td>
                             </tr>
                             {{/tractores}}

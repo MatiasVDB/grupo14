@@ -46,6 +46,12 @@ class EmpleadosModel
         return $this->database->query("SELECT * FROM USUARIO where rolUsuario = 1");
 
     }
+
+    public function getMecanicos(){
+
+        return $this->database->query("SELECT * FROM USUARIO where rolUsuario = 3");
+
+    }
     public function getTipoDocumento($numeroDNI){
 
         return $this->database->query("SELECT tipoDeDocumento FROM USUARIO where numeroDeDocumento = $numeroDNI");

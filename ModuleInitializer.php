@@ -158,6 +158,34 @@ class ModuleInitializer
         return new CargasCombustibleController($model, $this->renderer);
     }
 
+    public function createMantenimientoController(){
+        include_once ("model/MantenimientoModel.php");
+        include_once ("model/TractoresModel.php");
+        include_once ("model/FechaServiceModel.php");
+        include_once ("controller/MantenimientoController.php");
+        $model = new MantenimientoModel($this->database);
+        $modelFechaService = new FechaServiceModel($this->database);
+        $modelTractores = new TractoresModel($this->database);
+        return new MantenimientoController($model, $modelTractores, $modelFechaService,  $this->renderer);
+
+    }
+
+    public function createServicesController(){
+
+        include_once ("model/ServiceModel.php");
+        include_once ("model/FechaServiceModel.php");
+        include_once ("model/TractoresModel.php");
+        include_once ("model/EmpleadosModel.php");
+        include_once ("controller/ServiceController.php");
+
+        $model = new ServiceModel($this->database);
+        $modelFechaService = new FechaServiceModel($this->database);
+        $modelTractores = new TractoresModel($this->database);
+        $modelEmpleados = new EmpleadosModel($this->database);
+        return new ServiceController($model, $modelFechaService, $modelTractores, $modelEmpleados, $this->renderer);
+
+    }
+
 
     public function createDefaultController()
     {

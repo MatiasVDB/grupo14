@@ -13,6 +13,7 @@ values (1, "Chofer"),
 (2, "Supervisor"),
 (3, "Encargado del taller"),
 (4, "Administrador");
+
 create table CARGA(
 id int not null auto_increment,
 tipo varchar (15) not null,
@@ -52,9 +53,7 @@ values ("IVECO", "Cursor", "AA124DC", 69904367, "R69904367", 40005, 2013),
 ("IVECO", "Cursor", "AA233SS", 26139668, "K26139668", 78356, 2012),
 ("IVECO", "Cursor", "AB900QW", 44301415, "F44301415", 29000, 2015),
 ("IVECO", "Cursor", "AC342WW", 44260023, "D44260023", 19003, 2017),
-("SCANIA", "G310", "AA150QW", 82039512, "I82039512", 14590, 2020)
-;
-
+("SCANIA", "G310", "AA150QW", 82039512, "I82039512", 14590, 2020);
 
 create table ARRASTRADO(
 id int not null auto_increment,
@@ -71,8 +70,6 @@ values ("AA100AS", 585822, "Araña"),
 ("AA189AD", 775167,  "Jaula"),
 ("AC208AG", 642287,  "Araña"),
 ("AB230AS", 678666,  "Araña");
-
-
 
 create table VIAJE(
 id int not null auto_increment,
@@ -100,7 +97,6 @@ value ("Buenos Aires", "Cordoba", '2020-03-18', "2020-03-17", "2020-03-17", "202
 ("Corrientes", "Cordoba", '2020-03-20', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 4, 5),
 ("Cordoba", "Buenos aires", '2020-03-21', "2020-03-17", "2020-03-17", "2020-03-17", 0.0, 0.0, 0.0, 0.0, 1, 6);
 
-
 create table USUARIO(
     numeroDeDocumento INT NOT null,
     nombre varchar(50) not null  ,
@@ -114,11 +110,9 @@ create table USUARIO(
     foreign key(id_viaje) references VIAJE(id)
     );
     
-
-
 insert into USUARIO(numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
 values (41263730, "Agustin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "1234@hotmail.com", 4),
-( 41823476, "Roberto","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "roberto@hotmail.com", 1),
+(41823476, "Roberto","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "roberto@hotmail.com", 1),
 (41214566, "Pablo","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "pablo@hotmail.com", 1),
 (42343476, "Juan","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "juan@hotmail.com", 1),
 (41456476, "Peter","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "peter@hotmail.com", 1),
@@ -127,10 +121,6 @@ values (41263730, "Agustin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "1
 (43333333, "Mecanico","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "mecanico@hotmail.com", 3),
 (44444444, "Admin","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "admin@hotmail.com", 4),
 (41852376, "Matisco","81dc9bdb52d04dc20036dbd8313ed055", "1998-06-09", "matisco@hotmail.com", 2);
-
-
-
-
 
 create table CLIENTE(
 CUIT INT,
@@ -151,9 +141,6 @@ values (244444, "Sancor", "blabla@hotmail.com", "55559999", "99995555", "4444333
 (213443, "Samsung", "1111@hotmail.com", "43316664", "99995555", "31112251", "San Luis, Mataderos, Clash 3755"),
 (345121, "Flete", "12341@hotmail.com", "12357432", "99995555", "21145566", "San Luis, Moreno, Etesech 3751"),
 (554233, "Bk", "2525252@hotmail.com", "12346782", "99995555", "12908871", "Tucuman , Ituzaingo, San Pedro 2500");
-
-
-
 
 create table PROFORMA(
 numero int primary key,
@@ -194,25 +181,29 @@ primary key (id, idViaje, numeroDeDocumento_chofer),
 foreign key (idViaje) references VIAJE(id),
 foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
 
+create table service(
+codigo int not null primary key,
+id_tractor int,
+repuestos varchar(40),
+tipoDeService varchar(40),
+numeroDeDocumento_mecanico int,
+foreign key (id_tractor) references TRACTOR(id), 
+foreign key (numeroDeDocumento_mecanico) references USUARIO( numeroDeDocumento)); 
 
-select * from tractor; 
- 
- select * from PROFORMA;
 
- select * from CARGA;
+ create table FECHA_SERVICE(
+ id int auto_increment,
+ id_tractor int,
+ hora time,
+ fecha date,
+ codigo_service int,
+ primary key (id, codigo_service),
+ foreign key (id_tractor) references TRACTOR(id),
+ foreign key (codigo_service)  references service(codigo) ON DELETE CASCADE
+ );
  
- SELECT * FROM VIAJE;
 
 
- select * from CLIENTE;
 
- select * from usuario left join rol on usuario.rolUsuario = rol.id;
- 
-  select * from usuario left join rol on usuario.rolUsuario = rol.id where numeroDeDocumento = 86896324;
 
- select * from rol;
- 
- select * from usuario;
- 
- select * from arrastrado;
- 
+
