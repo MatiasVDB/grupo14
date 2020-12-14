@@ -104,10 +104,8 @@ create table USUARIO(
     fechaDeNacimiento date not null,
     mail varchar(75) not null unique,
     rolUsuario int,
-    id_viaje int,
     PRIMARY KEY( numeroDeDocumento),
-    foreign key(rolUsuario) references ROL(id),
-    foreign key(id_viaje) references VIAJE(id)
+    foreign key(rolUsuario) references ROL(id)
     );
     
 insert into USUARIO(numeroDeDocumento, nombre, password, fechaDeNacimiento, mail,rolUsuario)
@@ -180,6 +178,9 @@ kilometrosRecorridos float,
 primary key (id, idViaje, numeroDeDocumento_chofer),
 foreign key (idViaje) references VIAJE(id),
 foreign key ( numeroDeDocumento_chofer) references USUARIO( numeroDeDocumento));
+
+insert into combustible(id, idViaje, numeroDeDocumento_chofer, lugar, cantidad, importe, kilometrosRecorridos)
+values(1, 1, 41823476, "Ciudadela", 100, 400, 50);
 
 create table service(
 codigo int not null primary key,

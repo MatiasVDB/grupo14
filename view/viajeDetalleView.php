@@ -112,7 +112,7 @@
         <div>
 
             <label> <h6> Arrastrado</h6></label>
-            <select class="custom-select" multiple name="idArrastrado">
+            <select class="custom-select mb-4" multiple name="idArrastrado">
                 <option value="{{idArrastrado}}" selected>ID: {{idArrastrado}}</option>
                 {{#arrastrados}}
                 <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Tipo de carga: {{tipoCarga}}</option>
@@ -121,6 +121,29 @@
             </select>
 
         </div>
+
+    {{#cargas}}
+    <label> <h6> Cargas de combustible</h6></label>
+
+    <div class="form-row mb-4">
+        <div class="form-group col-md-6">
+            <input type="hidden" name="id" value="{{id}}">
+
+            <label for="inputOrigen" >Cantidad cargada</label>
+            <input name="cantidadCargada" type="text" id="inputCantidadCargada" class="form-control" placeholder="Cantidad cargada" value="{{cantidad}}" disabled>
+        </div>
+
+        <div class="form-group col-md-6">
+            <label for="inputDestino" >Importe</label>
+            <input type="text" name="importe" id="inputImporte" class="form-control" placeholder="Importe" value="${{importe}}" disabled>
+        </div>
+{{/cargas}}
+        <label> <h6> Este viaje no tiene cargas de combustible registradas.</h6></label>
+        {{^cargas}}
+
+        {{/cargas}}
+
+    </div>
     <!--
         <div>
 

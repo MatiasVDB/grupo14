@@ -77,9 +77,6 @@ class ProformaController
         else{
             $data["mensaje"] = "*Número de Proforma existente, ingrese otro.";
         }
-        echo ("5");
-
-
     }
 
     public function imprimirProforma(){
@@ -94,8 +91,7 @@ class ProformaController
        $data =  array("proforma"=> $this->proformaModel->getProforma($numero), "cliente" => $this->clientesModel->getCliente($CUIT), "viaje"=> $this->viajesModel->getViaje($viaje),
            "empleado"=>$this->empleadosModel->getEmpleado($numeroDNI),"carga"=>$this->cargasModel->getCarga($carga));
 
-        echo $this->render->render( "view/imprimirProformaView.php", $data);
-
+       echo $this->render->render( "view/imprimirProformaView.php", $data);
     }
 
     public function eliminar(){
@@ -108,10 +104,53 @@ class ProformaController
 
     }
 
+    public function detalle(){
+        $numero= $_GET["numero"];
+
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+            $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajes(), "empleados" => $this->empleadosModel->getChoferes(),
+                "cargas" => $this->cargasModel->getCargas() , "proforma" => $this->proformaModel->getProforma($numero));
+
+            echo $this->render->render("view/proformaDetalleView.php", $data);
+        }
+        else{
+            header("Location: main");
+        }
+    }
+    public function procesarActualizacionProforma(){
+        $numero = $_POST["numero"];
+        $CUIT = $_POST["CUIT_cliente"];
+        $viaje = $_POST["id_viaje"];
+        $carga = $_POST["id_carga"];
+        $numeroDNI = $_POST["numeroDeDocumento_usuario"];
+        $costeoKilometrosEsperado = $_POST["kilometrosCosteoEsperado"];
+        $costeoCombustibleEsperado = $_POST["combustibleCosteoEsperado"];
+        $costeoETDEsperado = $_POST["etdCosteoEsperado"];
+        $costeoETAEsperado = $_POST["etaCosteoEsperado"];
+        $costeoViaticosEsperado = $_POST["viaticosCosteoEsperado"];
+        $costeoPeajesPesajesEsperado = $_POST["peajesPesajesCosteoEsperado"];
+        $costeoExtrasEsperado= $_POST["extrasCosteoEsperado"];
+        $costeoFEEEsperado = $_POST["feeCosteoEsperado"];
+        $costeoHazardEsperado = $_POST["hazardCosteoEsperado"];
+        $costeoReeferEsperado = $_POST["reeferCosteoEsperado"];
+
+
+        echo("$numero, $CUIT, $viaje,  $numeroDNI --,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
+        $costeoETDEsperado,$costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado,$costeoExtrasEsperado
+        ,$costeoFEEEsperado, $costeoHazardEsperado,$costeoReeferEsperado
+        ");
+
+            $this->proformaModel->modificarDatos($numero, $CUIT, $viaje, $numeroDNI, $carga,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
+                $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
+                $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
+            header("Location: http://localhost/grupo14/proforma");
+
+    }
+
+
     public function imprimirQR(){
         $numero = $_GET['id_viaje'];
         $numeroDocumento = $_GET['numeroDeDocumento_chofer'];
-        //$tipoDocumento = $_GET['tipoDeDocumento_chofer'];
         QRcode::png('localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje='.$numero .'&numeroDeDocumento_chofer='.$numeroDocumento);
         // QRcode::png('http://localhost/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero)
     }

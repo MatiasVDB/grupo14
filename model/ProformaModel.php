@@ -53,6 +53,20 @@ class ProformaModel
         $this->database->execute($sql);
     }
 
+    public function modificarDatos($numero, $CUIT, $viaje, $numeroDNI, $carga,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
+                             $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
+                             $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado){
+
+        $sql = "update PROFORMA set CUIT_cliente = '$CUIT' , id_viaje = '$viaje' , numeroDeDocumento_chofer = '$numeroDNI', id_carga = '$carga'
+            , costeoEstimado_Kilometros = '$costeoKilometrosEsperado', costeoEstimado_Combustible = '$costeoCombustibleEsperado'
+            , costeoEstimado_ETD = '$costeoETDEsperado', costeoEstimado_ETA = '$costeoETAEsperado' , costeoEstimado_Viaticos = '$costeoViaticosEsperado', costeoEstimado_Peajes_Pesajes = '$costeoPeajesPesajesEsperado', 
+            costeoEstimado_Extras = '$costeoExtrasEsperado', costeoEstimado_FEE = '$costeoFEEEsperado', costeoEstimado_Hazard = '$costeoHazardEsperado', costeoEstimado_Reefer = '$costeoReeferEsperado' 
+            where numero = '$numero'" ;
+
+        $this->database->execute($sql);
+    }
+
+
     public function eliminar($numero)
     {
         $sql = "delete from proforma where  numero = '$numero'";

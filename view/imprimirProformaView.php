@@ -351,11 +351,7 @@
 
             <input type="text" class="form-control" name="nombre" value="{{nombre}} {{numeroDeDocumento}}" disabled>
 
-            <input type="hidden" value="{{tipoDeDocumento}}" name="tipoDeDocumento_usuario">
-            <input type="hidden" value="{{numeroDeDocumento}}" name="numeroDeDocumento_usuario">
-
             {{/empleado}}
-
         </div>
 
 
@@ -368,19 +364,11 @@
             <h5> Código QR: </h5>
 
             {{#viaje}}
-            <img src="./imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumento_chofer}}&tipoDeDocumento_chofer={{tipoDeDocumento_chofer}}" />
+            <img src="./imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumento_chofer}}" />
             {{/viaje}}
             {{/proforma}}
 
         </div>
-
-        <h5> Código QR: </h5>
-        {{#viaje}}
-        <img src="./imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumentoChofer}}&tipoDeDocumento_chofer={{tipoDocumentoChofer}}" />
-        {{/viaje}}
-
-
-
 
     <div class="col">
 

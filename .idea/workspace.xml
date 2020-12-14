@@ -39,6 +39,14 @@
       <change beforePath="$PROJECT_DIR$/view/mainView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mainView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/tractoresView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractoresView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/proformaDetalleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/EmpleadosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/EmpleadosModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ProformaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProformaModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/imprimirProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/imprimirProformaView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/proformasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/proformasView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +206,11 @@
     </state>
     <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1607968087888" />
     <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607804272915" />
+    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607905034998">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1606318702768" />
+    <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607905034998" />
     <state x="604" y="336" key="NewPhpFileDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604891483858" />
     <state x="536" y="263" width="418" height="202" key="WebDeployment.AddServerDialog.v.1" timestamp="1604942191980">
       <screen x="0" y="0" width="1360" height="728" />
@@ -207,10 +220,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="285" y="0" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1360.728@0.0.1360.728" timestamp="1607222622437" />
-    <state x="-307" y="-7" width="1107" height="810" maximized="true" key="dock-window-1" timestamp="1607801565934">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="1920" y="5" width="1096" height="810" maximized="true" key="dock-window-1" timestamp="1607911212659">
+      <screen x="1920" y="5" width="1536" height="824" />
     </state>
-    <state x="-307" y="-7" width="1107" height="810" maximized="true" key="dock-window-1/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607801565934" />
+    <state x="1920" y="5" width="1096" height="810" maximized="true" key="dock-window-1/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607911212659" />
     <state x="1920" y="5" width="1107" height="810" maximized="true" key="dock-window-2" timestamp="1607805297531">
       <screen x="1920" y="5" width="1536" height="824" />
     </state>
@@ -232,5 +245,10 @@
     </state>
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1607888015144" />
     <state x="387" y="55" width="759" height="768" key="search.everywhere.popup/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607804763909" />
+    <state x="387" y="55" width="759" height="768" key="search.everywhere.popup" timestamp="1607912018983">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1606842658841" />
+    <state x="387" y="55" width="759" height="768" key="search.everywhere.popup/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607912018983" />
   </component>
 </project>

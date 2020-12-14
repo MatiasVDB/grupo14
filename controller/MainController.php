@@ -43,6 +43,9 @@ class MainController
                 $data['servicesNav']="disabled";
                 break;
 
+            case 2:
+                $data["bienvenida"]= "Bienvenido supervisor";
+                break;
          
 
             case 3:
@@ -55,6 +58,9 @@ class MainController
                 $data['cargasNav']="disabled";
                 $data['proformasNav']="disabled";
                 break;
+
+            case 4:
+                $data['bienvenida']="Bienvenido administrador";
 
 
 

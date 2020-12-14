@@ -27,6 +27,8 @@
                                 <th scope="col" class="border-0  font-medium">Costeo estimado fee</th>
                                 <th scope="col" class="border-0  font-medium">Costeo estimado hazard</th>
                                 <th scope="col" class="border-0  font-medium">Costeo estimado reefer</th>
+                                <th scope="col" class="border-0  font-medium">Acciones</th>
+
                             </tr>
                             </thead>
                             <tbody>
@@ -51,7 +53,7 @@
 
 
                                 <td>
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./proforma/detalle/CUIT={{CUIT}}'" > Actualizar</button>
+                                    <button type="button" class="btn btn-primary" onclick="location.href='./proforma/detalle/numero={{numero}}'" > Actualizar</button>
                                     <button type="button" class="btn btn-danger" onclick="location.href='./proforma/eliminar?numeroProforma={{numero}}'" > Dar Baja</button>
                                 </td>
                             </tr>
@@ -63,7 +65,7 @@
             </div>
         </div>
         <div class="col text-center mt-4 mb-4">
-            <a href="clientes/registerCliente" class="btn btn-primary btn-lg {{agregarCliente}}" role="button" aria-pressed="true" >Agregar Cliente</a>
+            <a href="http://localhost/grupo14/DatosProforma" class="btn btn-primary btn-lg {{agregarCliente}}" role="button" aria-pressed="true" >Agregar proforma</a>
         </div>
     </div>
 </main>
