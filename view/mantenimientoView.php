@@ -30,7 +30,7 @@
 
         <div class="form-row">
 
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-12">
                 <label for="inputText4">Kilometros Unidad</label>
                 <input type="number" class="form-control" id="inputText4" name="kilometros" value="{{kilometros}}" readonly>
             </div>

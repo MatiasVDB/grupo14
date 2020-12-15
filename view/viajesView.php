@@ -16,7 +16,6 @@
                                 <th scope="col" class="border-0  font-medium">Destino</th>
                                 <th scope="col" class="border-0  font-medium">Fecha inicio</th>
                                 <th scope="col" class="border-0  font-medium">Fecha finalizacion</th>
-                                <th scope="col" class="border-0  font-medium">Fecha carga</th>
                                 <th scope="col" class="border-0  font-medium">ETA</th>
                                 <th scope="col" class="border-0  font-medium">ETD</th>
                                 <th scope="col" class="border-0  font-medium">Kilometros final </th>
@@ -37,7 +36,6 @@
                                 <td class="text-muted">{{destino}}</td>
                                 <td class="text-muted">{{fechaInicio}}</td>
                                 <td class="text-muted">{{fechaFinalizacion}}</td>
-                                <td class="text-muted">{{fechaCarga}}</td>
                                 <td class="text-muted">{{ETA}}</td>
                                 <td class="text-muted">{{ETD}}</td>
                                 <td class="text-muted">{{kilometrosFinal}}</td>

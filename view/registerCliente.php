@@ -36,7 +36,7 @@
             <label for="date-input" id="contacto1">Contacto 1</label>
 
 
-            <input name="contacto1" class="form-control" type="text"
+            <input name="contacto1" class="form-control" type="tel"
                    id="date-input">
 
         </div>
@@ -46,8 +46,7 @@
             <label for="date-input" id="contacto2">Contacto 2</label>
 
 
-            <input name="contacto2" class="form-control" type="text"
-                   id="date-input">
+            <input name="contacto2" class="form-control" type="tel">
 
         </div>
 

@@ -33,15 +33,15 @@ class ViajesModel
 
 
 
-    public function modificarViaje($id,$origen,$destino, $fechaFinalizacion, $fechaInicio, $fechaCarga, $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado){
-        $sql = "update viaje set origen = '$origen', destino = '$destino', fechaFinalizacion = '$fechaFinalizacion', fechaInicio = '$fechaInicio', fechaCarga ='$fechaCarga', tiempoReal = '$tiempoReal', ETA = '$ETA', ETD = '$ETD', kilometrosFinal = '$kilometrosFinal', kilometrosActuales = '$kilometrosActuales',combustibleFinal = '$combustibleFinal', combustibleConsumido = '$combustibleConsumido',idVehiculo = '$idVehiculo', tipoDocumentoChofer = '$tipoDocumentoChofer', numeroDeDocumentoChofer='$numeroDocumentoChofer', cuitCliente='$cuitCliente', idArrastrado='$idArrastrado'  where id = '$id'";
+    public function modificarViaje($id,$origen,$destino, $fechaFinalizacion, $fechaInicio, $tiempoReal, $ETA, $ETD, $kilometrosFinal, $kilometrosActuales, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado){
+        $sql = "update viaje set origen = '$origen', destino = '$destino', fechaFinalizacion = '$fechaFinalizacion', fechaInicio = '$fechaInicio',  tiempoReal = '$tiempoReal', ETA = '$ETA', ETD = '$ETD', kilometrosFinal = '$kilometrosFinal', kilometrosActuales = '$kilometrosActuales',combustibleFinal = '$combustibleFinal', combustibleConsumido = '$combustibleConsumido',idVehiculo = '$idVehiculo', tipoDocumentoChofer = '$tipoDocumentoChofer', numeroDeDocumentoChofer='$numeroDocumentoChofer', cuitCliente='$cuitCliente', idArrastrado='$idArrastrado'  where id = '$id'";
 
         return $this->database->query($sql);
     }
 
-    public function createViaje($origen, $destino,  $fechaInicio, $fechaFinalizacion, $fechaCarga, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado){
-        $sql = "insert into VIAJE(origen, destino, fechaInicio, fechaFinalizacion, fechaCarga, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado)
-        values ('$origen','$destino', '$fechaInicio','$fechaFinalizacion', '$fechaCarga', '$ETA', '$ETD', '$kilometrosActuales', '$kilometrosFinal', '$combustibleFinal', '$combustibleConsumido', '$idVehiculo', '$idArrastrado')";
+    public function createViaje($origen, $destino,  $fechaInicio, $fechaFinalizacion, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado){
+        $sql = "insert into VIAJE(origen, destino, fechaInicio, fechaFinalizacion, tiempoReal, ETA, ETD, kilometrosActuales, kilometrosFinal, combustibleFinal, combustibleConsumido, idVehiculo, tipoDocumentoChofer, numeroDeDocumentoChofer, cuitCliente, idArrastrado)
+        values ('$origen','$destino', '$fechaInicio','$fechaFinalizacion', '$ETA', '$ETD', '$kilometrosActuales', '$kilometrosFinal', '$combustibleFinal', '$combustibleConsumido', '$idVehiculo', '$idArrastrado')";
 
         $this->database->execute($sql);
     }

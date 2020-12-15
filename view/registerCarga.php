@@ -45,14 +45,14 @@
         <div class="form-group col-md-6">
             <label for="inputHazard" >Hazard</label>
             <select class="form-control category-select" id="inputHazard" name="hazard">
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                <option value="SI">Si</option>
+                <option value="NO">No</option>
             </select>
         </div>
 
         <div class="form-group col-md-6">
             <label for="imo" >IMO</label>
-            <input type="number" name="imo" id="imo" class="form-control" placeholder="IMO">
+            <input type="number" name="imo" id="imo" class="form-control" placeholder="IMO" step="0.01">
         </div>
 
 
@@ -62,8 +62,8 @@
         <div class="form-group col-md-6">
             <label for="inputReefer" >Reefer</label>
             <select class="form-control category-select" id="inputReefer" name="reefer">
-                <option value="si">Si</option>
-                <option value="no">No</option>
+                <option value="SI">Si</option>
+                <option value="NO">No</option>
             </select>
         </div>
 
@@ -73,7 +73,7 @@
 
 
             <input name="temperatura" class="form-control" type="number"
-                   id="temperatura">
+                   step="0.01" id="temperatura">
 
         </div>
 
