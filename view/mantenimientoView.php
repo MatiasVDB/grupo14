@@ -40,7 +40,7 @@
 
 
 
-        <a role="button" href="http://localhost/grupo14/services/realizarService?id_tractor={{id}}" class="btn btn-primary">Realizar Service</a>
+        <a role="button"  href="http://localhost/grupo14/services/realizarService?id_tractor={{id}}" class="btn btn-primary {{service}}">Realizar Service</a>
     </form>
     {{/tractor}}
 </div>
