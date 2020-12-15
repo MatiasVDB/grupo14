@@ -20,14 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/view/proformaDetalleView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/EmpleadosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/EmpleadosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ProformaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProformaModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/imprimirProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/imprimirProformaView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/proformasView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/proformasView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
