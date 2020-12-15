@@ -46,7 +46,7 @@ class CargasCombustibleController
 
             // VER
             // EJEMPLO DE URL localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje=1&numeroDeDocumento_chofer=41823476&tipoDeDocumento_chofer=DNI
-            $idViaje= $_GET['id_viaje'];
+            $idViaje= $_GET['idViaje'];
             $numeroDeDocumento_chofer = $_GET['numeroDeDocumento_chofer'];
 
             $data["datos"] = array("idViaje" => $idViaje, "numeroDeDocumento_chofer" => $numeroDeDocumento_chofer);
