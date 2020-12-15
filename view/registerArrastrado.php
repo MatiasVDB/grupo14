@@ -4,7 +4,7 @@
 
     <h5 id="ingresar" class="mb-3 registerTxt">Registrar arrastrado</h5>
 
-    <form action="./registrarArrastrado" class="col-md-8  formulario" method="post">
+    <form action="crearArrastrado" class="col-md-8  formulario" method="post">
 
 
         <div class="form-row">

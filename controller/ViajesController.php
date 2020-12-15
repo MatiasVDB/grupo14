@@ -25,7 +25,7 @@ class ViajesController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
+        if (isset($_SESSION['logueado']) and  $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ){
                     $data["viajes"] = $this->viajesModel->getViajes();
             echo $this->render->render( "view/viajesView.php", $data );
         }
@@ -35,11 +35,39 @@ class ViajesController
     }
 
     public function detalle(){
+        if (isset($_SESSION['logueado']) and  $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4){
+
         $id = $_GET["id"];
 
 
         $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores(), "cargas"=> $this->cargasCombustibleModel->getCargasCombustibleViaje($id));
         echo $this->render->render( "view/viajeDetalleView.php", $data );
+
+        }
+
+        else{
+            header("Location: main");
+        }
+    }
+
+    public function viajeDetalleChofer(){
+
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1){
+
+            $id = $_GET["id"];
+
+            $viaje = $this->viajesModel->getViaje($id);
+
+            $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrado"=> $this->arrastradosModel->getArrastrado($viaje[0]["idArrastrado"]), "tractor"=> $this->tractoresModel->getTractorPorID($viaje[0]["idVehiculo"]), "cargas"=> $this->cargasCombustibleModel->getCargasCombustibleViaje($id));
+            echo $this->render->render( "view/viajeDetalleChoferView.php", $data );
+
+
+        }
+
+        else{
+            header("Location: main");
+
+        }
     }
 
     public function procesarActualizacionViaje(){
@@ -66,7 +94,7 @@ class ViajesController
 
     public function registerViaje(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
 
             $data = array("arrastrados"=> $this->arrastradosModel->getArrastrados(), "tractores"=> $this->tractoresModel->getTractores());
 
@@ -99,7 +127,7 @@ class ViajesController
 
     public function eliminar()
     {
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ) {
             $id = $_GET["id"];
 
             $this->viajesModel->eliminar($id);

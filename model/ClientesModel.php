@@ -24,14 +24,14 @@ class ClientesModel
     public function modificarCliente($cuit, $denominacion, $contacto1, $contacto2, $telefono, $direccion, $email){
         $sql = "update CLIENTE set denominacion = '$denominacion', contacto1 = '$contacto1', contacto2 = '$contacto2', telefono = '$telefono', direccion = '$direccion', email = '$email' where cuit = '$cuit'";
 
-        return $this->database->query($sql);
+         $this->database->execute($sql);
     }
 
     public function createCliente($cuit, $denominacion, $email , $contacto1, $contacto2, $telefono, $direccion){
         $sql = "insert into CLIENTE(CUIT, denominacion, email, contacto1, contacto2, telefono, direccion)
         values ('$cuit', '$denominacion', '$email', '$contacto1', '$contacto2', '$telefono', '$direccion')";
 
-        return $this->database->execute($sql);
+         $this->database->execute($sql);
     }
 
     public function eliminar($cuit)

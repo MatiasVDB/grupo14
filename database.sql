@@ -204,5 +204,3 @@ foreign key (numeroDeDocumento_mecanico) references USUARIO( numeroDeDocumento))
  foreign key (codigo_service)  references service(codigo) ON DELETE CASCADE
  );
  
-
-

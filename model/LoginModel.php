@@ -37,6 +37,7 @@ class LoginModel
                     session_start();
                     $_SESSION['logueado'] = 1;
                     $_SESSION['username'] = $email;
+                    $_SESSION['numeroDeDocumento'] = $query[0]['numeroDeDocumento'];
 
                     break;
 

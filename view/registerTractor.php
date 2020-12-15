@@ -5,7 +5,7 @@
 
     <h5 class="registerTxt"> Registrar Tractor</h5>
 
-<form class="col-md-8 formulario" action="registrarTractor" method="post">
+<form class="col-md-8 formulario" action="crearTractor" method="post">
 
 
 

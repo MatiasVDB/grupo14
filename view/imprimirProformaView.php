@@ -120,8 +120,6 @@
 
     </div>
 
-
-
     <div class="form-row">
 
         <div class="form-group col-md-6">
@@ -137,6 +135,10 @@
             <label> Tiempo esperado de arribo </label>
             <input type="time" class="form-control" id="ETA" placeholder="{{ETA}}" name="eta" disabled>
 
+        </div>
+
+        <div class="form-group col-md-6">
+            <a class="btn btn-primary" href="http://localhost/grupo14/viajes/viajeDetalleChofer/id={{id}}"> Ver detalles del viaje</a>
         </div>
 
     </div>
@@ -357,24 +359,29 @@
 
 
     </div>
-    <br> <br>
 
-        <div class="col">
+    <div class="form-row">
 
-            <h5> Código QR: </h5>
-
+        <div class="form-group col-md-10">
+            <h5> Código QR Para Carga De Combustible: </h5>
             {{#viaje}}
-            <img src="./imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumento_chofer}}" />
+
+            <img src="../imprimirQR?id_viaje={{id}}&numeroDeDocumento_chofer={{numeroDeDocumento_chofer}}" />
+
+
             {{/viaje}}
             {{/proforma}}
 
         </div>
 
-    <div class="col">
+        <div class="form-group col-md-10">
 
-        <button type="button"onClick="window.print()" class="btn btn-primary">Imprimir</button>
+            <button type="button"onClick="window.print()" class="btn btn-primary">Imprimir</button>
+        </div>
 
     </div>
+
+
 
 </form>
 

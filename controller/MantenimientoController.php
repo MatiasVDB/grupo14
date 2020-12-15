@@ -20,23 +20,9 @@ class MantenimientoController
 
     public function index(){
 
-        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] = 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] = 4){
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] == 4){
 
             switch ($_SESSION['logueado']) {
-                case 1:
-                    $data['empleadosNav'] = "disabled";
-                    $data['viajesNav'] = "disabled";
-                    $data['cargarProformaNav'] = "disabled";
-                    $data['registrarTractorNav'] = "disabled";
-                    $data['registrarArrastradoNav'] = "disabled";
-                    $data['actualizarTractor'] = "disabled";
-                    $data['eliminarTractor'] = "disabled";
-                    $data['agregarTractor']= "disabled";
-                    $data['mantenimiento']= "disabled";
-                    $data['service'] = "disabled";
-
-                    break;
-
 
                 case 3:
                     $data['empleadosNav'] = "disabled";
@@ -44,11 +30,15 @@ class MantenimientoController
                     $data['cargarProformaNav'] = "disabled";
                     $data['registrarTractorNav'] = "disabled";
                     $data['registrarArrastradoNav'] = "disabled";
+                    $data['flotaArrastradosNav'] = "disabled";
+                    $data['proformasNav'] = "disabled";
                     $data['clientesNav'] = "disabled";
                     $data['cargasNav'] = "disabled";
                     $data['actualizarTractor'] = "disabled";
                     $data['eliminarTractor'] = "disabled";
                     $data['agregarTractor']= "disabled";
+                    $data['cargasCombustibleNav']= "disabled";
+
                     break;
             }
 

@@ -15,24 +15,8 @@ class CargasController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1){
-            switch ($_SESSION['logueado']){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ){
 
-                case 1:
-                    $data['empleadosNav']= "disabled";
-                    $data['viajesNav']= "disabled";
-                    $data['cargarProformaNav']="disabled";
-                    $data['registrarTractorNav']="disabled";
-                    $data['registrarArrastradoNav']="disabled";
-                    $data['proformasNav']="disabled";
-                    $data['servicesNav']="disabled";
-                    $data['actualizarCarga']="disabled";
-                    $data['eliminarCarga']="disabled";
-                    $data['agregarCarga']="disabled";
-                    break;
-
-
-            }
             $data["cargas"] = $this->cargaModel->getCargas();
             echo $this->render->render( "view/cargasView.php", $data );
         }
@@ -42,7 +26,7 @@ class CargasController
     }
 
     public function detalle(){
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ) {
             $id = $_GET["id"];
 
             $data["carga"] = $this->cargaModel->getCarga($id);
@@ -71,7 +55,7 @@ class CargasController
 
     public function registerCarga(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ) {
 
             echo $this->render->render("view/registerCarga.php");
         }
@@ -114,7 +98,7 @@ class CargasController
     }
 
     public function eliminar(){
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ) {
             $id = $_GET["id"];
 
             $this->cargaModel->eliminar($id);

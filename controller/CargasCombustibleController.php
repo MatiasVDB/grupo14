@@ -16,7 +16,7 @@ class CargasCombustibleController
 
     public function index()
     {
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
             switch ($_SESSION['logueado']){
 
                 case 1:
@@ -25,6 +25,13 @@ class CargasCombustibleController
                     $data['cargarProformaNav']="disabled";
                     $data['registrarTractorNav']="disabled";
                     $data['registrarArrastradoNav']="disabled";
+                    $data['clientesNav']="disabled";
+                    $data['cargasNav']="disabled";
+                    $data['flotaArrastradosNav']="disabled";
+                    $data['flotaTractoresNav']="disabled";
+                    $data['servicesNav']="disabled";
+
+                    break;
 
                     break;
 
@@ -33,7 +40,7 @@ class CargasCombustibleController
             $data["cargas"] = $this->cargasCombustibleModel->getCargasCombustible();
             echo $this->render->render("view/cargasCombustibleView.php", $data);
         }else{
-            header("Location: main");
+            header("Location: cargasCombustible");
         }
     }
 
@@ -41,7 +48,7 @@ class CargasCombustibleController
     public function registerCargaCombustible(){
 
 
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2 or 1) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
 
 
             // VER

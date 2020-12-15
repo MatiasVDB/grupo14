@@ -24,7 +24,7 @@ class datosProformaController
 
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
 
             $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajes(), "empleados" => $this->empleadosModel->getChoferes(),
                 "cargas" => $this->cargasModel->getCargas());

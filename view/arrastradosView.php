@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="col text-center mt-4 mb-4">
-            <a href="http://localhost/grupo14/arrastrados/registerArrastrado" class="btn btn-primary btn-lg {{agregarArrastrado}}" role="button" aria-pressed="true">Agregar arrastrado</a>
+            <a href="http://localhost/grupo14/arrastrados/registrarArrastrado" class="btn btn-primary btn-lg {{agregarArrastrado}}" role="button" aria-pressed="true">Agregar arrastrado</a>
         </div>
     </div>
 </main>
