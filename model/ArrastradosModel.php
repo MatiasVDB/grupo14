@@ -38,11 +38,11 @@ class ArrastradosModel
     }
 
 
-    public function setArrastrado($patente, $numeroDeChasis){
-        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis) 
-        VALUES ('$patente', $numeroDeChasis)";
+    public function setArrastrado($patente, $numeroDeChasis, $inputTipo){
+        $sql = "INSERT INTO ARRASTRADO (patente, numeroDeChasis, tipo) 
+        VALUES ('$patente', '$numeroDeChasis', '$inputTipo')";
 
-        return $this->database->query($sql);
+        return $this->database->execute($sql);
     }
 
 }

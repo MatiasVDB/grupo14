@@ -48,7 +48,6 @@ class ViajesController
         $destino = $_POST ['destino'];
         $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $fechaInicio = $_POST['fechaInicio'];
-        $fechaCarga = $_POST['fechaCarga'];
         $tiempoReal= $_POST['tiempoReal'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
@@ -63,7 +62,7 @@ class ViajesController
         $combustibleFinal= $_POST['combustibleFinal'];
         $combustibleConsumido= $_POST['combustibleConsumido'];
 
-        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio, $fechaCarga , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
+        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
 
         header("Location: ../viajes");
     }
@@ -86,7 +85,6 @@ class ViajesController
         $destino = $_POST ['destino'];
         $fechaInicio = $_POST['fechaInicio'];
         $fechaFinalizacion = $_POST['fechaFinalizacion'];
-        $fechaCarga = $_POST['fechaCarga'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
         $kilometrosFinal= 0.0;
@@ -96,25 +94,24 @@ class ViajesController
         $idVehiculo= $_POST['idVehiculo'];
         $idArrastrado= $_POST['idArrastrado'];
 
-        $this->viajesModel->createViaje($origen, $destino, $fechaInicio, $fechaFinalizacion, $fechaCarga , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
+//        echo("$origen, $destino,-- $fechaInicio, $fechaFinalizacion,$ETD, $ETA,-- $kilometrosFinal, $kilometrosActuales,
+//    $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado");
+
+        $this->viajesModel->createViaje($origen, $destino, $fechaInicio, $fechaFinalizacion , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
 
         header("Location: ../viajes");
     }
 
     public function eliminar()
     {
-
         if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
-
             $id = $_GET["id"];
 
             $this->viajesModel->eliminar($id);
 
             header("Location: ../viajes");
-
         }else{
             header("Location: ../main");
         }
-
     }
 }

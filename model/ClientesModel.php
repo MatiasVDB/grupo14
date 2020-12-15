@@ -27,11 +27,11 @@ class ClientesModel
         return $this->database->query($sql);
     }
 
-    public function createCliente($cuit, $denominacion, $contacto1, $contacto2, $telefono, $direccion, $email){
+    public function createCliente($cuit, $denominacion, $email , $contacto1, $contacto2, $telefono, $direccion){
         $sql = "insert into CLIENTE(CUIT, denominacion, email, contacto1, contacto2, telefono, direccion)
         values ('$cuit', '$denominacion', '$email', '$contacto1', '$contacto2', '$telefono', '$direccion')";
 
-        return $this->database->queryInsert($sql);
+        return $this->database->execute($sql);
     }
 
     public function eliminar($cuit)

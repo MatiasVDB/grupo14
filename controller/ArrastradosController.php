@@ -118,13 +118,12 @@ class ArrastradosController
 
         $patente = $_POST['patente'];
         $nroChasis = $_POST['chasis'];
+        $inputTipo = $_POST['tipo'];
 
         $mensaje["error"] = "*El arrastrado ingresado, ya se encuentra registrado.";
-
         if(count($this->arrastradosModel->getArrastrado($patente, $nroChasis)) == 0){
 
-            $this->arrastradosModel->setArrastrado($patente, $nroChasis);
-
+            $this->arrastradosModel->setArrastrado($patente, $nroChasis, $inputTipo);
             header("Location: ../arrastrados");
         }
 

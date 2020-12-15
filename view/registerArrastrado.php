@@ -17,7 +17,7 @@
 
             <div class="form-group col-md-6">
                 <label>Chasis</label>
-                <input name="chasis" id="inputChasis" class="form-control" placeholder="Chasis" required>
+                <input name="chasis" id="inputChasis" type="number" class="form-control" placeholder="Chasis" required>
 
 
             </div>
@@ -32,7 +32,6 @@
                 <label> Tipo de carga  </label>
 
                 <select class="form-control category-select" id="inputTipo" name="tipo">
-                    <option value="{{tipo}}">{{tipo}}(Seleccionado)</option>
                     <option value="Araña">Araña</option>
                     <option value="Jaula">Jaula</option>
                     <option value="Tanque"">Tanque</option>
