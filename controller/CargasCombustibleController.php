@@ -40,7 +40,7 @@ class CargasCombustibleController
             $data["cargas"] = $this->cargasCombustibleModel->getCargasCombustible();
             echo $this->render->render("view/cargasCombustibleView.php", $data);
         }else{
-            header("Location: main");
+            header("Location: cargasCombustible");
         }
     }
 

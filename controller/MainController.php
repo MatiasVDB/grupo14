@@ -45,6 +45,7 @@ class MainController
                 $data['clientesNav']="disabled";
                 $data['cargasNav']="disabled";
                 $data['servicesNav']="disabled";
+                $data['proformasNav']="disabled";
                 break;
 
             case 2:

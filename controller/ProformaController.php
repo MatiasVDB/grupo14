@@ -24,7 +24,7 @@ class ProformaController
 
 
     public function index(){
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
             $data = array("proformas" => $this->proformaModel->getProformas());
             echo $this->render->render( "view/proformasView.php", $data);
         }
@@ -83,7 +83,9 @@ class ProformaController
             $this->proformaModel->setDatos($numero, $fecha, $CUIT, $viaje, $numeroDNI, $carga,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
                 $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
                 $costeoFEEEsperado, $costeoHazardEsperado, $costeoReeferEsperado);
-            header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&numeroDNI=$numeroDNI&carga=$carga");
+            //header("Location: imprimirProforma?numero=$numero&CUIT=$CUIT&viaje=$viaje&numeroDNI=$numeroDNI&carga=$carga");
+
+            header("Location: ../proforma");
         }
         else{
             $data["mensaje"] = "*Número de Proforma existente, ingrese otro.";

@@ -14,14 +14,13 @@
                             <thead>
                             <tr>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Id carga</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Tipo de documento</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Documento</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Id viaje</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Lugar</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Cantidad</th>
-                                <th scope="col" class="border-0 text-uppercase font-medium">Administrar</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Importe</th>
                                 <th scope="col" class="border-0 text-uppercase font-medium">Kilometros recorridos</th>
+
 
                             </tr>
                             </thead>
@@ -30,10 +29,6 @@
                             <tr>
                                 <td>
                                     <h5 class="font-medium mb-0">{{id}}</h5>
-
-                                </td>
-                                <td>
-                                    <span class="text-muted">{{	tipoDeDocumento_chofer}}</span><br>
 
                                 </td>
                                 <td>
@@ -57,12 +52,7 @@
                                 <td>
                                     <span class="text-muted">{{kilometrosRecorridos}}</span>
                                 </td>
-                                <td>
-                                    <!--
-                                    <button type="button" class="btn btn-primary" onclick="location.href='./empleados/detalle/tipoDocumento={{tipoDeDocumento}}&numeroDeDocumento={{numeroDeDocumento}}'"> Actualizar</button>
-                                    <button type="button" class="btn btn-danger" onclick="location.href='./empleados/eliminar?tipoDocumento={{tipoDeDocumento}}&numeroDeDocumento={{numeroDeDocumento}}'" > Dar Baja</button>
-                                    -->
-                                </td>
+
                             </tr>
                             {{/cargas}}
 

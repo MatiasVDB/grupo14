@@ -38,6 +38,11 @@ class ProformaModel
         return $this->database->query("select * from PROFORMA where numero = '$numero'");
     }
 
+    public function getProformaParaElChofer($numeroDeDocumento_chofer){
+
+        return $this->database->query("select * from PROFORMA where numeroDeDocumento_chofer = '$numeroDeDocumento_chofer'");
+    }
+
 
     public function setDatos($numero, $fecha, $CUIT, $viaje, $numeroDNI, $carga,$costeoKilometrosEsperado, $costeoCombustibleEsperado,
                              $costeoETDEsperado, $costeoETAEsperado, $costeoViaticosEsperado, $costeoPeajesPesajesEsperado, $costeoExtrasEsperado,
@@ -71,7 +76,7 @@ class ProformaModel
     {
         $sql = "delete from proforma where  numero = '$numero'";
 
-        return $this->database->execute($sql);
+        $this->database->execute($sql);
     }
 
 }

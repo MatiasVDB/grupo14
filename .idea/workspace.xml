@@ -20,31 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/controller/ProformasDelChoferController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/proformasDelChoferView.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/view/viajeDetalleChoferView.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ModuleInitializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/ModuleInitializer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/CargasCombustibleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ClientesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ClientesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/DatosProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/DatosProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/EmpleadosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/EmpleadosController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MainController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/MantenimientoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MantenimientoController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/TractoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TractoresController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/TractoresModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/TractoresModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/arrastradosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradosView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerTractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerTractor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/servicesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/servicesView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/tractoresView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractoresView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/CargasCombustibleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCargaCombustible.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCargaCombustible.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/LoginModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/LoginModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/ProformaModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ProformaModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/cargasCombustibleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/cargasCombustibleView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/imprimirProformaView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/imprimirProformaView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +135,7 @@
       <workItem from="1607954616719" duration="11986000" />
       <workItem from="1607975813423" duration="3877000" />
       <workItem from="1607997440525" duration="5447000" />
-      <workItem from="1608034590357" duration="9689000" />
+      <workItem from="1608034590357" duration="18921000" />
     </task>
     <servers />
   </component>
@@ -180,10 +171,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604875442239" />
-    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1607977422173">
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1608048311355">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1607977422173" />
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1608048311355" />
     <state x="498" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604883699503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -196,16 +187,16 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1605056606584" />
-    <state x="606" y="138" key="NewPhpClassDialog" timestamp="1607977332038">
+    <state x="606" y="138" key="NewPhpClassDialog" timestamp="1608048233398">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1607977332038" />
+    <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1608048233398" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607455310750" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604888137142" />
-    <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607905034998">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="535" y="297" key="NewPhpFileDialog" timestamp="1608053937676">
+      <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1606318702768" />
+    <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1608053937676" />
     <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607905034998" />
     <state x="604" y="336" key="NewPhpFileDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604891483858" />
     <state x="536" y="263" width="418" height="202" key="WebDeployment.AddServerDialog.v.1" timestamp="1604942191980">

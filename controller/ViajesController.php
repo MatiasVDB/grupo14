@@ -25,7 +25,7 @@ class ViajesController
     }
 
     public function index(){
-        if ($_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ){
+        if (isset($_SESSION['logueado']) and  $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ){
                     $data["viajes"] = $this->viajesModel->getViajes();
             echo $this->render->render( "view/viajesView.php", $data );
         }
@@ -35,7 +35,7 @@ class ViajesController
     }
 
     public function detalle(){
-        if ($_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ){
+        if (isset($_SESSION['logueado']) and  $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4){
 
         $id = $_GET["id"];
 
@@ -47,6 +47,26 @@ class ViajesController
 
         else{
             header("Location: main");
+        }
+    }
+
+    public function viajeDetalleChofer(){
+
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1){
+
+            $id = $_GET["id"];
+
+            $viaje = $this->viajesModel->getViaje($id);
+
+            $data = array("viaje"=> $this->viajesModel->getViaje($id), "arrastrado"=> $this->arrastradosModel->getArrastrado($viaje[0]["idArrastrado"]), "tractor"=> $this->tractoresModel->getTractorPorID($viaje[0]["idVehiculo"]), "cargas"=> $this->cargasCombustibleModel->getCargasCombustibleViaje($id));
+            echo $this->render->render( "view/viajeDetalleChoferView.php", $data );
+
+
+        }
+
+        else{
+            header("Location: main");
+
         }
     }
 

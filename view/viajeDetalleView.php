@@ -74,7 +74,7 @@
             <select class="custom-select mb-4" multiple name="idArrastrado">
                 <option value="{{idArrastrado}}" selected>ID: {{idArrastrado}}</option>
                 {{#arrastrados}}
-                <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} - Tipo de carga: {{tipoCarga}}</option>
+                <option value="{{id}}">ID: {{id}} - Patente: {{patente}} - Numero de chasis: {{numeroDeChasis}} </option>
 
                 {{/arrastrados}}
             </select>
@@ -108,11 +108,11 @@
 
         <div class="form-group col-md-6">
             <label for="inputDestino" >Lugar</label>
-            <input type="text" name="importe" id="lugar" class="form-control" placeholder="Lugar" value="${{lugar}}" disabled>
+            <input type="text" name="importe" id="lugar" class="form-control" placeholder="Lugar" value="{{lugar}}" disabled>
         </div>
         <div class="form-group col-md-6">
             <label for="inputDestino" >Kilometros recorridos</label>
-            <input type="text" name="importe" id="kmRecorridos" class="form-control" placeholder="Kilometros recorridos" value="${{kilometrosRecorridos}}" disabled>
+            <input type="text" name="importe" id="kmRecorridos" class="form-control" placeholder="Kilometros recorridos" value="{{kilometrosRecorridos}}" disabled>
         </div>
     </div>
     {{/cargas}}
