@@ -100,13 +100,15 @@ class ModuleInitializer
         include_once ("model/TractoresModel.php");
         include_once ("model/ClientesModel.php");
         include_once ("model/EmpleadosModel.php");
+        include_once ("model/CargasCombustibleModel.php");
 
         $model = new ViajesModel($this->database);
         $modelArrastrados = new ArrastradosModel($this->database);
         $modelTractores = new TractoresModel($this->database);
         $modelClientes = new ClientesModel($this->database);
         $modelEmpleados= new EmpleadosModel($this->database);
-        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $this->renderer);
+        $cargasCombustibleModel= new CargasCombustibleModel($this->database);
+        return new ViajesController($model, $modelArrastrados, $modelTractores, $modelClientes, $modelEmpleados, $cargasCombustibleModel, $this->renderer);
     }
 
     public function createDatosProformaController(){
@@ -156,6 +158,34 @@ class ModuleInitializer
 
         $model = new CargasCombustibleModel($this->database);
         return new CargasCombustibleController($model, $this->renderer);
+    }
+
+    public function createMantenimientoController(){
+        include_once ("model/MantenimientoModel.php");
+        include_once ("model/TractoresModel.php");
+        include_once ("model/FechaServiceModel.php");
+        include_once ("controller/MantenimientoController.php");
+        $model = new MantenimientoModel($this->database);
+        $modelFechaService = new FechaServiceModel($this->database);
+        $modelTractores = new TractoresModel($this->database);
+        return new MantenimientoController($model, $modelTractores, $modelFechaService,  $this->renderer);
+
+    }
+
+    public function createServicesController(){
+
+        include_once ("model/ServiceModel.php");
+        include_once ("model/FechaServiceModel.php");
+        include_once ("model/TractoresModel.php");
+        include_once ("model/EmpleadosModel.php");
+        include_once ("controller/ServiceController.php");
+
+        $model = new ServiceModel($this->database);
+        $modelFechaService = new FechaServiceModel($this->database);
+        $modelTractores = new TractoresModel($this->database);
+        $modelEmpleados = new EmpleadosModel($this->database);
+        return new ServiceController($model, $modelFechaService, $modelTractores, $modelEmpleados, $this->renderer);
+
     }
 
 

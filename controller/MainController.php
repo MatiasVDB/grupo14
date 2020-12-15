@@ -29,6 +29,7 @@ class MainController
                 $data['flotaArrastradosNav']="disabled";
                 $data['flotaTractoresNav']="disabled";
                 $data['proformasNav']="disabled";
+                $data['servicesNav']="disabled";
 
                 break;
 
@@ -39,8 +40,12 @@ class MainController
                 $data['registrarTractorNav']="disabled";
                 $data['registrarArrastradoNav']="disabled";
                 $data['proformasNav']="disabled";
+                $data['servicesNav']="disabled";
                 break;
 
+            case 2:
+                $data["bienvenida"]= "Bienvenido supervisor";
+                break;
          
 
             case 3:
@@ -54,9 +59,14 @@ class MainController
                 $data['proformasNav']="disabled";
                 break;
 
+            case 4:
+                $data['bienvenida']="Bienvenido administrador";
+
+
 
 
         }
+
         echo $this->render->render("view/mainView.php", $data);
 
     }
@@ -65,19 +75,6 @@ class MainController
 
         header("Location: home");
     }
-    }
-
-    public function mostrarNombreDelUsuario()
-    {
-        $mail = $_POST["email"];
-
-
-        $resultado = $this->mainModel->getUsuarioPorMail($mail);
-
-        $data["mensajeBienvenida"] = "Bienvenido " . $resultado[0]["nombre"];
-        echo $this->render->render("view/mainView.php", $data);
-
-
     }
 
     public function cerrarSession() {

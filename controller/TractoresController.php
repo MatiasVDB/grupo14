@@ -27,6 +27,8 @@ class TractoresController
                     $data['actualizarTractor'] = "disabled";
                     $data['eliminarTractor'] = "disabled";
                     $data['agregarTractor']= "disabled";
+                    $data['mantenimiento']= "disabled";
+
                     break;
 
 
