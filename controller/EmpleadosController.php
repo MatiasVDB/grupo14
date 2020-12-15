@@ -15,7 +15,7 @@ class EmpleadosController
     }
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2){
+        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or $_SESSION['logueado'] == 2){
             switch ($_SESSION['logueado']){
 
                 case 2:

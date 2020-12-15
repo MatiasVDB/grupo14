@@ -24,19 +24,13 @@ class ClientesController
                     $data['cargarProformaNav']="disabled";
                     $data['registrarTractorNav']="disabled";
                     $data['registrarArrastradoNav']="disabled";
+                    $data['proformasNav']="disabled";
+                    $data['servicesNav']="disabled";
                     $data['actualizarCliente']="disabled";
                     $data['borrarCliente']="disabled";
                     $data['agregarCliente']="disabled";
                     break;
 
-                case 2:
-
-                    break;
-
-
-                case 4:
-
-                    break;
 
 
             }

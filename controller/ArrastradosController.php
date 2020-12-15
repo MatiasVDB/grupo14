@@ -19,11 +19,13 @@ class ArrastradosController
         if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 3 or 2 or 1) {
             switch ($_SESSION['logueado']) {
                 case 1:
-                    $data['empleadosNav'] = "disabled";
-                    $data['viajesNav'] = "disabled";
-                    $data['cargarProformaNav'] = "disabled";
-                    $data['registrarTractorNav'] = "disabled";
-                    $data['registrarArrastradoNav'] = "disabled";
+                    $data['empleadosNav']= "disabled";
+                    $data['viajesNav']= "disabled";
+                    $data['cargarProformaNav']="disabled";
+                    $data['registrarTractorNav']="disabled";
+                    $data['registrarArrastradoNav']="disabled";
+                    $data['proformasNav']="disabled";
+                    $data['servicesNav']="disabled";
                     $data['actualizarArrastrado'] = "disabled";
                     $data['eliminarArrastrado'] = "disabled";
                     $data['agregarArrastrado']= "disabled";

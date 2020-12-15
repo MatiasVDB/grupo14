@@ -9,7 +9,8 @@ create table ROL(
 );
 
 INSERT INTO ROL(id, nivel)
-values (1, "Chofer"),
+values (0, "Invitado"),
+(1, "Chofer"),
 (2, "Supervisor"),
 (3, "Encargado del taller"),
 (4, "Administrador");
@@ -203,8 +204,5 @@ foreign key (numeroDeDocumento_mecanico) references USUARIO( numeroDeDocumento))
  foreign key (codigo_service)  references service(codigo) ON DELETE CASCADE
  );
  
-
-
-
 
 
