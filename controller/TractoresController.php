@@ -16,23 +16,8 @@ class TractoresController
 
     public function index(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 3 or 2 or 1){
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3  or $_SESSION['logueado'] == 4){
             switch ($_SESSION['logueado']) {
-                case 1:
-                    $data['empleadosNav']= "disabled";
-                    $data['viajesNav']= "disabled";
-                    $data['cargarProformaNav']="disabled";
-                    $data['registrarTractorNav']="disabled";
-                    $data['registrarArrastradoNav']="disabled";
-                    $data['proformasNav']="disabled";
-                    $data['servicesNav']="disabled";
-                    $data['actualizarTractor'] = "disabled";
-                    $data['eliminarTractor'] = "disabled";
-                    $data['agregarTractor']= "disabled";
-                    $data['mantenimiento']= "disabled";
-
-                    break;
-
 
                 case 3:
                     $data['empleadosNav'] = "disabled";
@@ -40,13 +25,18 @@ class TractoresController
                     $data['cargarProformaNav'] = "disabled";
                     $data['registrarTractorNav'] = "disabled";
                     $data['registrarArrastradoNav'] = "disabled";
+                    $data['flotaArrastradosNav'] = "disabled";
+                    $data['proformasNav'] = "disabled";
                     $data['clientesNav'] = "disabled";
                     $data['cargasNav'] = "disabled";
                     $data['actualizarTractor'] = "disabled";
                     $data['eliminarTractor'] = "disabled";
                     $data['agregarTractor']= "disabled";
+                    $data['cargasCombustibleNav']= "disabled";
+
                     break;
             }
+
         $data["tractores"] = $this->tractoresModel->getTractores();
         echo $this->render->render("view/tractoresView.php", $data);
 
@@ -63,7 +53,7 @@ class TractoresController
     {
 
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
 
         $id = $_GET['id'];
 
@@ -77,9 +67,9 @@ class TractoresController
         }
     }
 
-    public function registerTractor(){
+    public function registrarTractor(){
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4 ) {
 
             echo $this->render->render("view/registerTractor.php");
 
@@ -93,24 +83,25 @@ class TractoresController
 
     }
 
-    public function registrarTractor(){
+    public function crearTractor(){
 
-        $marca = $_POST['marca'];
-        $modelo = $_POST['modelo'];
-        $patente = $_POST['patente'];
-        $nroMotor = $_POST['motor'];
-        $chasis = $_POST['chasis'];
-        $kilometros = $_POST['kilometros'];
-        $anoDeFabricacion = $_POST['año'];
+            $marca = $_POST['marca'];
+            $modelo = $_POST['modelo'];
+            $patente = $_POST['patente'];
+            $nroMotor = $_POST['motor'];
+            $chasis = $_POST['chasis'];
+            $kilometros = $_POST['kilometros'];
+            $anoDeFabricacion = $_POST['año'];
 
-        $mensaje["error"] = "*El tractor ingresado, ya se encuentra registrado.";
+            $mensaje["error"] = "*El tractor ingresado, ya se encuentra registrado.";
 
-        if(count($this->tractoresModel->getTractor($patente, $chasis)) == 0){
+            if (count($this->tractoresModel->getTractor($patente, $chasis)) == 0) {
 
-            $this->tractoresModel->createTractor($marca,$modelo,$patente,$nroMotor,$chasis,$kilometros,$anoDeFabricacion);
+                $this->tractoresModel->createTractor($marca, $modelo, $patente, $nroMotor, $chasis, $kilometros, $anoDeFabricacion);
 
-            header("Location: ../tractores");
-        }
+                header("Location: ./tractores");
+
+            }
 
         else{
 
@@ -142,7 +133,7 @@ class TractoresController
     public function eliminarTractor(){
 
 
-        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] ==  4) {
 
               $id = $_GET['id'];
 
@@ -151,6 +142,7 @@ class TractoresController
             header("Location: ../tractores");
 
             exit();
+
         }else{
             header("Location: ../main");
         }

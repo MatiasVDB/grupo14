@@ -29,8 +29,8 @@
                                 <td class="text-muted">{{modelo}} {{marca}} {{patente}}</td>
                                 <td class="text-muted">{{tipoDeService}}</td>
                                 <td class="text-muted">{{nombre}} {{numeroDeDocumento}}</td>
-                                <td><a href="http://localhost/grupo14/services/serviceDetalle?codigo={{codigo}}" class="btn btn-primary {{actualizarTractor}}" role="button" aria-pressed="true" >Ver Detalles</a>
-                                    <a href="http://localhost/grupo14/services/eliminarService?codigo={{codigo}}&id_tractor={{id_tractor}}" class="btn btn-danger {{eliminarService}}" role="button" aria-pressed="true" >Dar Baja</a>
+                                <td><a href="http://localhost/grupo14/services/serviceDetalle?codigo={{codigo}}" class="btn btn-primary" role="button" aria-pressed="true" >Ver Detalles</a>
+                                    <a href="http://localhost/grupo14/services/eliminarService?codigo={{codigo}}&id_tractor={{id_tractor}}" class="btn btn-danger" role="button" aria-pressed="true" >Dar Baja</a>
                                 </td>
                             </tr>
                             {{/services}}

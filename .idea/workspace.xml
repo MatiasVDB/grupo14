@@ -22,22 +22,27 @@
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/EmpleadosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/EmpleadosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CargasCombustibleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasCombustibleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/CargasController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/CargasController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ClientesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ClientesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/DatosProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/DatosProformaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/EmpleadosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/EmpleadosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/MainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MainController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/MantenimientoController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/MantenimientoController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ProformaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ProformaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controller/TractoresController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/TractoresController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ClientesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ClientesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ViajesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ViajesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mantenimientoView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mantenimientoView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model/TractoresModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/TractoresModel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/arrastradosView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/arrastradosView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/partial/header.mustache" beforeDir="false" afterPath="$PROJECT_DIR$/view/partial/header.mustache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerViaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerViaje.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/serviceRegisterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/serviceRegisterView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajesView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/registerTractor.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerTractor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/servicesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/servicesView.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/tractoresView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/tractoresView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +141,8 @@
       <workItem from="1607880776735" duration="23034000" />
       <workItem from="1607954616719" duration="11986000" />
       <workItem from="1607975813423" duration="3877000" />
-      <workItem from="1607997440525" duration="3176000" />
+      <workItem from="1607997440525" duration="5447000" />
+      <workItem from="1608034590357" duration="9689000" />
     </task>
     <servers />
   </component>

@@ -31,7 +31,7 @@ class TractoresModel
             $sql = "insert into TRACTOR(marca, modelo, patente, numeroDeMotor, chasis, kilometros, añoDeFabricacion)
                 values('$marca', '$modelo','$patente','$nroMotor','$chasis','$kilometros','$anoDeFabricacion')";
 
-            return $this->database->query($sql);
+           $this->database->execute($sql);
 
         }
 

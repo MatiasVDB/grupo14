@@ -51,7 +51,7 @@
 </main>
 
     <div class="col text-center mt-4 mb-4">
-        <a href="http://localhost/grupo14/tractores/registerTractor" class="btn btn-primary btn-lg {{agregarTractor}}" role="button" aria-pressed="true">Agregar Tractor</a>
+        <a href="http://localhost/grupo14/tractores/registrarTractor" class="btn btn-primary btn-lg {{agregarTractor}}" role="button" aria-pressed="true">Agregar Tractor</a>
     </div>
 </div>
 

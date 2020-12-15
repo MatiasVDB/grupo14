@@ -22,22 +22,9 @@ class ServiceController
 
     public function  index(){
 
-        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] = 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] = 4) {
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] == 4) {
 
             switch ($_SESSION['logueado']) {
-                case 1:
-                    $data['empleadosNav'] = "disabled";
-                    $data['viajesNav'] = "disabled";
-                    $data['cargarProformaNav'] = "disabled";
-                    $data['registrarTractorNav'] = "disabled";
-                    $data['registrarArrastradoNav'] = "disabled";
-                    $data['actualizarTractor'] = "disabled";
-                    $data['eliminarTractor'] = "disabled";
-                    $data['agregarTractor']= "disabled";
-                    $data['mantenimiento']= "disabled";
-
-                    break;
-
 
                 case 3:
                     $data['empleadosNav'] = "disabled";
@@ -45,11 +32,15 @@ class ServiceController
                     $data['cargarProformaNav'] = "disabled";
                     $data['registrarTractorNav'] = "disabled";
                     $data['registrarArrastradoNav'] = "disabled";
+                    $data['flotaArrastradosNav'] = "disabled";
+                    $data['proformasNav'] = "disabled";
                     $data['clientesNav'] = "disabled";
                     $data['cargasNav'] = "disabled";
                     $data['actualizarTractor'] = "disabled";
                     $data['eliminarTractor'] = "disabled";
                     $data['agregarTractor']= "disabled";
+                    $data['cargasCombustibleNav']= "disabled";
+
                     break;
             }
 
@@ -67,7 +58,7 @@ class ServiceController
 
     public function realizarService(){
 
-        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] = 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] = 4){
+        if(isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] == 4){
 
         $id = $_GET["id_tractor"];
 
@@ -113,27 +104,43 @@ class ServiceController
 
     }
 
-    public function serviceDetalle(){
+    public function serviceDetalle()
+    {
 
-        $codigo = $_GET["codigo"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] == 4) {
 
+            $codigo = $_GET["codigo"];
 
+            $data = array("service" => $this->serviceModel->getServiceConTractoresyChoferes($codigo), "fechaService" => $this->fechaServiceModel->getFechaService($codigo));
 
-        $data = array("service"=>$this->serviceModel->getServiceConTractoresyChoferes($codigo), "fechaService"=>$this->fechaServiceModel->getFechaService($codigo));
+            echo $this->render->render("view/serviceDetalleView.php", $data);
+        }
 
-        echo $this->render->render("view/serviceDetalleView.php", $data);
+        else{
+
+            header("Location: main");
+        }
     }
 
     public function eliminarService(){
 
-        $codigo = $_GET["codigo"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 3 or $_SESSION['logueado'] == 4) {
 
-        $id_tractor = $_GET["id_tractor"];
+            $codigo = $_GET["codigo"];
 
-        $this->serviceModel->deleteService($codigo);
+            $id_tractor = $_GET["id_tractor"];
+
+            $this->serviceModel->deleteService($codigo);
 
 
-        header("Location: ../services");
+            header("Location: ../services");
+
+        }
+
+        else{
+
+            header("Location: main");
+        }
 
     }
 }

@@ -18,6 +18,12 @@ class ArrastradosModel
     }
 
 
+    public function getArrastradoPorPatenteNumeroDeChasis($patente, $numeroDeChasis){
+
+
+        return $this->database->query("SELECT * FROM ARRASTRADO where patente = '$patente' and numeroDeChasis = '$numeroDeChasis' ");
+    }
+
     public function getArrastrado($id)
     {
         return $this->database->query("SELECT * FROM ARRASTRADO where id = '$id' ");

@@ -24,7 +24,7 @@ class ProformaController
 
 
     public function index(){
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4 or 2) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
             $data = array("proformas" => $this->proformaModel->getProformas());
             echo $this->render->render( "view/proformasView.php", $data);
         }
@@ -33,15 +33,26 @@ class ProformaController
         }
     }
 
-    public function mostrarDatosEnLaProforma(){
-        $CUIT_cliente = $_POST["CUIT_cliente"];
-        $ID_viaje = $_POST["id_viaje"];
-        $carga = $_POST["id_carga"];
-        $numeroDNI = $_POST["numeroDeDocumento_usuario"];
-        $data = array("cliente" => $this->clientesModel->getCliente($CUIT_cliente), "viaje"=> $this->viajesModel->getViaje($ID_viaje),
-           "carga"=>$this->cargasModel->getCarga($carga),"empleado"=>$this->empleadosModel->getEmpleadoDNI($numeroDNI));
+    public function mostrarDatosEnLaProforma()
+    {
 
-        echo $this->render->render( "view/proformaRegisterView.php", $data);
+
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
+
+            $CUIT_cliente = $_POST["CUIT_cliente"];
+            $ID_viaje = $_POST["id_viaje"];
+            $carga = $_POST["id_carga"];
+            $numeroDNI = $_POST["numeroDeDocumento_usuario"];
+            $data = array("cliente" => $this->clientesModel->getCliente($CUIT_cliente), "viaje" => $this->viajesModel->getViaje($ID_viaje),
+                "carga" => $this->cargasModel->getCarga($carga), "empleado" => $this->empleadosModel->getEmpleadoDNI($numeroDNI));
+
+            echo $this->render->render("view/proformaRegisterView.php", $data);
+
+        }
+
+        else{
+            header("Location: main");
+        }
 
     }
 
@@ -96,18 +107,26 @@ class ProformaController
 
     public function eliminar(){
 
-        $numeroProforma = $_GET["numeroProforma"];
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
 
-        $this->proformaModel->eliminar($numeroProforma);
+            $numeroProforma = $_GET["numeroProforma"];
 
-        header("Location: ../proforma");
+            $this->proformaModel->eliminar($numeroProforma);
 
+            header("Location: ../proforma");
+
+        }
+
+        else{
+
+            header("Location: main");
+        }
     }
 
     public function detalle(){
         $numero= $_GET["numero"];
 
-        if (isset($_SESSION['logueado']) && $_SESSION['logueado'] == 4) {
+        if (isset($_SESSION['logueado']) and $_SESSION['logueado'] == 1 or $_SESSION['logueado'] == 2 or $_SESSION['logueado'] == 4) {
             $data = array("clientes" => $this->clientesModel->getClientes(), "viajes" => $this->viajesModel->getViajes(), "empleados" => $this->empleadosModel->getChoferes(),
                 "cargas" => $this->cargasModel->getCargas() , "proforma" => $this->proformaModel->getProforma($numero));
 
