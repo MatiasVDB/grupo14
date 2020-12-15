@@ -64,38 +64,6 @@
 
 
     </div>
-    <!--
-
-        <div class="form-row">
-            <div class="form-group col-md-4">
-                <label for="kilometrosActuales" id="direccion">Kilometros actuales</label>
-                <input name="kilometrosActuales" class="form-control" type="number" value="{{kilometrosActuales}}" id="kilometrosActuales">
-            </div>
-
-
-            <div class="form-group col-md-4">
-                <label for="kilometrosFinal" id="direccion">Kilometros final</label>
-                <input name="kilometrosFinal" class="form-control" type="number" value="{{kilometrosFinal}}" id="kilometrosFinal">
-            </div>
-
-        </div>
-
-
-        <div class="form-row">
-
-            <div class="form-group col-md-4">
-                <label for="combustibleConsumido" id="direccion">Combustible consumido</label>
-                <input name="combustibleConsumido" class="form-control" type="number" value="{{combustibleConsumido}}" id="combustibleConsumido">
-            </div>
-
-            <div class="form-group col-md-4">
-                <label for="combustibleFinal" id="direccion">Combustible final</label>
-                <input name="combustibleFinal" class="form-control" type="number" value="{{combustibleFinal}}" id="combustibleFinal">
-            </div>
-
-
-        </div>
--->
         <div>
 
             <label> <h6> Vehículo</h6></label>
@@ -122,55 +90,46 @@
 
         </div>
 
-    {{#cargas}}
     <label> <h6> Cargas de combustible</h6></label>
-
+    {{#cargas}}
     <div class="form-row mb-4">
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
+            <label for="inputOrigen" >Id</label>
+            <input name="cantidadCargada" type="text" id="id" class="form-control" placeholder="Cantidad cargada" value="{{id}}" disabled>
+        </div>
+
+
+
+        <div class="form-group col-md-4">
             <input type="hidden" name="id" value="{{id}}">
 
             <label for="inputOrigen" >Cantidad cargada</label>
             <input name="cantidadCargada" type="text" id="inputCantidadCargada" class="form-control" placeholder="Cantidad cargada" value="{{cantidad}}" disabled>
         </div>
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-4">
             <label for="inputDestino" >Importe</label>
             <input type="text" name="importe" id="inputImporte" class="form-control" placeholder="Importe" value="${{importe}}" disabled>
         </div>
-{{/cargas}}
-        <label> <h6> Este viaje no tiene cargas de combustible registradas.</h6></label>
-        {{^cargas}}
-
-        {{/cargas}}
-
     </div>
-    <!--
-        <div>
 
-            <label> <h6> Cliente</h6></label>
-            <select class="custom-select" multiple name="cuit">
-                <option value="{{cuitCliente}}" selected>CUIT: {{cuitCliente}}</option>
-                {{#clientes}}
-                <option value="{{CUIT}}">CUIT: {{CUIT}} - Denominación: {{denominacion}}</option>
+    <div class="form-row mb-4">
 
-                {{/clientes}}
-            </select>
-
+        <div class="form-group col-md-6">
+            <label for="inputDestino" >Lugar</label>
+            <input type="text" name="importe" id="lugar" class="form-control" placeholder="Lugar" value="${{lugar}}" disabled>
         </div>
-
-        <div>
-
-            <label> <h6> Chofer</h6></label>
-            <select class="custom-select" multiple name="dniChofer">
-                <option value="{{numeroDeDocumentoChofer}}" selected>{{tipoDocumentoChofer}} - {{numeroDeDocumentoChofer}}</option>
-                {{#choferes}}
-                <option value="{{numeroDeDocumento}}">Tipo de documento: {{tipoDeDocumento}} - Numero de documento: {{numeroDeDocumento}} - Nombre: {{nombre}}</option>
-
-                {{/choferes}}
-            </select>
-
+        <div class="form-group col-md-6">
+            <label for="inputDestino" >Kilometros recorridos</label>
+            <input type="text" name="importe" id="kmRecorridos" class="form-control" placeholder="Kilometros recorridos" value="${{kilometrosRecorridos}}" disabled>
         </div>
-        -->
+    </div>
+    {{/cargas}}
+
+    {{^cargas}}
+    <label> <h6> Este viaje no tiene cargas de combustible registradas.</h6></label>
+
+    {{/cargas}}
     <button class="btn btn-primary" id="aplicarRegistro" type="submit">Actualizar</button>
 </form>
 
