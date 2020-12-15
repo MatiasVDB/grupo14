@@ -13,8 +13,9 @@
                 <label for="numeroDeDocumento_chofer" >Numero documento chofer</label>
                 <input type="number" name="numeroDeDocumento_chofer" id="numeroDeDocumento_chofer" class="form-control" value="{{numeroDeDocumento_chofer}}" placeholder="{{numeroDeDocumento_chofer}}" readonly="readonly">
             </div>
+            {{/datos}}
+
         </div>
-        {{/datos}}
 
 
         <div class="form-row">

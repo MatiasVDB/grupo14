@@ -54,23 +54,20 @@ class ViajesController
         $id = $_POST['id'];
         $origen = $_POST ['origen'];
         $destino = $_POST ['destino'];
-        $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $fechaInicio = $_POST['fechaInicio'];
-        $tiempoReal= $_POST['tiempoReal'];
+        $fechaFinalizacion = $_POST['fechaFinalizacion'];
         $ETA= $_POST['ETA'];
         $ETD= $_POST['ETD'];
+        $kilometrosFinal= 0.0;
+        $kilometrosActuales= 0.0;
+        $combustibleFinal= 0.0;
+        $combustibleConsumido= 0.0;
         $idVehiculo= $_POST['idVehiculo'];
         $idArrastrado= $_POST['idArrastrado'];
-        $numeroDocumentoChofer= $_POST["dniChofer"];
-        $getTipoDocumento= $this->empleadosModel->getTipoDocumento($numeroDocumentoChofer)[0];
-        $tipoDocumentoChofer= implode($getTipoDocumento);
-        $cuitCliente= $_POST["cuit"];
-        $kilometrosFinal= $_POST['kilometrosFinal'];
-        $kilometrosActuales= $_POST['kilometrosActuales'];
-        $combustibleFinal= $_POST['combustibleFinal'];
-        $combustibleConsumido= $_POST['combustibleConsumido'];
 
-        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio , $tiempoReal, $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $tipoDocumentoChofer, $numeroDocumentoChofer, $cuitCliente, $idArrastrado);
+        //echo ("$id, $origen,$destino,-$fechaInicio,$fechaFinalizacion,$ETA,$ETD -, $kilometrosFinal, $kilometrosActuales, $combustibleConsumido, $combustibleFinal, $idVehiculo, $idArrastrado");
+
+        $this->viajesModel->modificarViaje($id, $origen, $destino, $fechaFinalizacion,$fechaInicio , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
 
         header("Location: ../viajes");
     }
@@ -102,8 +99,6 @@ class ViajesController
         $idVehiculo= $_POST['idVehiculo'];
         $idArrastrado= $_POST['idArrastrado'];
 
-//        echo("$origen, $destino,-- $fechaInicio, $fechaFinalizacion,$ETD, $ETA,-- $kilometrosFinal, $kilometrosActuales,
-//    $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado");
 
         $this->viajesModel->createViaje($origen, $destino, $fechaInicio, $fechaFinalizacion , $ETA, $ETD, $kilometrosActuales, $kilometrosFinal, $combustibleFinal, $combustibleConsumido, $idVehiculo, $idArrastrado);
 
