@@ -33,6 +33,7 @@ class MantenimientoController
                     $data['eliminarTractor'] = "disabled";
                     $data['agregarTractor']= "disabled";
                     $data['mantenimiento']= "disabled";
+                    $data['service'] = "disabled";
 
                     break;
 

@@ -131,7 +131,9 @@
       <workItem from="1607645518151" duration="235000" />
       <workItem from="1607809342559" duration="78000" />
       <workItem from="1607880776735" duration="23034000" />
-      <workItem from="1607954616719" duration="10773000" />
+      <workItem from="1607954616719" duration="11986000" />
+      <workItem from="1607975813423" duration="3877000" />
+      <workItem from="1607997440525" duration="897000" />
     </task>
     <servers />
   </component>
@@ -167,10 +169,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604875442239" />
-    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1607899762069">
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser" timestamp="1607977422173">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1607899762069" />
+    <state x="485" y="80" key="#com.intellij.ide.util.MemberChooser/0.0.1360.728@0.0.1360.728" timestamp="1607977422173" />
     <state x="498" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1604883699503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -183,17 +185,12 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="460" y="118" key="FileChooserDialogImpl/0.0.1360.728@0.0.1360.728" timestamp="1605056606584" />
-    <state x="606" y="138" key="NewPhpClassDialog" timestamp="1607899716138">
+    <state x="606" y="138" key="NewPhpClassDialog" timestamp="1607977332038">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1607899716138" />
+    <state x="606" y="138" key="NewPhpClassDialog/0.0.1360.728@0.0.1360.728" timestamp="1607977332038" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607455310750" />
     <state x="593" y="135" key="NewPhpClassDialog/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604888137142" />
-    <state x="535" y="297" key="NewPhpFileDialog" timestamp="1607968087888">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="535" y="297" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1607968087888" />
-    <state x="604" y="336" key="NewPhpFileDialog/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607804272915" />
     <state x="604" y="336" key="NewPhpFileDialog" timestamp="1607905034998">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -228,11 +225,6 @@
     <state x="376" y="165" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1607896398296" />
     <state x="425" y="187" key="run.anything.popup/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607359378297" />
     <state x="425" y="187" key="run.anything.popup/1920.95.1360.718/0.0.1536.824@0.0.1536.824" timestamp="1604889864056" />
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1607888015144">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1607888015144" />
-    <state x="387" y="55" width="759" height="768" key="search.everywhere.popup/1920.5.1536.824/0.0.1536.824@0.0.1536.824" timestamp="1607804763909" />
     <state x="387" y="55" width="759" height="768" key="search.everywhere.popup" timestamp="1607912018983">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
