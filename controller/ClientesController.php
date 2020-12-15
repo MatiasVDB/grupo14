@@ -74,7 +74,7 @@ class ClientesController
         $email = $_POST['email'];
         $telefono = $_POST['telefono'];
         $direccion = $_POST['direccion'];
-        echo("$cuit, $denominacion, $contacto2, $contacto1, $email, $telefono, $direccion");
+
 
         $this->clienteModel->createCliente($cuit, $denominacion, $email,$contacto1, $contacto2,$telefono ,$direccion );
 
