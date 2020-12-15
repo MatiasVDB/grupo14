@@ -24,6 +24,8 @@ class CargasController
                     $data['cargarProformaNav']="disabled";
                     $data['registrarTractorNav']="disabled";
                     $data['registrarArrastradoNav']="disabled";
+                    $data['proformasNav']="disabled";
+                    $data['servicesNav']="disabled";
                     $data['actualizarCarga']="disabled";
                     $data['eliminarCarga']="disabled";
                     $data['agregarCarga']="disabled";
