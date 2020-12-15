@@ -4,15 +4,12 @@
     <form action="./registrarCargaCombustible" class="col-md-8 formulario" method="post">
         <div class="form-row">
             {{#datos}}
-            <div class="form-group col-md-4">
+            <div class="form-group col-md-6">
                 <label for="idViaje" >Id viaje </label>
                 <input type="number" name="idViaje" id="idViaje" class="form-control" value="{{idViaje}}" placeholder="{{idViaje}}" readonly="readonly">
             </div>
-            <div class="form-group col-md-4">
-                <label for="tipoDeDocumento_chofer" >Tipo documento chofer </label>
-                <input type="text" name="tipoDeDocumento_chofer" id="tipoDeDocumento_chofer" class="form-control" value="{{tipoDeDocumento_chofer}}" placeholder="{{tipoDeDocumento_chofer}}" readonly="readonly">
-            </div>
-            <div class="form-group col-md-4">
+
+            <div class="form-group col-md-6">
                 <label for="numeroDeDocumento_chofer" >Numero documento chofer</label>
                 <input type="number" name="numeroDeDocumento_chofer" id="numeroDeDocumento_chofer" class="form-control" value="{{numeroDeDocumento_chofer}}" placeholder="{{numeroDeDocumento_chofer}}" readonly="readonly">
             </div>

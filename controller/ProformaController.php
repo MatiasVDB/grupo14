@@ -152,6 +152,7 @@ class ProformaController
         $numero = $_GET['id_viaje'];
         $numeroDocumento = $_GET['numeroDeDocumento_chofer'];
         QRcode::png('localhost/grupo14/cargasCombustible/registerCargaCombustible?idViaje='.$numero .'&numeroDeDocumento_chofer='.$numeroDocumento);
+        //localhost/grupo14/cargasCombustible/registerCargaCombustible?id_viaje=2&numeroDeDocumento_chofer=41214566
         // QRcode::png('http://localhost/grupo14/EditarProforma/editarDatosEnLaProforma?numero='.$numero)
     }
 

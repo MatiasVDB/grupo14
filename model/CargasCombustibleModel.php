@@ -38,9 +38,9 @@ class CargasCombustibleModel
     }
     */
 
-    public function setCargaCombustible($idViaje, $numeroDeDocumento_chofer, $tipoDeDocumento_Chofer, $lugar, $cantidad,$importe, $kilometrosRecorridos){
-        $sql = "INSERT INTO combustible (idviaje, numeroDeDocumento_chofer, tipoDeDocumento_Chofer, lugar, cantidad,importe, kilometrosRecorridos ) 
-        VALUES ('$idViaje', '$numeroDeDocumento_chofer', '$tipoDeDocumento_Chofer', '$lugar', '$cantidad','$importe', '$kilometrosRecorridos')";
+    public function setCargaCombustible($idViaje, $numeroDeDocumento_chofer, $lugar, $cantidad,$importe, $kilometrosRecorridos){
+        $sql = "INSERT INTO combustible (idviaje, numeroDeDocumento_chofer, lugar, cantidad,importe, kilometrosRecorridos ) 
+        VALUES ('$idViaje', '$numeroDeDocumento_chofer', '$lugar', '$cantidad','$importe', '$kilometrosRecorridos')";
         return $this->database->query($sql);
     }
 
