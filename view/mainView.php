@@ -8,13 +8,19 @@
         <div class="card" style="width: 18rem;">
             <img src="../../public/img/1291276.jpg" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">Lista de Empleados</h5>
-                <p class="card-text">Sección para dar de alta, actualizar y eliminar empleados de la aplicación.</p>
+                <h5 class="card-title">{{titulo}}</h5>
+                <p class="card-text">{{descripcion}}</p>
             </div>
+
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item"> <a href="{{listLink}}"> {{descripcionListLinkBoton}} </a>  </li>
+
+            </ul>
 
 
             <div class="card-body">
-                <a href="Empleados" class="card-link btn btn-primary btn-lg btn-block">Acceder</a>
+
+                <a href="{{link}}" class="card-link btn btn-primary btn-lg btn-block">Acceder</a>
             </div>
         </div>
             </div>
@@ -25,11 +31,11 @@
                     <img src="../../public/img/793977.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Unidades</h5>
-                        <p class="card-text">Sección para dar de alta, actualizar y elminar vehículos de la aplicación.</p>
+                        <p class="card-text">Sección para dar de alta, actualizar y eliminar vehículos de la aplicación.</p>
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> <a href="tractores/registerTractor"> Registrar Tractor </a>  </li>
-                        <li class="list-group-item"><a href="arrastrados/registerArrastrado"> Registrar Arrastrado </a> </li>
+                        <li class="list-group-item"> <a href="tractores/registrarTractor"> Registrar Tractor </a>  </li>
+                        <li class="list-group-item"><a href="arrastrados/registrarArrastrado"> Registrar Arrastrado </a> </li>
                     </ul>
                     <div class="card-body">
                         <a href="tractores"> Tractores </a> |

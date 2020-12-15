@@ -30,7 +30,12 @@ class MainController
                 $data['flotaTractoresNav']="disabled";
                 $data['proformasNav']="disabled";
                 $data['servicesNav']="disabled";
-                $data['cargasCombustibleNav']= "disabled";
+                $data ['titulo'] = "Bienvenido Invitado";
+                $data['descripcion'] = "No tiene autorización para realizar operaciones en el sitio.";
+                $data ['listLink'] = "main";
+                $data ['descripcionListLinkBoton'] = "";
+                $data['link']="main";
+
 
                 break;
 
@@ -46,10 +51,19 @@ class MainController
                 $data['cargasNav']="disabled";
                 $data['servicesNav']="disabled";
                 $data['proformasNav']="disabled";
+                $data ['titulo'] = "Viajes Del Chofer";
+                $data['descripcion'] = "Sección para ver las proformas, viajes y poder registrar la carga de combustibles realizadas.";
+                $data ['listLink'] = "cargasCombustible";
+                $data ['descripcionListLinkBoton'] = "Cargas De Combustible";
+                $data['link']="proformasDelChofer";
                 break;
 
             case 2:
-                $data["bienvenida"]= "Bienvenido supervisor";
+                $data ['titulo'] = "Empleados";
+                $data['descripcion'] = "Sección para dar de alta y eliminar empleados de la aplicación.";
+                $data ['listLink'] = "";
+                $data ['descripcionListLinkBoton'] = "";
+                $data['link']="empleados";
                 break;
          
 
@@ -63,15 +77,19 @@ class MainController
                 $data['clientesNav']="disabled";
                 $data['cargasNav']="disabled";
                 $data['proformasNav']="disabled";
-                $data['cargasCombustibleNav']= "disabled";
-
+                $data ['titulo'] = "Service";
+                $data['descripcion'] = "Sección para ver la lista de services realizados a los vehículos de la aplicación.";
+                $data ['listLink'] = "tractores";
+                $data ['descripcionListLinkBoton'] = "Ver la flota de tractores, revisar mantenimiento";
+                $data['link']="services";
                 break;
 
             case 4:
-                $data['bienvenida']="Bienvenido administrador";
-
-
-
+                $data ['titulo'] = "Empleados";
+                $data['descripcion'] = "Sección para dar de alta, actualizar y eliminar empleados de la aplicación.";
+                $data ['listLink'] = "";
+                $data ['descripcionListLinkBoton'] = "";
+                $data['link']="empleados";
 
         }
 

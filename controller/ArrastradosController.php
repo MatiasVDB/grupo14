@@ -39,7 +39,7 @@ class ArrastradosController
         }
 
         else{
-            header("Location: ../main");
+            header("Location: http://localhost/grupo14/main");
         }
 
     }
