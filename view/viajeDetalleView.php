@@ -41,15 +41,6 @@
     </div>
 
 
-    <div class="form-row">
-
-        <div class="form-group col-md-12">
-            <label for="fechaCarga" >Fecha de carga</label>
-            <input type="date" name="fechaCarga" id="fechaCarga" class="form-control"  value="{{fechaCarga}}">
-        </div>
-
-    </div>
-
 
     <div class="form-row">
         <div class="form-group col-md-6">

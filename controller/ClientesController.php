@@ -24,19 +24,13 @@ class ClientesController
                     $data['cargarProformaNav']="disabled";
                     $data['registrarTractorNav']="disabled";
                     $data['registrarArrastradoNav']="disabled";
+                    $data['proformasNav']="disabled";
+                    $data['servicesNav']="disabled";
                     $data['actualizarCliente']="disabled";
                     $data['borrarCliente']="disabled";
                     $data['agregarCliente']="disabled";
                     break;
 
-                case 2:
-
-                    break;
-
-
-                case 4:
-
-                    break;
 
 
             }
@@ -91,8 +85,9 @@ class ClientesController
         $email = $_POST['email'];
         $telefono = $_POST['telefono'];
         $direccion = $_POST['direccion'];
+        echo("$cuit, $denominacion, $contacto2, $contacto1, $email, $telefono, $direccion");
 
-        $this->clienteModel->createCliente($cuit, $denominacion, $contacto1, $contacto2,$telefono ,$direccion , $email);
+        $this->clienteModel->createCliente($cuit, $denominacion, $email,$contacto1, $contacto2,$telefono ,$direccion );
 
         header("Location: ../clientes");
     }

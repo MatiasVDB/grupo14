@@ -27,7 +27,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-10">
+        <div class="form-group col-md-12">
             <label>Vehículo</label>
             <select class="custom-select" name="id_tractor" multiple>
                 <option selected>Vehículo</option>
@@ -59,7 +59,7 @@
             </select>
         </div>
 
-        <div class="form-group col-md-4">
+        <div class="form-group col-md-6">
 
             <label>Tipo de Service</label>
 
@@ -74,7 +74,7 @@
 
     <div class="form-row">
 
-        <div class="form-group col-md-6">
+        <div class="form-group col-md-12">
 
             <label>Mecánico a cargo del service</label>
             <select class="custom-select" name="numeroDeDocumento_mecanico" multiple>
