@@ -21,20 +21,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e45c5e36-88e8-4b77-bedb-8ba528b7c897" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ArrastradosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ArrastradosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controller/ClientesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ClientesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controller/ViajesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/controller/ViajesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ArrastradosModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ArrastradosModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model/ClientesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ClientesModel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/model/ViajesModel.php" beforeDir="false" afterPath="$PROJECT_DIR$/model/ViajesModel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/mantenimientoView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/mantenimientoView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerArrastrado.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerArrastrado.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCarga.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCarga.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/registerViaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/registerViaje.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/serviceRegisterView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/serviceRegisterView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajeDetalleView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajeDetalleView.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/viajesView.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/viajesView.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
